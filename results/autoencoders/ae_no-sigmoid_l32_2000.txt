@@ -1,0 +1,2296 @@
+=========================================
+2024-03-10 14:09:32,218 [trainer.py] => config: ./exps/FeCAM_cifar100.json
+2024-03-10 14:09:32,218 [trainer.py] => prefix: train
+2024-03-10 14:09:32,218 [trainer.py] => dataset: cifar100
+2024-03-10 14:09:32,218 [trainer.py] => memory_size: 0
+2024-03-10 14:09:32,218 [trainer.py] => shuffle: True
+2024-03-10 14:09:32,218 [trainer.py] => init_cls: 50
+2024-03-10 14:09:32,218 [trainer.py] => increment: 10
+2024-03-10 14:09:32,218 [trainer.py] => model_name: fecam
+2024-03-10 14:09:32,218 [trainer.py] => convnet_type: resnet18
+2024-03-10 14:09:32,218 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-03-10 14:09:32,218 [trainer.py] => seed: 1993
+2024-03-10 14:09:32,218 [trainer.py] => init_epochs: 200
+2024-03-10 14:09:32,218 [trainer.py] => init_lr: 0.1
+2024-03-10 14:09:32,218 [trainer.py] => init_weight_decay: 0.0005
+2024-03-10 14:09:32,218 [trainer.py] => batch_size: 128
+2024-03-10 14:09:32,218 [trainer.py] => num_workers: 8
+2024-03-10 14:09:32,218 [trainer.py] => T: 5
+2024-03-10 14:09:32,218 [trainer.py] => beta: 0.5
+2024-03-10 14:09:32,218 [trainer.py] => alpha1: 1
+2024-03-10 14:09:32,218 [trainer.py] => alpha2: 1
+2024-03-10 14:09:32,218 [trainer.py] => ncm: False
+2024-03-10 14:09:32,219 [trainer.py] => tukey: False
+2024-03-10 14:09:32,219 [trainer.py] => diagonal: False
+2024-03-10 14:09:32,219 [trainer.py] => per_class: True
+2024-03-10 14:09:32,219 [trainer.py] => full_cov: True
+2024-03-10 14:09:32,219 [trainer.py] => shrink: True
+2024-03-10 14:09:32,219 [trainer.py] => norm_cov: False
+2024-03-10 14:09:32,219 [trainer.py] => vecnorm: False
+2024-03-10 14:09:32,219 [trainer.py] => ae_type: ae
+2024-03-10 14:09:32,219 [trainer.py] => epochs: 2000
+2024-03-10 14:09:32,219 [trainer.py] => ae_latent_dim: 32
+2024-03-10 14:09:32,219 [trainer.py] => wae_sigma: 10
+2024-03-10 14:09:32,219 [trainer.py] => wae_C: 0.8
+Files already downloaded and verified
+Files already downloaded and verified
+2024-03-10 14:09:35,482 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2024-03-10 14:09:35,792 [fecam.py] => Learning on 0-50
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Processing class: 0
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003106530
+Epoch:   200  |  train loss: 0.0002516689
+Epoch:   300  |  train loss: 0.0002326375
+Epoch:   400  |  train loss: 0.0002046650
+Epoch:   500  |  train loss: 0.0001930087
+Epoch:   600  |  train loss: 0.0001847440
+Epoch:   700  |  train loss: 0.0001731010
+Epoch:   800  |  train loss: 0.0001661700
+Epoch:   900  |  train loss: 0.0001587607
+Epoch:  1000  |  train loss: 0.0001502496
+Epoch:  1100  |  train loss: 0.0001399793
+Epoch:  1200  |  train loss: 0.0001298906
+Epoch:  1300  |  train loss: 0.0001234463
+Epoch:  1400  |  train loss: 0.0001185519
+Epoch:  1500  |  train loss: 0.0001146884
+Epoch:  1600  |  train loss: 0.0001111783
+Epoch:  1700  |  train loss: 0.0001080718
+Epoch:  1800  |  train loss: 0.0001048468
+Epoch:  1900  |  train loss: 0.0001014134
+Epoch:  2000  |  train loss: 0.0000981303
+Processing class: 1
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003296324
+Epoch:   200  |  train loss: 0.0003228495
+Epoch:   300  |  train loss: 0.0002514980
+Epoch:   400  |  train loss: 0.0002217086
+Epoch:   500  |  train loss: 0.0002036654
+Epoch:   600  |  train loss: 0.0001925131
+Epoch:   700  |  train loss: 0.0001819982
+Epoch:   800  |  train loss: 0.0001667193
+Epoch:   900  |  train loss: 0.0001522182
+Epoch:  1000  |  train loss: 0.0001410960
+Epoch:  1100  |  train loss: 0.0001339829
+Epoch:  1200  |  train loss: 0.0001278954
+Epoch:  1300  |  train loss: 0.0001222170
+Epoch:  1400  |  train loss: 0.0001173182
+Epoch:  1500  |  train loss: 0.0001126442
+Epoch:  1600  |  train loss: 0.0001083815
+Epoch:  1700  |  train loss: 0.0001045450
+Epoch:  1800  |  train loss: 0.0001011992
+Epoch:  1900  |  train loss: 0.0000982038
+Epoch:  2000  |  train loss: 0.0000953376
+Processing class: 2
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0004165955
+Epoch:   200  |  train loss: 0.0003648214
+Epoch:   300  |  train loss: 0.0003390096
+Epoch:   400  |  train loss: 0.0003071001
+Epoch:   500  |  train loss: 0.0002676896
+Epoch:   600  |  train loss: 0.0002399649
+Epoch:   700  |  train loss: 0.0002190240
+Epoch:   800  |  train loss: 0.0002037313
+Epoch:   900  |  train loss: 0.0001928397
+Epoch:  1000  |  train loss: 0.0001817988
+Epoch:  1100  |  train loss: 0.0001715930
+Epoch:  1200  |  train loss: 0.0001631607
+Epoch:  1300  |  train loss: 0.0001557582
+Epoch:  1400  |  train loss: 0.0001486939
+Epoch:  1500  |  train loss: 0.0001419300
+Epoch:  1600  |  train loss: 0.0001364084
+Epoch:  1700  |  train loss: 0.0001313132
+Epoch:  1800  |  train loss: 0.0001268061
+Epoch:  1900  |  train loss: 0.0001227767
+Epoch:  2000  |  train loss: 0.0001192255
+Processing class: 3
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003946887
+Epoch:   200  |  train loss: 0.0003863810
+Epoch:   300  |  train loss: 0.0003589445
+Epoch:   400  |  train loss: 0.0003177834
+Epoch:   500  |  train loss: 0.0002932230
+Epoch:   600  |  train loss: 0.0002750389
+Epoch:   700  |  train loss: 0.0002495765
+Epoch:   800  |  train loss: 0.0002333314
+Epoch:   900  |  train loss: 0.0002208494
+Epoch:  1000  |  train loss: 0.0002111444
+Epoch:  1100  |  train loss: 0.0002011805
+Epoch:  1200  |  train loss: 0.0001929974
+Epoch:  1300  |  train loss: 0.0001843913
+Epoch:  1400  |  train loss: 0.0001746777
+Epoch:  1500  |  train loss: 0.0001658868
+Epoch:  1600  |  train loss: 0.0001593123
+Epoch:  1700  |  train loss: 0.0001535695
+Epoch:  1800  |  train loss: 0.0001485423
+Epoch:  1900  |  train loss: 0.0001437790
+Epoch:  2000  |  train loss: 0.0001385467
+Processing class: 4
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003175714
+Epoch:   200  |  train loss: 0.0002815025
+Epoch:   300  |  train loss: 0.0002537523
+Epoch:   400  |  train loss: 0.0002291970
+Epoch:   500  |  train loss: 0.0002055609
+Epoch:   600  |  train loss: 0.0001883842
+Epoch:   700  |  train loss: 0.0001725163
+Epoch:   800  |  train loss: 0.0001629480
+Epoch:   900  |  train loss: 0.0001545632
+Epoch:  1000  |  train loss: 0.0001467791
+Epoch:  1100  |  train loss: 0.0001387415
+Epoch:  1200  |  train loss: 0.0001321816
+Epoch:  1300  |  train loss: 0.0001263408
+Epoch:  1400  |  train loss: 0.0001213788
+Epoch:  1500  |  train loss: 0.0001170202
+Epoch:  1600  |  train loss: 0.0001129111
+Epoch:  1700  |  train loss: 0.0001091011
+Epoch:  1800  |  train loss: 0.0001058758
+Epoch:  1900  |  train loss: 0.0001024359
+Epoch:  2000  |  train loss: 0.0000992486
+Processing class: 5
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003483894
+Epoch:   200  |  train loss: 0.0002963194
+Epoch:   300  |  train loss: 0.0002607550
+Epoch:   400  |  train loss: 0.0002399771
+Epoch:   500  |  train loss: 0.0002151934
+Epoch:   600  |  train loss: 0.0002040981
+Epoch:   700  |  train loss: 0.0001892780
+Epoch:   800  |  train loss: 0.0001771817
+Epoch:   900  |  train loss: 0.0001639538
+Epoch:  1000  |  train loss: 0.0001530149
+Epoch:  1100  |  train loss: 0.0001456165
+Epoch:  1200  |  train loss: 0.0001391797
+Epoch:  1300  |  train loss: 0.0001331784
+Epoch:  1400  |  train loss: 0.0001276778
+Epoch:  1500  |  train loss: 0.0001226371
+Epoch:  1600  |  train loss: 0.0001184722
+Epoch:  1700  |  train loss: 0.0001144438
+Epoch:  1800  |  train loss: 0.0001110781
+Epoch:  1900  |  train loss: 0.0001078152
+Epoch:  2000  |  train loss: 0.0001046295
+Processing class: 6
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003283967
+Epoch:   200  |  train loss: 0.0002874153
+Epoch:   300  |  train loss: 0.0002596345
+Epoch:   400  |  train loss: 0.0002456136
+Epoch:   500  |  train loss: 0.0002105265
+Epoch:   600  |  train loss: 0.0001889519
+Epoch:   700  |  train loss: 0.0001756766
+Epoch:   800  |  train loss: 0.0001683205
+Epoch:   900  |  train loss: 0.0001624625
+Epoch:  1000  |  train loss: 0.0001547760
+Epoch:  1100  |  train loss: 0.0001467829
+Epoch:  1200  |  train loss: 0.0001396718
+Epoch:  1300  |  train loss: 0.0001331497
+Epoch:  1400  |  train loss: 0.0001280655
+Epoch:  1500  |  train loss: 0.0001237014
+Epoch:  1600  |  train loss: 0.0001195570
+Epoch:  1700  |  train loss: 0.0001156404
+Epoch:  1800  |  train loss: 0.0001118981
+Epoch:  1900  |  train loss: 0.0001080612
+Epoch:  2000  |  train loss: 0.0001049816
+Processing class: 7
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003810726
+Epoch:   200  |  train loss: 0.0003282053
+Epoch:   300  |  train loss: 0.0003060456
+Epoch:   400  |  train loss: 0.0002716754
+Epoch:   500  |  train loss: 0.0002484094
+Epoch:   600  |  train loss: 0.0002279524
+Epoch:   700  |  train loss: 0.0002090935
+Epoch:   800  |  train loss: 0.0001958153
+Epoch:   900  |  train loss: 0.0001861276
+Epoch:  1000  |  train loss: 0.0001785403
+Epoch:  1100  |  train loss: 0.0001711567
+Epoch:  1200  |  train loss: 0.0001641843
+Epoch:  1300  |  train loss: 0.0001577101
+Epoch:  1400  |  train loss: 0.0001513430
+Epoch:  1500  |  train loss: 0.0001456328
+Epoch:  1600  |  train loss: 0.0001402952
+Epoch:  1700  |  train loss: 0.0001354904
+Epoch:  1800  |  train loss: 0.0001309854
+Epoch:  1900  |  train loss: 0.0001264867
+Epoch:  2000  |  train loss: 0.0001228296
+Processing class: 8
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0004067289
+Epoch:   200  |  train loss: 0.0003573227
+Epoch:   300  |  train loss: 0.0003055700
+Epoch:   400  |  train loss: 0.0002882368
+Epoch:   500  |  train loss: 0.0002638105
+Epoch:   600  |  train loss: 0.0002403029
+Epoch:   700  |  train loss: 0.0002203679
+Epoch:   800  |  train loss: 0.0002097639
+Epoch:   900  |  train loss: 0.0001992852
+Epoch:  1000  |  train loss: 0.0001898613
+Epoch:  1100  |  train loss: 0.0001818893
+Epoch:  1200  |  train loss: 0.0001742278
+Epoch:  1300  |  train loss: 0.0001675713
+Epoch:  1400  |  train loss: 0.0001612720
+Epoch:  1500  |  train loss: 0.0001548947
+Epoch:  1600  |  train loss: 0.0001491382
+Epoch:  1700  |  train loss: 0.0001439549
+Epoch:  1800  |  train loss: 0.0001383272
+Epoch:  1900  |  train loss: 0.0001335385
+Epoch:  2000  |  train loss: 0.0001291776
+Processing class: 9
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002681411
+Epoch:   200  |  train loss: 0.0002615005
+Epoch:   300  |  train loss: 0.0002518408
+Epoch:   400  |  train loss: 0.0002061181
+Epoch:   500  |  train loss: 0.0001799029
+Epoch:   600  |  train loss: 0.0001641527
+Epoch:   700  |  train loss: 0.0001435597
+Epoch:   800  |  train loss: 0.0001322377
+Epoch:   900  |  train loss: 0.0001223909
+Epoch:  1000  |  train loss: 0.0001176173
+Epoch:  1100  |  train loss: 0.0001138601
+Epoch:  1200  |  train loss: 0.0001097610
+Epoch:  1300  |  train loss: 0.0001043183
+Epoch:  1400  |  train loss: 0.0000994178
+Epoch:  1500  |  train loss: 0.0000956779
+Epoch:  1600  |  train loss: 0.0000925507
+Epoch:  1700  |  train loss: 0.0000894790
+Epoch:  1800  |  train loss: 0.0000867511
+Epoch:  1900  |  train loss: 0.0000843844
+Epoch:  2000  |  train loss: 0.0000821536
+Processing class: 10
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003282614
+Epoch:   200  |  train loss: 0.0002691635
+Epoch:   300  |  train loss: 0.0002520326
+Epoch:   400  |  train loss: 0.0002210685
+Epoch:   500  |  train loss: 0.0001998773
+Epoch:   600  |  train loss: 0.0001817198
+Epoch:   700  |  train loss: 0.0001694581
+Epoch:   800  |  train loss: 0.0001596326
+Epoch:   900  |  train loss: 0.0001497704
+Epoch:  1000  |  train loss: 0.0001416814
+Epoch:  1100  |  train loss: 0.0001350125
+Epoch:  1200  |  train loss: 0.0001286224
+Epoch:  1300  |  train loss: 0.0001227918
+Epoch:  1400  |  train loss: 0.0001173437
+Epoch:  1500  |  train loss: 0.0001125158
+Epoch:  1600  |  train loss: 0.0001086266
+Epoch:  1700  |  train loss: 0.0001047763
+Epoch:  1800  |  train loss: 0.0001013911
+Epoch:  1900  |  train loss: 0.0000984140
+Epoch:  2000  |  train loss: 0.0000954898
+Processing class: 11
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0004211579
+Epoch:   200  |  train loss: 0.0003633860
+Epoch:   300  |  train loss: 0.0003391249
+Epoch:   400  |  train loss: 0.0002828189
+Epoch:   500  |  train loss: 0.0002521832
+Epoch:   600  |  train loss: 0.0002287521
+Epoch:   700  |  train loss: 0.0002106966
+Epoch:   800  |  train loss: 0.0001996841
+Epoch:   900  |  train loss: 0.0001894190
+Epoch:  1000  |  train loss: 0.0001794740
+Epoch:  1100  |  train loss: 0.0001707348
+Epoch:  1200  |  train loss: 0.0001636749
+Epoch:  1300  |  train loss: 0.0001571623
+Epoch:  1400  |  train loss: 0.0001506633
+Epoch:  1500  |  train loss: 0.0001438687
+Epoch:  1600  |  train loss: 0.0001378765
+Epoch:  1700  |  train loss: 0.0001322343
+Epoch:  1800  |  train loss: 0.0001275776
+Epoch:  1900  |  train loss: 0.0001236882
+Epoch:  2000  |  train loss: 0.0001201398
+Processing class: 12
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003559399
+Epoch:   200  |  train loss: 0.0003205599
+Epoch:   300  |  train loss: 0.0002807680
+Epoch:   400  |  train loss: 0.0002324083
+Epoch:   500  |  train loss: 0.0002121338
+Epoch:   600  |  train loss: 0.0001970125
+Epoch:   700  |  train loss: 0.0001821886
+Epoch:   800  |  train loss: 0.0001703306
+Epoch:   900  |  train loss: 0.0001587707
+Epoch:  1000  |  train loss: 0.0001512701
+Epoch:  1100  |  train loss: 0.0001453972
+Epoch:  1200  |  train loss: 0.0001400536
+Epoch:  1300  |  train loss: 0.0001350271
+Epoch:  1400  |  train loss: 0.0001299143
+Epoch:  1500  |  train loss: 0.0001251372
+Epoch:  1600  |  train loss: 0.0001207577
+Epoch:  1700  |  train loss: 0.0001171517
+Epoch:  1800  |  train loss: 0.0001134726
+Epoch:  1900  |  train loss: 0.0001102479
+Epoch:  2000  |  train loss: 0.0001075115
+Processing class: 13
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0005013869
+Epoch:   200  |  train loss: 0.0004234656
+Epoch:   300  |  train loss: 0.0003603556
+Epoch:   400  |  train loss: 0.0003143946
+Epoch:   500  |  train loss: 0.0002815503
+Epoch:   600  |  train loss: 0.0002651311
+Epoch:   700  |  train loss: 0.0002535246
+Epoch:   800  |  train loss: 0.0002399476
+Epoch:   900  |  train loss: 0.0002265456
+Epoch:  1000  |  train loss: 0.0002113673
+Epoch:  1100  |  train loss: 0.0001971218
+Epoch:  1200  |  train loss: 0.0001830790
+Epoch:  1300  |  train loss: 0.0001722980
+Epoch:  1400  |  train loss: 0.0001651185
+Epoch:  1500  |  train loss: 0.0001592020
+Epoch:  1600  |  train loss: 0.0001545645
+Epoch:  1700  |  train loss: 0.0001502409
+Epoch:  1800  |  train loss: 0.0001459514
+Epoch:  1900  |  train loss: 0.0001419808
+Epoch:  2000  |  train loss: 0.0001379281
+Processing class: 14
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002753173
+Epoch:   200  |  train loss: 0.0002713356
+Epoch:   300  |  train loss: 0.0002511098
+Epoch:   400  |  train loss: 0.0002184855
+Epoch:   500  |  train loss: 0.0001940161
+Epoch:   600  |  train loss: 0.0001781050
+Epoch:   700  |  train loss: 0.0001647147
+Epoch:   800  |  train loss: 0.0001563762
+Epoch:   900  |  train loss: 0.0001482729
+Epoch:  1000  |  train loss: 0.0001397261
+Epoch:  1100  |  train loss: 0.0001320707
+Epoch:  1200  |  train loss: 0.0001250595
+Epoch:  1300  |  train loss: 0.0001189092
+Epoch:  1400  |  train loss: 0.0001134333
+Epoch:  1500  |  train loss: 0.0001088741
+Epoch:  1600  |  train loss: 0.0001053420
+Epoch:  1700  |  train loss: 0.0001020271
+Epoch:  1800  |  train loss: 0.0000992009
+Epoch:  1900  |  train loss: 0.0000965519
+Epoch:  2000  |  train loss: 0.0000938620
+Processing class: 15
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003774585
+Epoch:   200  |  train loss: 0.0003252354
+Epoch:   300  |  train loss: 0.0002799225
+Epoch:   400  |  train loss: 0.0002601259
+Epoch:   500  |  train loss: 0.0002155226
+Epoch:   600  |  train loss: 0.0001998815
+Epoch:   700  |  train loss: 0.0001931546
+Epoch:   800  |  train loss: 0.0001873075
+Epoch:   900  |  train loss: 0.0001797987
+Epoch:  1000  |  train loss: 0.0001683444
+Epoch:  1100  |  train loss: 0.0001559278
+Epoch:  1200  |  train loss: 0.0001475156
+Epoch:  1300  |  train loss: 0.0001402780
+Epoch:  1400  |  train loss: 0.0001343221
+Epoch:  1500  |  train loss: 0.0001295042
+Epoch:  1600  |  train loss: 0.0001242318
+Epoch:  1700  |  train loss: 0.0001188917
+Epoch:  1800  |  train loss: 0.0001141641
+Epoch:  1900  |  train loss: 0.0001105735
+Epoch:  2000  |  train loss: 0.0001074117
+Processing class: 16
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003680291
+Epoch:   200  |  train loss: 0.0003135494
+Epoch:   300  |  train loss: 0.0002895281
+Epoch:   400  |  train loss: 0.0002553482
+Epoch:   500  |  train loss: 0.0002463116
+Epoch:   600  |  train loss: 0.0002332108
+Epoch:   700  |  train loss: 0.0002163356
+Epoch:   800  |  train loss: 0.0002010753
+Epoch:   900  |  train loss: 0.0001869658
+Epoch:  1000  |  train loss: 0.0001763003
+Epoch:  1100  |  train loss: 0.0001670515
+Epoch:  1200  |  train loss: 0.0001585367
+Epoch:  1300  |  train loss: 0.0001515222
+Epoch:  1400  |  train loss: 0.0001453429
+Epoch:  1500  |  train loss: 0.0001394141
+Epoch:  1600  |  train loss: 0.0001342000
+Epoch:  1700  |  train loss: 0.0001292011
+Epoch:  1800  |  train loss: 0.0001244514
+Epoch:  1900  |  train loss: 0.0001201909
+Epoch:  2000  |  train loss: 0.0001162352
+Processing class: 17
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003058949
+Epoch:   200  |  train loss: 0.0003015548
+Epoch:   300  |  train loss: 0.0002923515
+Epoch:   400  |  train loss: 0.0002469221
+Epoch:   500  |  train loss: 0.0002331242
+Epoch:   600  |  train loss: 0.0002114383
+Epoch:   700  |  train loss: 0.0001894214
+Epoch:   800  |  train loss: 0.0001781349
+Epoch:   900  |  train loss: 0.0001661092
+Epoch:  1000  |  train loss: 0.0001577253
+Epoch:  1100  |  train loss: 0.0001503225
+Epoch:  1200  |  train loss: 0.0001430315
+Epoch:  1300  |  train loss: 0.0001365799
+Epoch:  1400  |  train loss: 0.0001307208
+Epoch:  1500  |  train loss: 0.0001256576
+Epoch:  1600  |  train loss: 0.0001210813
+Epoch:  1700  |  train loss: 0.0001171423
+Epoch:  1800  |  train loss: 0.0001136912
+Epoch:  1900  |  train loss: 0.0001105787
+Epoch:  2000  |  train loss: 0.0001077415
+Processing class: 18
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0004421354
+Epoch:   200  |  train loss: 0.0003818360
+Epoch:   300  |  train loss: 0.0003438304
+Epoch:   400  |  train loss: 0.0003173507
+Epoch:   500  |  train loss: 0.0002781544
+Epoch:   600  |  train loss: 0.0002562557
+Epoch:   700  |  train loss: 0.0002358942
+Epoch:   800  |  train loss: 0.0002227214
+Epoch:   900  |  train loss: 0.0002091356
+Epoch:  1000  |  train loss: 0.0001985077
+Epoch:  1100  |  train loss: 0.0001884459
+Epoch:  1200  |  train loss: 0.0001798213
+Epoch:  1300  |  train loss: 0.0001718528
+Epoch:  1400  |  train loss: 0.0001639491
+Epoch:  1500  |  train loss: 0.0001569391
+Epoch:  1600  |  train loss: 0.0001505970
+Epoch:  1700  |  train loss: 0.0001449367
+Epoch:  1800  |  train loss: 0.0001399286
+Epoch:  1900  |  train loss: 0.0001353747
+Epoch:  2000  |  train loss: 0.0001312677
+Processing class: 19
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003692710
+Epoch:   200  |  train loss: 0.0003600283
+Epoch:   300  |  train loss: 0.0003113464
+Epoch:   400  |  train loss: 0.0002639873
+Epoch:   500  |  train loss: 0.0002427162
+Epoch:   600  |  train loss: 0.0002249134
+Epoch:   700  |  train loss: 0.0002089689
+Epoch:   800  |  train loss: 0.0001966037
+Epoch:   900  |  train loss: 0.0001845347
+Epoch:  1000  |  train loss: 0.0001719337
+Epoch:  1100  |  train loss: 0.0001607570
+Epoch:  1200  |  train loss: 0.0001525892
+Epoch:  1300  |  train loss: 0.0001455930
+Epoch:  1400  |  train loss: 0.0001396555
+Epoch:  1500  |  train loss: 0.0001350363
+Epoch:  1600  |  train loss: 0.0001308654
+Epoch:  1700  |  train loss: 0.0001271740
+Epoch:  1800  |  train loss: 0.0001237947
+Epoch:  1900  |  train loss: 0.0001205536
+Epoch:  2000  |  train loss: 0.0001176254
+Processing class: 20
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0004079088
+Epoch:   200  |  train loss: 0.0003362971
+Epoch:   300  |  train loss: 0.0002913129
+Epoch:   400  |  train loss: 0.0002743563
+Epoch:   500  |  train loss: 0.0002499426
+Epoch:   600  |  train loss: 0.0002285081
+Epoch:   700  |  train loss: 0.0002197385
+Epoch:   800  |  train loss: 0.0002101087
+Epoch:   900  |  train loss: 0.0001981134
+Epoch:  1000  |  train loss: 0.0001858485
+Epoch:  1100  |  train loss: 0.0001784663
+Epoch:  1200  |  train loss: 0.0001710201
+Epoch:  1300  |  train loss: 0.0001618264
+Epoch:  1400  |  train loss: 0.0001529133
+Epoch:  1500  |  train loss: 0.0001461846
+Epoch:  1600  |  train loss: 0.0001406522
+Epoch:  1700  |  train loss: 0.0001356265
+Epoch:  1800  |  train loss: 0.0001307218
+Epoch:  1900  |  train loss: 0.0001261640
+Epoch:  2000  |  train loss: 0.0001221656
+Processing class: 21
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0004383582
+Epoch:   200  |  train loss: 0.0004289701
+Epoch:   300  |  train loss: 0.0003287121
+Epoch:   400  |  train loss: 0.0002876770
+Epoch:   500  |  train loss: 0.0002589729
+Epoch:   600  |  train loss: 0.0002403014
+Epoch:   700  |  train loss: 0.0002167838
+Epoch:   800  |  train loss: 0.0002001192
+Epoch:   900  |  train loss: 0.0001899291
+Epoch:  1000  |  train loss: 0.0001800425
+Epoch:  1100  |  train loss: 0.0001711507
+Epoch:  1200  |  train loss: 0.0001633379
+Epoch:  1300  |  train loss: 0.0001562624
+Epoch:  1400  |  train loss: 0.0001499195
+Epoch:  1500  |  train loss: 0.0001444041
+Epoch:  1600  |  train loss: 0.0001383826
+Epoch:  1700  |  train loss: 0.0001327113
+Epoch:  1800  |  train loss: 0.0001276209
+Epoch:  1900  |  train loss: 0.0001235375
+Epoch:  2000  |  train loss: 0.0001193857
+Processing class: 22
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002862631
+Epoch:   200  |  train loss: 0.0002810666
+Epoch:   300  |  train loss: 0.0002388350
+Epoch:   400  |  train loss: 0.0002104627
+Epoch:   500  |  train loss: 0.0001814418
+Epoch:   600  |  train loss: 0.0001659528
+Epoch:   700  |  train loss: 0.0001532600
+Epoch:   800  |  train loss: 0.0001451639
+Epoch:   900  |  train loss: 0.0001361979
+Epoch:  1000  |  train loss: 0.0001270626
+Epoch:  1100  |  train loss: 0.0001192260
+Epoch:  1200  |  train loss: 0.0001132985
+Epoch:  1300  |  train loss: 0.0001078198
+Epoch:  1400  |  train loss: 0.0001031836
+Epoch:  1500  |  train loss: 0.0000994928
+Epoch:  1600  |  train loss: 0.0000960846
+Epoch:  1700  |  train loss: 0.0000931601
+Epoch:  1800  |  train loss: 0.0000905322
+Epoch:  1900  |  train loss: 0.0000883153
+Epoch:  2000  |  train loss: 0.0000863009
+Processing class: 23
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003966131
+Epoch:   200  |  train loss: 0.0003887296
+Epoch:   300  |  train loss: 0.0003608436
+Epoch:   400  |  train loss: 0.0003117490
+Epoch:   500  |  train loss: 0.0002783445
+Epoch:   600  |  train loss: 0.0002471630
+Epoch:   700  |  train loss: 0.0002301089
+Epoch:   800  |  train loss: 0.0002187043
+Epoch:   900  |  train loss: 0.0002101237
+Epoch:  1000  |  train loss: 0.0002016863
+Epoch:  1100  |  train loss: 0.0001905520
+Epoch:  1200  |  train loss: 0.0001785373
+Epoch:  1300  |  train loss: 0.0001684709
+Epoch:  1400  |  train loss: 0.0001599372
+Epoch:  1500  |  train loss: 0.0001532989
+Epoch:  1600  |  train loss: 0.0001478237
+Epoch:  1700  |  train loss: 0.0001423304
+Epoch:  1800  |  train loss: 0.0001374994
+Epoch:  1900  |  train loss: 0.0001330978
+Epoch:  2000  |  train loss: 0.0001293997
+Processing class: 24
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003001249
+Epoch:   200  |  train loss: 0.0002938624
+Epoch:   300  |  train loss: 0.0002726292
+Epoch:   400  |  train loss: 0.0002425539
+Epoch:   500  |  train loss: 0.0002200754
+Epoch:   600  |  train loss: 0.0002028836
+Epoch:   700  |  train loss: 0.0001882322
+Epoch:   800  |  train loss: 0.0001716491
+Epoch:   900  |  train loss: 0.0001634470
+Epoch:  1000  |  train loss: 0.0001568357
+Epoch:  1100  |  train loss: 0.0001496578
+Epoch:  1200  |  train loss: 0.0001424057
+Epoch:  1300  |  train loss: 0.0001355889
+Epoch:  1400  |  train loss: 0.0001292970
+Epoch:  1500  |  train loss: 0.0001246240
+Epoch:  1600  |  train loss: 0.0001204934
+Epoch:  1700  |  train loss: 0.0001167821
+Epoch:  1800  |  train loss: 0.0001130596
+Epoch:  1900  |  train loss: 0.0001094225
+Epoch:  2000  |  train loss: 0.0001059870
+Processing class: 25
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003602708
+Epoch:   200  |  train loss: 0.0003221634
+Epoch:   300  |  train loss: 0.0002891392
+Epoch:   400  |  train loss: 0.0002502761
+Epoch:   500  |  train loss: 0.0002303022
+Epoch:   600  |  train loss: 0.0002141070
+Epoch:   700  |  train loss: 0.0001992995
+Epoch:   800  |  train loss: 0.0001837755
+Epoch:   900  |  train loss: 0.0001718888
+Epoch:  1000  |  train loss: 0.0001623575
+Epoch:  1100  |  train loss: 0.0001540386
+Epoch:  1200  |  train loss: 0.0001466896
+Epoch:  1300  |  train loss: 0.0001406870
+Epoch:  1400  |  train loss: 0.0001353965
+Epoch:  1500  |  train loss: 0.0001303873
+Epoch:  1600  |  train loss: 0.0001254164
+Epoch:  1700  |  train loss: 0.0001210828
+Epoch:  1800  |  train loss: 0.0001169289
+Epoch:  1900  |  train loss: 0.0001133217
+Epoch:  2000  |  train loss: 0.0001100305
+Processing class: 26
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002790285
+Epoch:   200  |  train loss: 0.0002720149
+Epoch:   300  |  train loss: 0.0002656765
+Epoch:   400  |  train loss: 0.0002281917
+Epoch:   500  |  train loss: 0.0002059397
+Epoch:   600  |  train loss: 0.0001774545
+Epoch:   700  |  train loss: 0.0001662784
+Epoch:   800  |  train loss: 0.0001533521
+Epoch:   900  |  train loss: 0.0001459831
+Epoch:  1000  |  train loss: 0.0001388975
+Epoch:  1100  |  train loss: 0.0001301307
+Epoch:  1200  |  train loss: 0.0001212045
+Epoch:  1300  |  train loss: 0.0001151882
+Epoch:  1400  |  train loss: 0.0001105859
+Epoch:  1500  |  train loss: 0.0001061283
+Epoch:  1600  |  train loss: 0.0001018517
+Epoch:  1700  |  train loss: 0.0000979126
+Epoch:  1800  |  train loss: 0.0000944878
+Epoch:  1900  |  train loss: 0.0000913997
+Epoch:  2000  |  train loss: 0.0000886389
+Processing class: 27
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003896575
+Epoch:   200  |  train loss: 0.0003448794
+Epoch:   300  |  train loss: 0.0003091047
+Epoch:   400  |  train loss: 0.0002738809
+Epoch:   500  |  train loss: 0.0002545318
+Epoch:   600  |  train loss: 0.0002247807
+Epoch:   700  |  train loss: 0.0002111257
+Epoch:   800  |  train loss: 0.0002001728
+Epoch:   900  |  train loss: 0.0001903854
+Epoch:  1000  |  train loss: 0.0001799018
+Epoch:  1100  |  train loss: 0.0001706941
+Epoch:  1200  |  train loss: 0.0001620784
+Epoch:  1300  |  train loss: 0.0001550336
+Epoch:  1400  |  train loss: 0.0001497267
+Epoch:  1500  |  train loss: 0.0001446060
+Epoch:  1600  |  train loss: 0.0001394473
+Epoch:  1700  |  train loss: 0.0001348957
+Epoch:  1800  |  train loss: 0.0001308053
+Epoch:  1900  |  train loss: 0.0001273477
+Epoch:  2000  |  train loss: 0.0001240105
+Processing class: 28
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003157471
+Epoch:   200  |  train loss: 0.0002768635
+Epoch:   300  |  train loss: 0.0002647041
+Epoch:   400  |  train loss: 0.0002288738
+Epoch:   500  |  train loss: 0.0002050053
+Epoch:   600  |  train loss: 0.0001919343
+Epoch:   700  |  train loss: 0.0001810948
+Epoch:   800  |  train loss: 0.0001664607
+Epoch:   900  |  train loss: 0.0001568674
+Epoch:  1000  |  train loss: 0.0001500672
+Epoch:  1100  |  train loss: 0.0001419730
+Epoch:  1200  |  train loss: 0.0001344597
+Epoch:  1300  |  train loss: 0.0001281659
+Epoch:  1400  |  train loss: 0.0001230600
+Epoch:  1500  |  train loss: 0.0001185205
+Epoch:  1600  |  train loss: 0.0001147522
+Epoch:  1700  |  train loss: 0.0001108650
+Epoch:  1800  |  train loss: 0.0001074910
+Epoch:  1900  |  train loss: 0.0001042987
+Epoch:  2000  |  train loss: 0.0001011992
+Processing class: 29
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0005227497
+Epoch:   200  |  train loss: 0.0004615065
+Epoch:   300  |  train loss: 0.0003428130
+Epoch:   400  |  train loss: 0.0003197433
+Epoch:   500  |  train loss: 0.0002779659
+Epoch:   600  |  train loss: 0.0002458480
+Epoch:   700  |  train loss: 0.0002300208
+Epoch:   800  |  train loss: 0.0002178523
+Epoch:   900  |  train loss: 0.0002042525
+Epoch:  1000  |  train loss: 0.0001925338
+Epoch:  1100  |  train loss: 0.0001825024
+Epoch:  1200  |  train loss: 0.0001724476
+Epoch:  1300  |  train loss: 0.0001636409
+Epoch:  1400  |  train loss: 0.0001564459
+Epoch:  1500  |  train loss: 0.0001498666
+Epoch:  1600  |  train loss: 0.0001441211
+Epoch:  1700  |  train loss: 0.0001386970
+Epoch:  1800  |  train loss: 0.0001338581
+Epoch:  1900  |  train loss: 0.0001294468
+Epoch:  2000  |  train loss: 0.0001251948
+Processing class: 30
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003604179
+Epoch:   200  |  train loss: 0.0003165089
+Epoch:   300  |  train loss: 0.0002617926
+Epoch:   400  |  train loss: 0.0002243932
+Epoch:   500  |  train loss: 0.0002125251
+Epoch:   600  |  train loss: 0.0002060335
+Epoch:   700  |  train loss: 0.0001913912
+Epoch:   800  |  train loss: 0.0001778039
+Epoch:   900  |  train loss: 0.0001676224
+Epoch:  1000  |  train loss: 0.0001606449
+Epoch:  1100  |  train loss: 0.0001537352
+Epoch:  1200  |  train loss: 0.0001453000
+Epoch:  1300  |  train loss: 0.0001378641
+Epoch:  1400  |  train loss: 0.0001329199
+Epoch:  1500  |  train loss: 0.0001294105
+Epoch:  1600  |  train loss: 0.0001264746
+Epoch:  1700  |  train loss: 0.0001233863
+Epoch:  1800  |  train loss: 0.0001203198
+Epoch:  1900  |  train loss: 0.0001169720
+Epoch:  2000  |  train loss: 0.0001142407
+Processing class: 31
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002968457
+Epoch:   200  |  train loss: 0.0002904641
+Epoch:   300  |  train loss: 0.0002237294
+Epoch:   400  |  train loss: 0.0002150771
+Epoch:   500  |  train loss: 0.0001932392
+Epoch:   600  |  train loss: 0.0001709778
+Epoch:   700  |  train loss: 0.0001620939
+Epoch:   800  |  train loss: 0.0001546330
+Epoch:   900  |  train loss: 0.0001467651
+Epoch:  1000  |  train loss: 0.0001372983
+Epoch:  1100  |  train loss: 0.0001299125
+Epoch:  1200  |  train loss: 0.0001243068
+Epoch:  1300  |  train loss: 0.0001191105
+Epoch:  1400  |  train loss: 0.0001150368
+Epoch:  1500  |  train loss: 0.0001107662
+Epoch:  1600  |  train loss: 0.0001056297
+Epoch:  1700  |  train loss: 0.0001010157
+Epoch:  1800  |  train loss: 0.0000970865
+Epoch:  1900  |  train loss: 0.0000938744
+Epoch:  2000  |  train loss: 0.0000911958
+Processing class: 32
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003306815
+Epoch:   200  |  train loss: 0.0002968916
+Epoch:   300  |  train loss: 0.0002674796
+Epoch:   400  |  train loss: 0.0002274787
+Epoch:   500  |  train loss: 0.0002054558
+Epoch:   600  |  train loss: 0.0001907527
+Epoch:   700  |  train loss: 0.0001772715
+Epoch:   800  |  train loss: 0.0001668411
+Epoch:   900  |  train loss: 0.0001569851
+Epoch:  1000  |  train loss: 0.0001484668
+Epoch:  1100  |  train loss: 0.0001415851
+Epoch:  1200  |  train loss: 0.0001355865
+Epoch:  1300  |  train loss: 0.0001295854
+Epoch:  1400  |  train loss: 0.0001239131
+Epoch:  1500  |  train loss: 0.0001189251
+Epoch:  1600  |  train loss: 0.0001143703
+Epoch:  1700  |  train loss: 0.0001103964
+Epoch:  1800  |  train loss: 0.0001070167
+Epoch:  1900  |  train loss: 0.0001039222
+Epoch:  2000  |  train loss: 0.0001012066
+Processing class: 33
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0004920447
+Epoch:   200  |  train loss: 0.0004576084
+Epoch:   300  |  train loss: 0.0003442426
+Epoch:   400  |  train loss: 0.0003034413
+Epoch:   500  |  train loss: 0.0002839855
+Epoch:   600  |  train loss: 0.0002669162
+Epoch:   700  |  train loss: 0.0002453594
+Epoch:   800  |  train loss: 0.0002290272
+Epoch:   900  |  train loss: 0.0002146659
+Epoch:  1000  |  train loss: 0.0002007628
+Epoch:  1100  |  train loss: 0.0001899742
+Epoch:  1200  |  train loss: 0.0001807329
+Epoch:  1300  |  train loss: 0.0001729033
+Epoch:  1400  |  train loss: 0.0001662344
+Epoch:  1500  |  train loss: 0.0001596901
+Epoch:  1600  |  train loss: 0.0001538186
+Epoch:  1700  |  train loss: 0.0001483779
+Epoch:  1800  |  train loss: 0.0001431519
+Epoch:  1900  |  train loss: 0.0001386003
+Epoch:  2000  |  train loss: 0.0001343707
+Processing class: 34
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0004129415
+Epoch:   200  |  train loss: 0.0004073037
+Epoch:   300  |  train loss: 0.0003471426
+Epoch:   400  |  train loss: 0.0003112123
+Epoch:   500  |  train loss: 0.0002706233
+Epoch:   600  |  train loss: 0.0002523349
+Epoch:   700  |  train loss: 0.0002342132
+Epoch:   800  |  train loss: 0.0002204200
+Epoch:   900  |  train loss: 0.0002069676
+Epoch:  1000  |  train loss: 0.0001948586
+Epoch:  1100  |  train loss: 0.0001840890
+Epoch:  1200  |  train loss: 0.0001742678
+Epoch:  1300  |  train loss: 0.0001643512
+Epoch:  1400  |  train loss: 0.0001554805
+Epoch:  1500  |  train loss: 0.0001484112
+Epoch:  1600  |  train loss: 0.0001429317
+Epoch:  1700  |  train loss: 0.0001382469
+Epoch:  1800  |  train loss: 0.0001342021
+Epoch:  1900  |  train loss: 0.0001305009
+Epoch:  2000  |  train loss: 0.0001269909
+Processing class: 35
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002673009
+Epoch:   200  |  train loss: 0.0001971982
+Epoch:   300  |  train loss: 0.0001676091
+Epoch:   400  |  train loss: 0.0001613985
+Epoch:   500  |  train loss: 0.0001539978
+Epoch:   600  |  train loss: 0.0001399844
+Epoch:   700  |  train loss: 0.0001314295
+Epoch:   800  |  train loss: 0.0001257743
+Epoch:   900  |  train loss: 0.0001202114
+Epoch:  1000  |  train loss: 0.0001150095
+Epoch:  1100  |  train loss: 0.0001093465
+Epoch:  1200  |  train loss: 0.0001044536
+Epoch:  1300  |  train loss: 0.0001004223
+Epoch:  1400  |  train loss: 0.0000966154
+Epoch:  1500  |  train loss: 0.0000928934
+Epoch:  1600  |  train loss: 0.0000897091
+Epoch:  1700  |  train loss: 0.0000865483
+Epoch:  1800  |  train loss: 0.0000837598
+Epoch:  1900  |  train loss: 0.0000811696
+Epoch:  2000  |  train loss: 0.0000788640
+Processing class: 36
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003929078
+Epoch:   200  |  train loss: 0.0003574146
+Epoch:   300  |  train loss: 0.0003101132
+Epoch:   400  |  train loss: 0.0002846336
+Epoch:   500  |  train loss: 0.0002702093
+Epoch:   600  |  train loss: 0.0002391550
+Epoch:   700  |  train loss: 0.0002174737
+Epoch:   800  |  train loss: 0.0002019962
+Epoch:   900  |  train loss: 0.0001907557
+Epoch:  1000  |  train loss: 0.0001809064
+Epoch:  1100  |  train loss: 0.0001703919
+Epoch:  1200  |  train loss: 0.0001599618
+Epoch:  1300  |  train loss: 0.0001508144
+Epoch:  1400  |  train loss: 0.0001441945
+Epoch:  1500  |  train loss: 0.0001383481
+Epoch:  1600  |  train loss: 0.0001332523
+Epoch:  1700  |  train loss: 0.0001282328
+Epoch:  1800  |  train loss: 0.0001236380
+Epoch:  1900  |  train loss: 0.0001194474
+Epoch:  2000  |  train loss: 0.0001160482
+Processing class: 37
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003597653
+Epoch:   200  |  train loss: 0.0003348603
+Epoch:   300  |  train loss: 0.0002813092
+Epoch:   400  |  train loss: 0.0002440490
+Epoch:   500  |  train loss: 0.0002176112
+Epoch:   600  |  train loss: 0.0002035221
+Epoch:   700  |  train loss: 0.0001901422
+Epoch:   800  |  train loss: 0.0001779821
+Epoch:   900  |  train loss: 0.0001689927
+Epoch:  1000  |  train loss: 0.0001626353
+Epoch:  1100  |  train loss: 0.0001565168
+Epoch:  1200  |  train loss: 0.0001508135
+Epoch:  1300  |  train loss: 0.0001438131
+Epoch:  1400  |  train loss: 0.0001375841
+Epoch:  1500  |  train loss: 0.0001315945
+Epoch:  1600  |  train loss: 0.0001262654
+Epoch:  1700  |  train loss: 0.0001216127
+Epoch:  1800  |  train loss: 0.0001179316
+Epoch:  1900  |  train loss: 0.0001147357
+Epoch:  2000  |  train loss: 0.0001116982
+Processing class: 38
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003319560
+Epoch:   200  |  train loss: 0.0003254014
+Epoch:   300  |  train loss: 0.0002874719
+Epoch:   400  |  train loss: 0.0002609969
+Epoch:   500  |  train loss: 0.0002381769
+Epoch:   600  |  train loss: 0.0002287093
+Epoch:   700  |  train loss: 0.0002070924
+Epoch:   800  |  train loss: 0.0001902260
+Epoch:   900  |  train loss: 0.0001789021
+Epoch:  1000  |  train loss: 0.0001702358
+Epoch:  1100  |  train loss: 0.0001619337
+Epoch:  1200  |  train loss: 0.0001540742
+Epoch:  1300  |  train loss: 0.0001468522
+Epoch:  1400  |  train loss: 0.0001406662
+Epoch:  1500  |  train loss: 0.0001351384
+Epoch:  1600  |  train loss: 0.0001303177
+Epoch:  1700  |  train loss: 0.0001255971
+Epoch:  1800  |  train loss: 0.0001211558
+Epoch:  1900  |  train loss: 0.0001168456
+Epoch:  2000  |  train loss: 0.0001130363
+Processing class: 39
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003132247
+Epoch:   200  |  train loss: 0.0003081564
+Epoch:   300  |  train loss: 0.0002697639
+Epoch:   400  |  train loss: 0.0002338331
+Epoch:   500  |  train loss: 0.0002206220
+Epoch:   600  |  train loss: 0.0002077955
+Epoch:   700  |  train loss: 0.0001926179
+Epoch:   800  |  train loss: 0.0001808288
+Epoch:   900  |  train loss: 0.0001697195
+Epoch:  1000  |  train loss: 0.0001593470
+Epoch:  1100  |  train loss: 0.0001511664
+Epoch:  1200  |  train loss: 0.0001450105
+Epoch:  1300  |  train loss: 0.0001394592
+Epoch:  1400  |  train loss: 0.0001340623
+Epoch:  1500  |  train loss: 0.0001289214
+Epoch:  1600  |  train loss: 0.0001239083
+Epoch:  1700  |  train loss: 0.0001192782
+Epoch:  1800  |  train loss: 0.0001152561
+Epoch:  1900  |  train loss: 0.0001119498
+Epoch:  2000  |  train loss: 0.0001088219
+Processing class: 40
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003330980
+Epoch:   200  |  train loss: 0.0002863582
+Epoch:   300  |  train loss: 0.0002584404
+Epoch:   400  |  train loss: 0.0002463276
+Epoch:   500  |  train loss: 0.0002248871
+Epoch:   600  |  train loss: 0.0002108658
+Epoch:   700  |  train loss: 0.0001988992
+Epoch:   800  |  train loss: 0.0001857875
+Epoch:   900  |  train loss: 0.0001750999
+Epoch:  1000  |  train loss: 0.0001655683
+Epoch:  1100  |  train loss: 0.0001580822
+Epoch:  1200  |  train loss: 0.0001524189
+Epoch:  1300  |  train loss: 0.0001476730
+Epoch:  1400  |  train loss: 0.0001430359
+Epoch:  1500  |  train loss: 0.0001375853
+Epoch:  1600  |  train loss: 0.0001322072
+Epoch:  1700  |  train loss: 0.0001271329
+Epoch:  1800  |  train loss: 0.0001228896
+Epoch:  1900  |  train loss: 0.0001193774
+Epoch:  2000  |  train loss: 0.0001160569
+Processing class: 41
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003798895
+Epoch:   200  |  train loss: 0.0003109459
+Epoch:   300  |  train loss: 0.0002918718
+Epoch:   400  |  train loss: 0.0002596641
+Epoch:   500  |  train loss: 0.0002495918
+Epoch:   600  |  train loss: 0.0002324629
+Epoch:   700  |  train loss: 0.0002043408
+Epoch:   800  |  train loss: 0.0001886080
+Epoch:   900  |  train loss: 0.0001758158
+Epoch:  1000  |  train loss: 0.0001671431
+Epoch:  1100  |  train loss: 0.0001588842
+Epoch:  1200  |  train loss: 0.0001516111
+Epoch:  1300  |  train loss: 0.0001454584
+Epoch:  1400  |  train loss: 0.0001394343
+Epoch:  1500  |  train loss: 0.0001332180
+Epoch:  1600  |  train loss: 0.0001273039
+Epoch:  1700  |  train loss: 0.0001222981
+Epoch:  1800  |  train loss: 0.0001182416
+Epoch:  1900  |  train loss: 0.0001144614
+Epoch:  2000  |  train loss: 0.0001112879
+Processing class: 42
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003365588
+Epoch:   200  |  train loss: 0.0002941281
+Epoch:   300  |  train loss: 0.0002604779
+Epoch:   400  |  train loss: 0.0002408617
+Epoch:   500  |  train loss: 0.0002282757
+Epoch:   600  |  train loss: 0.0002094426
+Epoch:   700  |  train loss: 0.0001913833
+Epoch:   800  |  train loss: 0.0001778511
+Epoch:   900  |  train loss: 0.0001677100
+Epoch:  1000  |  train loss: 0.0001596696
+Epoch:  1100  |  train loss: 0.0001523154
+Epoch:  1200  |  train loss: 0.0001453045
+Epoch:  1300  |  train loss: 0.0001390353
+Epoch:  1400  |  train loss: 0.0001334895
+Epoch:  1500  |  train loss: 0.0001284950
+Epoch:  1600  |  train loss: 0.0001243835
+Epoch:  1700  |  train loss: 0.0001207016
+Epoch:  1800  |  train loss: 0.0001171448
+Epoch:  1900  |  train loss: 0.0001135689
+Epoch:  2000  |  train loss: 0.0001101728
+Processing class: 43
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002513209
+Epoch:   200  |  train loss: 0.0002095412
+Epoch:   300  |  train loss: 0.0001968451
+Epoch:   400  |  train loss: 0.0001744628
+Epoch:   500  |  train loss: 0.0001531871
+Epoch:   600  |  train loss: 0.0001424649
+Epoch:   700  |  train loss: 0.0001383073
+Epoch:   800  |  train loss: 0.0001330199
+Epoch:   900  |  train loss: 0.0001265621
+Epoch:  1000  |  train loss: 0.0001210900
+Epoch:  1100  |  train loss: 0.0001148172
+Epoch:  1200  |  train loss: 0.0001085352
+Epoch:  1300  |  train loss: 0.0001038251
+Epoch:  1400  |  train loss: 0.0001003022
+Epoch:  1500  |  train loss: 0.0000970951
+Epoch:  1600  |  train loss: 0.0000942849
+Epoch:  1700  |  train loss: 0.0000916050
+Epoch:  1800  |  train loss: 0.0000889639
+Epoch:  1900  |  train loss: 0.0000863822
+Epoch:  2000  |  train loss: 0.0000840607
+Processing class: 44
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003532175
+Epoch:   200  |  train loss: 0.0003023080
+Epoch:   300  |  train loss: 0.0002686991
+Epoch:   400  |  train loss: 0.0002530225
+Epoch:   500  |  train loss: 0.0002347263
+Epoch:   600  |  train loss: 0.0002223335
+Epoch:   700  |  train loss: 0.0002058980
+Epoch:   800  |  train loss: 0.0001883244
+Epoch:   900  |  train loss: 0.0001732346
+Epoch:  1000  |  train loss: 0.0001628918
+Epoch:  1100  |  train loss: 0.0001526183
+Epoch:  1200  |  train loss: 0.0001437394
+Epoch:  1300  |  train loss: 0.0001369082
+Epoch:  1400  |  train loss: 0.0001313682
+Epoch:  1500  |  train loss: 0.0001265133
+Epoch:  1600  |  train loss: 0.0001219084
+Epoch:  1700  |  train loss: 0.0001176955
+Epoch:  1800  |  train loss: 0.0001138254
+Epoch:  1900  |  train loss: 0.0001101009
+Epoch:  2000  |  train loss: 0.0001068158
+Processing class: 45
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002871796
+Epoch:   200  |  train loss: 0.0002354127
+Epoch:   300  |  train loss: 0.0002202781
+Epoch:   400  |  train loss: 0.0002037470
+Epoch:   500  |  train loss: 0.0001884170
+Epoch:   600  |  train loss: 0.0001763106
+Epoch:   700  |  train loss: 0.0001636791
+Epoch:   800  |  train loss: 0.0001486347
+Epoch:   900  |  train loss: 0.0001368768
+Epoch:  1000  |  train loss: 0.0001325738
+Epoch:  1100  |  train loss: 0.0001296714
+Epoch:  1200  |  train loss: 0.0001260745
+Epoch:  1300  |  train loss: 0.0001201510
+Epoch:  1400  |  train loss: 0.0001134100
+Epoch:  1500  |  train loss: 0.0001076170
+Epoch:  1600  |  train loss: 0.0001025763
+Epoch:  1700  |  train loss: 0.0000974945
+Epoch:  1800  |  train loss: 0.0000932278
+Epoch:  1900  |  train loss: 0.0000893793
+Epoch:  2000  |  train loss: 0.0000863699
+Processing class: 46
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002795994
+Epoch:   200  |  train loss: 0.0002729856
+Epoch:   300  |  train loss: 0.0002339730
+Epoch:   400  |  train loss: 0.0002142359
+Epoch:   500  |  train loss: 0.0001971087
+Epoch:   600  |  train loss: 0.0001854442
+Epoch:   700  |  train loss: 0.0001716273
+Epoch:   800  |  train loss: 0.0001562666
+Epoch:   900  |  train loss: 0.0001460167
+Epoch:  1000  |  train loss: 0.0001377771
+Epoch:  1100  |  train loss: 0.0001299310
+Epoch:  1200  |  train loss: 0.0001235116
+Epoch:  1300  |  train loss: 0.0001173643
+Epoch:  1400  |  train loss: 0.0001125192
+Epoch:  1500  |  train loss: 0.0001085000
+Epoch:  1600  |  train loss: 0.0001046807
+Epoch:  1700  |  train loss: 0.0001017167
+Epoch:  1800  |  train loss: 0.0000989523
+Epoch:  1900  |  train loss: 0.0000964586
+Epoch:  2000  |  train loss: 0.0000938131
+Processing class: 47
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003943289
+Epoch:   200  |  train loss: 0.0003867810
+Epoch:   300  |  train loss: 0.0003248206
+Epoch:   400  |  train loss: 0.0002557483
+Epoch:   500  |  train loss: 0.0002375429
+Epoch:   600  |  train loss: 0.0002135055
+Epoch:   700  |  train loss: 0.0002006849
+Epoch:   800  |  train loss: 0.0001902830
+Epoch:   900  |  train loss: 0.0001810767
+Epoch:  1000  |  train loss: 0.0001724918
+Epoch:  1100  |  train loss: 0.0001653948
+Epoch:  1200  |  train loss: 0.0001588970
+Epoch:  1300  |  train loss: 0.0001523020
+Epoch:  1400  |  train loss: 0.0001461105
+Epoch:  1500  |  train loss: 0.0001403727
+Epoch:  1600  |  train loss: 0.0001357444
+Epoch:  1700  |  train loss: 0.0001314695
+Epoch:  1800  |  train loss: 0.0001276665
+Epoch:  1900  |  train loss: 0.0001238546
+Epoch:  2000  |  train loss: 0.0001201325
+Processing class: 48
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003669271
+Epoch:   200  |  train loss: 0.0003564297
+Epoch:   300  |  train loss: 0.0002803298
+Epoch:   400  |  train loss: 0.0002510069
+Epoch:   500  |  train loss: 0.0002416273
+Epoch:   600  |  train loss: 0.0002229522
+Epoch:   700  |  train loss: 0.0002061910
+Epoch:   800  |  train loss: 0.0001933532
+Epoch:   900  |  train loss: 0.0001834999
+Epoch:  1000  |  train loss: 0.0001725201
+Epoch:  1100  |  train loss: 0.0001634745
+Epoch:  1200  |  train loss: 0.0001550644
+Epoch:  1300  |  train loss: 0.0001481700
+Epoch:  1400  |  train loss: 0.0001426970
+Epoch:  1500  |  train loss: 0.0001379585
+Epoch:  1600  |  train loss: 0.0001332981
+Epoch:  1700  |  train loss: 0.0001292210
+Epoch:  1800  |  train loss: 0.0001255305
+Epoch:  1900  |  train loss: 0.0001221728
+Epoch:  2000  |  train loss: 0.0001191945
+Processing class: 49
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003949375
+Epoch:   200  |  train loss: 0.0003335185
+Epoch:   300  |  train loss: 0.0002843206
+Epoch:   400  |  train loss: 0.0002640401
+Epoch:   500  |  train loss: 0.0002445917
+Epoch:   600  |  train loss: 0.0002212015
+Epoch:   700  |  train loss: 0.0002027464
+Epoch:   800  |  train loss: 0.0001930149
+Epoch:   900  |  train loss: 0.0001839947
+Epoch:  1000  |  train loss: 0.0001764774
+Epoch:  1100  |  train loss: 0.0001693151
+Epoch:  1200  |  train loss: 0.0001624866
+Epoch:  1300  |  train loss: 0.0001558553
+Epoch:  1400  |  train loss: 0.0001487438
+Epoch:  1500  |  train loss: 0.0001422211
+Epoch:  1600  |  train loss: 0.0001373347
+Epoch:  1700  |  train loss: 0.0001331084
+Epoch:  1800  |  train loss: 0.0001292343
+Epoch:  1900  |  train loss: 0.0001252938
+Epoch:  2000  |  train loss: 0.0001214540
+/home/z1165703/FeCAM/models/base.py:87: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  if self.args['ae_standarization']:
+2024-03-10 14:53:35,637 [trainer.py] => CNN: {'total': 83.44, '00-09': 87.7, '10-19': 79.6, '20-29': 84.9, '30-39': 81.0, '40-49': 84.0, 'old': 0, 'new': 83.44}
+2024-03-10 14:53:35,639 [trainer.py] => No NME accuracy
+2024-03-10 14:53:35,639 [trainer.py] => FeCAM: {'total': 82.74, '00-09': 86.3, '10-19': 79.6, '20-29': 84.9, '30-39': 80.0, '40-49': 82.9, 'old': 0, 'new': 82.74}
+2024-03-10 14:53:35,639 [trainer.py] => CNN top1 curve: [83.44]
+2024-03-10 14:53:35,639 [trainer.py] => CNN top5 curve: [96.5]
+2024-03-10 14:53:35,639 [trainer.py] => FeCAM top1 curve: [82.74]
+2024-03-10 14:53:35,639 [trainer.py] => FeCAM top5 curve: [95.2]
+
+2024-03-10 14:53:35,647 [fecam.py] => Learning on 50-60
+Processing class: 50
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002743471
+Epoch:   200  |  train loss: 0.0002262218
+Epoch:   300  |  train loss: 0.0001904360
+Epoch:   400  |  train loss: 0.0001683630
+Epoch:   500  |  train loss: 0.0001526169
+Epoch:   600  |  train loss: 0.0001419204
+Epoch:   700  |  train loss: 0.0001330962
+Epoch:   800  |  train loss: 0.0001251738
+Epoch:   900  |  train loss: 0.0001185973
+Epoch:  1000  |  train loss: 0.0001131477
+Epoch:  1100  |  train loss: 0.0001077426
+Epoch:  1200  |  train loss: 0.0001030758
+Epoch:  1300  |  train loss: 0.0000990338
+Epoch:  1400  |  train loss: 0.0000952954
+Epoch:  1500  |  train loss: 0.0000920355
+Epoch:  1600  |  train loss: 0.0000891835
+Epoch:  1700  |  train loss: 0.0000865193
+Epoch:  1800  |  train loss: 0.0000841135
+Epoch:  1900  |  train loss: 0.0000819596
+Epoch:  2000  |  train loss: 0.0000799550
+Processing class: 51
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002925775
+Epoch:   200  |  train loss: 0.0002818724
+Epoch:   300  |  train loss: 0.0002118162
+Epoch:   400  |  train loss: 0.0001866860
+Epoch:   500  |  train loss: 0.0001668649
+Epoch:   600  |  train loss: 0.0001499992
+Epoch:   700  |  train loss: 0.0001381348
+Epoch:   800  |  train loss: 0.0001293810
+Epoch:   900  |  train loss: 0.0001226233
+Epoch:  1000  |  train loss: 0.0001168023
+Epoch:  1100  |  train loss: 0.0001114700
+Epoch:  1200  |  train loss: 0.0001069259
+Epoch:  1300  |  train loss: 0.0001025234
+Epoch:  1400  |  train loss: 0.0000989264
+Epoch:  1500  |  train loss: 0.0000958245
+Epoch:  1600  |  train loss: 0.0000928040
+Epoch:  1700  |  train loss: 0.0000902973
+Epoch:  1800  |  train loss: 0.0000879075
+Epoch:  1900  |  train loss: 0.0000855601
+Epoch:  2000  |  train loss: 0.0000835370
+Processing class: 52
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002945176
+Epoch:   200  |  train loss: 0.0002583174
+Epoch:   300  |  train loss: 0.0002117009
+Epoch:   400  |  train loss: 0.0001867496
+Epoch:   500  |  train loss: 0.0001700249
+Epoch:   600  |  train loss: 0.0001568412
+Epoch:   700  |  train loss: 0.0001466009
+Epoch:   800  |  train loss: 0.0001382756
+Epoch:   900  |  train loss: 0.0001310310
+Epoch:  1000  |  train loss: 0.0001246813
+Epoch:  1100  |  train loss: 0.0001189102
+Epoch:  1200  |  train loss: 0.0001138751
+Epoch:  1300  |  train loss: 0.0001096891
+Epoch:  1400  |  train loss: 0.0001059218
+Epoch:  1500  |  train loss: 0.0001027990
+Epoch:  1600  |  train loss: 0.0000999088
+Epoch:  1700  |  train loss: 0.0000971666
+Epoch:  1800  |  train loss: 0.0000946690
+Epoch:  1900  |  train loss: 0.0000923850
+Epoch:  2000  |  train loss: 0.0000902902
+Processing class: 53
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002290158
+Epoch:   200  |  train loss: 0.0001748583
+Epoch:   300  |  train loss: 0.0001584291
+Epoch:   400  |  train loss: 0.0001288767
+Epoch:   500  |  train loss: 0.0001176853
+Epoch:   600  |  train loss: 0.0001118113
+Epoch:   700  |  train loss: 0.0001063552
+Epoch:   800  |  train loss: 0.0001008065
+Epoch:   900  |  train loss: 0.0000953432
+Epoch:  1000  |  train loss: 0.0000906335
+Epoch:  1100  |  train loss: 0.0000865916
+Epoch:  1200  |  train loss: 0.0000830738
+Epoch:  1300  |  train loss: 0.0000799613
+Epoch:  1400  |  train loss: 0.0000769627
+Epoch:  1500  |  train loss: 0.0000744241
+Epoch:  1600  |  train loss: 0.0000722745
+Epoch:  1700  |  train loss: 0.0000701312
+Epoch:  1800  |  train loss: 0.0000678309
+Epoch:  1900  |  train loss: 0.0000656587
+Epoch:  2000  |  train loss: 0.0000638198
+Processing class: 54
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003062244
+Epoch:   200  |  train loss: 0.0002272868
+Epoch:   300  |  train loss: 0.0001935986
+Epoch:   400  |  train loss: 0.0001757576
+Epoch:   500  |  train loss: 0.0001627341
+Epoch:   600  |  train loss: 0.0001525390
+Epoch:   700  |  train loss: 0.0001435785
+Epoch:   800  |  train loss: 0.0001354577
+Epoch:   900  |  train loss: 0.0001284967
+Epoch:  1000  |  train loss: 0.0001219156
+Epoch:  1100  |  train loss: 0.0001161078
+Epoch:  1200  |  train loss: 0.0001112056
+Epoch:  1300  |  train loss: 0.0001066062
+Epoch:  1400  |  train loss: 0.0001023636
+Epoch:  1500  |  train loss: 0.0000986639
+Epoch:  1600  |  train loss: 0.0000951227
+Epoch:  1700  |  train loss: 0.0000921948
+Epoch:  1800  |  train loss: 0.0000893133
+Epoch:  1900  |  train loss: 0.0000868093
+Epoch:  2000  |  train loss: 0.0000844625
+Processing class: 55
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002246883
+Epoch:   200  |  train loss: 0.0002112784
+Epoch:   300  |  train loss: 0.0001934795
+Epoch:   400  |  train loss: 0.0001745710
+Epoch:   500  |  train loss: 0.0001590423
+Epoch:   600  |  train loss: 0.0001423537
+Epoch:   700  |  train loss: 0.0001313827
+Epoch:   800  |  train loss: 0.0001223452
+Epoch:   900  |  train loss: 0.0001148325
+Epoch:  1000  |  train loss: 0.0001086026
+Epoch:  1100  |  train loss: 0.0001033528
+Epoch:  1200  |  train loss: 0.0000987721
+Epoch:  1300  |  train loss: 0.0000947732
+Epoch:  1400  |  train loss: 0.0000911640
+Epoch:  1500  |  train loss: 0.0000876724
+Epoch:  1600  |  train loss: 0.0000847050
+Epoch:  1700  |  train loss: 0.0000819371
+Epoch:  1800  |  train loss: 0.0000796289
+Epoch:  1900  |  train loss: 0.0000774602
+Epoch:  2000  |  train loss: 0.0000755558
+Processing class: 56
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003744711
+Epoch:   200  |  train loss: 0.0002737951
+Epoch:   300  |  train loss: 0.0002190582
+Epoch:   400  |  train loss: 0.0001947903
+Epoch:   500  |  train loss: 0.0001762204
+Epoch:   600  |  train loss: 0.0001658187
+Epoch:   700  |  train loss: 0.0001564068
+Epoch:   800  |  train loss: 0.0001466363
+Epoch:   900  |  train loss: 0.0001385255
+Epoch:  1000  |  train loss: 0.0001323405
+Epoch:  1100  |  train loss: 0.0001270534
+Epoch:  1200  |  train loss: 0.0001221919
+Epoch:  1300  |  train loss: 0.0001180001
+Epoch:  1400  |  train loss: 0.0001141140
+Epoch:  1500  |  train loss: 0.0001106238
+Epoch:  1600  |  train loss: 0.0001075641
+Epoch:  1700  |  train loss: 0.0001043405
+Epoch:  1800  |  train loss: 0.0001015527
+Epoch:  1900  |  train loss: 0.0000988137
+Epoch:  2000  |  train loss: 0.0000965264
+Processing class: 57
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002389034
+Epoch:   200  |  train loss: 0.0002227363
+Epoch:   300  |  train loss: 0.0001910644
+Epoch:   400  |  train loss: 0.0001616771
+Epoch:   500  |  train loss: 0.0001426154
+Epoch:   600  |  train loss: 0.0001309896
+Epoch:   700  |  train loss: 0.0001227218
+Epoch:   800  |  train loss: 0.0001157986
+Epoch:   900  |  train loss: 0.0001094210
+Epoch:  1000  |  train loss: 0.0001039028
+Epoch:  1100  |  train loss: 0.0000990882
+Epoch:  1200  |  train loss: 0.0000949904
+Epoch:  1300  |  train loss: 0.0000913344
+Epoch:  1400  |  train loss: 0.0000882422
+Epoch:  1500  |  train loss: 0.0000853120
+Epoch:  1600  |  train loss: 0.0000827499
+Epoch:  1700  |  train loss: 0.0000803446
+Epoch:  1800  |  train loss: 0.0000782295
+Epoch:  1900  |  train loss: 0.0000762561
+Epoch:  2000  |  train loss: 0.0000744018
+Processing class: 58
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003956999
+Epoch:   200  |  train loss: 0.0003069086
+Epoch:   300  |  train loss: 0.0002593036
+Epoch:   400  |  train loss: 0.0002264416
+Epoch:   500  |  train loss: 0.0001999300
+Epoch:   600  |  train loss: 0.0001823700
+Epoch:   700  |  train loss: 0.0001691065
+Epoch:   800  |  train loss: 0.0001577033
+Epoch:   900  |  train loss: 0.0001477525
+Epoch:  1000  |  train loss: 0.0001389116
+Epoch:  1100  |  train loss: 0.0001317158
+Epoch:  1200  |  train loss: 0.0001257175
+Epoch:  1300  |  train loss: 0.0001201676
+Epoch:  1400  |  train loss: 0.0001154369
+Epoch:  1500  |  train loss: 0.0001115221
+Epoch:  1600  |  train loss: 0.0001079720
+Epoch:  1700  |  train loss: 0.0001049142
+Epoch:  1800  |  train loss: 0.0001020459
+Epoch:  1900  |  train loss: 0.0000992681
+Epoch:  2000  |  train loss: 0.0000968863
+Processing class: 59
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003195715
+Epoch:   200  |  train loss: 0.0002321210
+Epoch:   300  |  train loss: 0.0001896853
+Epoch:   400  |  train loss: 0.0001691661
+Epoch:   500  |  train loss: 0.0001589690
+Epoch:   600  |  train loss: 0.0001502111
+Epoch:   700  |  train loss: 0.0001415259
+Epoch:   800  |  train loss: 0.0001328561
+Epoch:   900  |  train loss: 0.0001255078
+Epoch:  1000  |  train loss: 0.0001191380
+Epoch:  1100  |  train loss: 0.0001140818
+Epoch:  1200  |  train loss: 0.0001101970
+Epoch:  1300  |  train loss: 0.0001066231
+Epoch:  1400  |  train loss: 0.0001035427
+Epoch:  1500  |  train loss: 0.0001009816
+Epoch:  1600  |  train loss: 0.0000985288
+Epoch:  1700  |  train loss: 0.0000962860
+Epoch:  1800  |  train loss: 0.0000940480
+Epoch:  1900  |  train loss: 0.0000918890
+Epoch:  2000  |  train loss: 0.0000898656
+2024-03-10 15:04:36,136 [trainer.py] => CNN: {'total': 71.75, '00-09': 82.2, '10-19': 72.8, '20-29': 78.5, '30-39': 74.9, '40-49': 68.4, '50-59': 53.7, 'old': 75.36, 'new': 53.7}
+2024-03-10 15:04:36,137 [trainer.py] => No NME accuracy
+2024-03-10 15:04:36,137 [trainer.py] => FeCAM: {'total': 72.32, '00-09': 82.2, '10-19': 72.2, '20-29': 80.5, '30-39': 75.7, '40-49': 77.6, '50-59': 45.7, 'old': 77.64, 'new': 45.7}
+2024-03-10 15:04:36,137 [trainer.py] => CNN top1 curve: [83.44, 71.75]
+2024-03-10 15:04:36,137 [trainer.py] => CNN top5 curve: [96.5, 89.6]
+2024-03-10 15:04:36,137 [trainer.py] => FeCAM top1 curve: [82.74, 72.32]
+2024-03-10 15:04:36,137 [trainer.py] => FeCAM top5 curve: [95.2, 90.73]
+
+2024-03-10 15:04:36,146 [fecam.py] => Learning on 60-70
+Processing class: 60
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002914296
+Epoch:   200  |  train loss: 0.0002380123
+Epoch:   300  |  train loss: 0.0002093308
+Epoch:   400  |  train loss: 0.0001826956
+Epoch:   500  |  train loss: 0.0001635893
+Epoch:   600  |  train loss: 0.0001522565
+Epoch:   700  |  train loss: 0.0001427016
+Epoch:   800  |  train loss: 0.0001327272
+Epoch:   900  |  train loss: 0.0001242470
+Epoch:  1000  |  train loss: 0.0001173526
+Epoch:  1100  |  train loss: 0.0001117104
+Epoch:  1200  |  train loss: 0.0001070468
+Epoch:  1300  |  train loss: 0.0001031646
+Epoch:  1400  |  train loss: 0.0000997143
+Epoch:  1500  |  train loss: 0.0000964526
+Epoch:  1600  |  train loss: 0.0000936476
+Epoch:  1700  |  train loss: 0.0000911416
+Epoch:  1800  |  train loss: 0.0000889410
+Epoch:  1900  |  train loss: 0.0000868215
+Epoch:  2000  |  train loss: 0.0000849243
+Processing class: 61
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002971294
+Epoch:   200  |  train loss: 0.0002443876
+Epoch:   300  |  train loss: 0.0002238488
+Epoch:   400  |  train loss: 0.0001878225
+Epoch:   500  |  train loss: 0.0001663135
+Epoch:   600  |  train loss: 0.0001507793
+Epoch:   700  |  train loss: 0.0001392836
+Epoch:   800  |  train loss: 0.0001300877
+Epoch:   900  |  train loss: 0.0001221597
+Epoch:  1000  |  train loss: 0.0001155417
+Epoch:  1100  |  train loss: 0.0001100320
+Epoch:  1200  |  train loss: 0.0001050003
+Epoch:  1300  |  train loss: 0.0001007285
+Epoch:  1400  |  train loss: 0.0000969046
+Epoch:  1500  |  train loss: 0.0000932727
+Epoch:  1600  |  train loss: 0.0000898490
+Epoch:  1700  |  train loss: 0.0000866219
+Epoch:  1800  |  train loss: 0.0000836924
+Epoch:  1900  |  train loss: 0.0000808105
+Epoch:  2000  |  train loss: 0.0000783490
+Processing class: 62
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002170567
+Epoch:   200  |  train loss: 0.0002057035
+Epoch:   300  |  train loss: 0.0001791301
+Epoch:   400  |  train loss: 0.0001629122
+Epoch:   500  |  train loss: 0.0001465228
+Epoch:   600  |  train loss: 0.0001336400
+Epoch:   700  |  train loss: 0.0001237702
+Epoch:   800  |  train loss: 0.0001155310
+Epoch:   900  |  train loss: 0.0001088200
+Epoch:  1000  |  train loss: 0.0001028048
+Epoch:  1100  |  train loss: 0.0000975178
+Epoch:  1200  |  train loss: 0.0000931605
+Epoch:  1300  |  train loss: 0.0000894933
+Epoch:  1400  |  train loss: 0.0000863584
+Epoch:  1500  |  train loss: 0.0000835746
+Epoch:  1600  |  train loss: 0.0000811702
+Epoch:  1700  |  train loss: 0.0000789729
+Epoch:  1800  |  train loss: 0.0000770526
+Epoch:  1900  |  train loss: 0.0000752547
+Epoch:  2000  |  train loss: 0.0000735891
+Processing class: 63
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003002920
+Epoch:   200  |  train loss: 0.0002585405
+Epoch:   300  |  train loss: 0.0002103740
+Epoch:   400  |  train loss: 0.0001863550
+Epoch:   500  |  train loss: 0.0001629643
+Epoch:   600  |  train loss: 0.0001487258
+Epoch:   700  |  train loss: 0.0001362932
+Epoch:   800  |  train loss: 0.0001273221
+Epoch:   900  |  train loss: 0.0001208936
+Epoch:  1000  |  train loss: 0.0001156309
+Epoch:  1100  |  train loss: 0.0001109738
+Epoch:  1200  |  train loss: 0.0001067020
+Epoch:  1300  |  train loss: 0.0001028305
+Epoch:  1400  |  train loss: 0.0000994198
+Epoch:  1500  |  train loss: 0.0000962015
+Epoch:  1600  |  train loss: 0.0000932065
+Epoch:  1700  |  train loss: 0.0000905480
+Epoch:  1800  |  train loss: 0.0000879402
+Epoch:  1900  |  train loss: 0.0000854187
+Epoch:  2000  |  train loss: 0.0000830197
+Processing class: 64
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003577852
+Epoch:   200  |  train loss: 0.0002592296
+Epoch:   300  |  train loss: 0.0002048401
+Epoch:   400  |  train loss: 0.0001848582
+Epoch:   500  |  train loss: 0.0001710540
+Epoch:   600  |  train loss: 0.0001614226
+Epoch:   700  |  train loss: 0.0001525099
+Epoch:   800  |  train loss: 0.0001430666
+Epoch:   900  |  train loss: 0.0001346848
+Epoch:  1000  |  train loss: 0.0001277822
+Epoch:  1100  |  train loss: 0.0001212388
+Epoch:  1200  |  train loss: 0.0001154004
+Epoch:  1300  |  train loss: 0.0001104336
+Epoch:  1400  |  train loss: 0.0001059132
+Epoch:  1500  |  train loss: 0.0001021595
+Epoch:  1600  |  train loss: 0.0000988076
+Epoch:  1700  |  train loss: 0.0000957757
+Epoch:  1800  |  train loss: 0.0000931653
+Epoch:  1900  |  train loss: 0.0000904866
+Epoch:  2000  |  train loss: 0.0000880916
+Processing class: 65
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003628475
+Epoch:   200  |  train loss: 0.0002754791
+Epoch:   300  |  train loss: 0.0002156370
+Epoch:   400  |  train loss: 0.0001916167
+Epoch:   500  |  train loss: 0.0001762849
+Epoch:   600  |  train loss: 0.0001636304
+Epoch:   700  |  train loss: 0.0001530116
+Epoch:   800  |  train loss: 0.0001438437
+Epoch:   900  |  train loss: 0.0001355602
+Epoch:  1000  |  train loss: 0.0001281195
+Epoch:  1100  |  train loss: 0.0001222070
+Epoch:  1200  |  train loss: 0.0001174434
+Epoch:  1300  |  train loss: 0.0001128810
+Epoch:  1400  |  train loss: 0.0001092456
+Epoch:  1500  |  train loss: 0.0001059833
+Epoch:  1600  |  train loss: 0.0001026544
+Epoch:  1700  |  train loss: 0.0000996562
+Epoch:  1800  |  train loss: 0.0000971083
+Epoch:  1900  |  train loss: 0.0000947448
+Epoch:  2000  |  train loss: 0.0000924726
+Processing class: 66
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002643343
+Epoch:   200  |  train loss: 0.0001975086
+Epoch:   300  |  train loss: 0.0001637638
+Epoch:   400  |  train loss: 0.0001475112
+Epoch:   500  |  train loss: 0.0001356648
+Epoch:   600  |  train loss: 0.0001275237
+Epoch:   700  |  train loss: 0.0001208917
+Epoch:   800  |  train loss: 0.0001134167
+Epoch:   900  |  train loss: 0.0001069480
+Epoch:  1000  |  train loss: 0.0001020166
+Epoch:  1100  |  train loss: 0.0000978657
+Epoch:  1200  |  train loss: 0.0000942675
+Epoch:  1300  |  train loss: 0.0000909810
+Epoch:  1400  |  train loss: 0.0000877321
+Epoch:  1500  |  train loss: 0.0000845592
+Epoch:  1600  |  train loss: 0.0000818869
+Epoch:  1700  |  train loss: 0.0000794822
+Epoch:  1800  |  train loss: 0.0000771807
+Epoch:  1900  |  train loss: 0.0000751533
+Epoch:  2000  |  train loss: 0.0000732650
+Processing class: 67
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002886138
+Epoch:   200  |  train loss: 0.0002339682
+Epoch:   300  |  train loss: 0.0001973880
+Epoch:   400  |  train loss: 0.0001805452
+Epoch:   500  |  train loss: 0.0001624147
+Epoch:   600  |  train loss: 0.0001489206
+Epoch:   700  |  train loss: 0.0001398285
+Epoch:   800  |  train loss: 0.0001323743
+Epoch:   900  |  train loss: 0.0001260130
+Epoch:  1000  |  train loss: 0.0001200017
+Epoch:  1100  |  train loss: 0.0001147732
+Epoch:  1200  |  train loss: 0.0001103458
+Epoch:  1300  |  train loss: 0.0001064384
+Epoch:  1400  |  train loss: 0.0001025029
+Epoch:  1500  |  train loss: 0.0000990013
+Epoch:  1600  |  train loss: 0.0000956147
+Epoch:  1700  |  train loss: 0.0000926038
+Epoch:  1800  |  train loss: 0.0000898162
+Epoch:  1900  |  train loss: 0.0000874178
+Epoch:  2000  |  train loss: 0.0000851860
+Processing class: 68
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002767782
+Epoch:   200  |  train loss: 0.0002515111
+Epoch:   300  |  train loss: 0.0002187420
+Epoch:   400  |  train loss: 0.0002005293
+Epoch:   500  |  train loss: 0.0001779588
+Epoch:   600  |  train loss: 0.0001616986
+Epoch:   700  |  train loss: 0.0001493321
+Epoch:   800  |  train loss: 0.0001402504
+Epoch:   900  |  train loss: 0.0001322343
+Epoch:  1000  |  train loss: 0.0001241538
+Epoch:  1100  |  train loss: 0.0001173368
+Epoch:  1200  |  train loss: 0.0001113203
+Epoch:  1300  |  train loss: 0.0001056147
+Epoch:  1400  |  train loss: 0.0001008313
+Epoch:  1500  |  train loss: 0.0000968720
+Epoch:  1600  |  train loss: 0.0000932354
+Epoch:  1700  |  train loss: 0.0000901124
+Epoch:  1800  |  train loss: 0.0000871880
+Epoch:  1900  |  train loss: 0.0000845865
+Epoch:  2000  |  train loss: 0.0000822067
+Processing class: 69
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003544819
+Epoch:   200  |  train loss: 0.0003049440
+Epoch:   300  |  train loss: 0.0002377433
+Epoch:   400  |  train loss: 0.0002168715
+Epoch:   500  |  train loss: 0.0002053220
+Epoch:   600  |  train loss: 0.0001940150
+Epoch:   700  |  train loss: 0.0001812540
+Epoch:   800  |  train loss: 0.0001708031
+Epoch:   900  |  train loss: 0.0001616426
+Epoch:  1000  |  train loss: 0.0001531571
+Epoch:  1100  |  train loss: 0.0001456932
+Epoch:  1200  |  train loss: 0.0001390481
+Epoch:  1300  |  train loss: 0.0001334762
+Epoch:  1400  |  train loss: 0.0001282892
+Epoch:  1500  |  train loss: 0.0001233527
+Epoch:  1600  |  train loss: 0.0001189148
+Epoch:  1700  |  train loss: 0.0001146624
+Epoch:  1800  |  train loss: 0.0001108134
+Epoch:  1900  |  train loss: 0.0001066614
+Epoch:  2000  |  train loss: 0.0001025931
+2024-03-10 15:16:27,159 [trainer.py] => CNN: {'total': 64.66, '00-09': 75.0, '10-19': 70.1, '20-29': 77.1, '30-39': 70.6, '40-49': 64.0, '50-59': 45.8, '60-69': 50.0, 'old': 67.1, 'new': 50.0}
+2024-03-10 15:16:27,160 [trainer.py] => No NME accuracy
+2024-03-10 15:16:27,160 [trainer.py] => FeCAM: {'total': 66.61, '00-09': 79.6, '10-19': 69.4, '20-29': 78.6, '30-39': 72.5, '40-49': 74.3, '50-59': 40.1, '60-69': 51.8, 'old': 69.08, 'new': 51.8}
+2024-03-10 15:16:27,160 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66]
+2024-03-10 15:16:27,160 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54]
+2024-03-10 15:16:27,160 [trainer.py] => FeCAM top1 curve: [82.74, 72.32, 66.61]
+2024-03-10 15:16:27,160 [trainer.py] => FeCAM top5 curve: [95.2, 90.73, 86.53]
+
+2024-03-10 15:16:27,164 [fecam.py] => Learning on 70-80
+Processing class: 70
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003085577
+Epoch:   200  |  train loss: 0.0002754782
+Epoch:   300  |  train loss: 0.0002352193
+Epoch:   400  |  train loss: 0.0002179360
+Epoch:   500  |  train loss: 0.0001944817
+Epoch:   600  |  train loss: 0.0001768443
+Epoch:   700  |  train loss: 0.0001597377
+Epoch:   800  |  train loss: 0.0001480746
+Epoch:   900  |  train loss: 0.0001394312
+Epoch:  1000  |  train loss: 0.0001322632
+Epoch:  1100  |  train loss: 0.0001257626
+Epoch:  1200  |  train loss: 0.0001196045
+Epoch:  1300  |  train loss: 0.0001136513
+Epoch:  1400  |  train loss: 0.0001085265
+Epoch:  1500  |  train loss: 0.0001044022
+Epoch:  1600  |  train loss: 0.0001013125
+Epoch:  1700  |  train loss: 0.0000981999
+Epoch:  1800  |  train loss: 0.0000955421
+Epoch:  1900  |  train loss: 0.0000930929
+Epoch:  2000  |  train loss: 0.0000907630
+Processing class: 71
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002764453
+Epoch:   200  |  train loss: 0.0002428987
+Epoch:   300  |  train loss: 0.0002133488
+Epoch:   400  |  train loss: 0.0001797792
+Epoch:   500  |  train loss: 0.0001632713
+Epoch:   600  |  train loss: 0.0001496768
+Epoch:   700  |  train loss: 0.0001392033
+Epoch:   800  |  train loss: 0.0001313250
+Epoch:   900  |  train loss: 0.0001248748
+Epoch:  1000  |  train loss: 0.0001188555
+Epoch:  1100  |  train loss: 0.0001133471
+Epoch:  1200  |  train loss: 0.0001085675
+Epoch:  1300  |  train loss: 0.0001042465
+Epoch:  1400  |  train loss: 0.0001002847
+Epoch:  1500  |  train loss: 0.0000967197
+Epoch:  1600  |  train loss: 0.0000934336
+Epoch:  1700  |  train loss: 0.0000907675
+Epoch:  1800  |  train loss: 0.0000882840
+Epoch:  1900  |  train loss: 0.0000861748
+Epoch:  2000  |  train loss: 0.0000842237
+Processing class: 72
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002956881
+Epoch:   200  |  train loss: 0.0002614245
+Epoch:   300  |  train loss: 0.0002265168
+Epoch:   400  |  train loss: 0.0002016158
+Epoch:   500  |  train loss: 0.0001810608
+Epoch:   600  |  train loss: 0.0001635473
+Epoch:   700  |  train loss: 0.0001504435
+Epoch:   800  |  train loss: 0.0001403418
+Epoch:   900  |  train loss: 0.0001320456
+Epoch:  1000  |  train loss: 0.0001252308
+Epoch:  1100  |  train loss: 0.0001193173
+Epoch:  1200  |  train loss: 0.0001140793
+Epoch:  1300  |  train loss: 0.0001091737
+Epoch:  1400  |  train loss: 0.0001047855
+Epoch:  1500  |  train loss: 0.0001007245
+Epoch:  1600  |  train loss: 0.0000972170
+Epoch:  1700  |  train loss: 0.0000941093
+Epoch:  1800  |  train loss: 0.0000910669
+Epoch:  1900  |  train loss: 0.0000883092
+Epoch:  2000  |  train loss: 0.0000858388
+Processing class: 73
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002671554
+Epoch:   200  |  train loss: 0.0002104763
+Epoch:   300  |  train loss: 0.0001615439
+Epoch:   400  |  train loss: 0.0001433879
+Epoch:   500  |  train loss: 0.0001320978
+Epoch:   600  |  train loss: 0.0001228306
+Epoch:   700  |  train loss: 0.0001145262
+Epoch:   800  |  train loss: 0.0001063584
+Epoch:   900  |  train loss: 0.0000998464
+Epoch:  1000  |  train loss: 0.0000950843
+Epoch:  1100  |  train loss: 0.0000911714
+Epoch:  1200  |  train loss: 0.0000877536
+Epoch:  1300  |  train loss: 0.0000848173
+Epoch:  1400  |  train loss: 0.0000820978
+Epoch:  1500  |  train loss: 0.0000795685
+Epoch:  1600  |  train loss: 0.0000770772
+Epoch:  1700  |  train loss: 0.0000749123
+Epoch:  1800  |  train loss: 0.0000729286
+Epoch:  1900  |  train loss: 0.0000711276
+Epoch:  2000  |  train loss: 0.0000693119
+Processing class: 74
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002491277
+Epoch:   200  |  train loss: 0.0002165508
+Epoch:   300  |  train loss: 0.0001866644
+Epoch:   400  |  train loss: 0.0001690663
+Epoch:   500  |  train loss: 0.0001497879
+Epoch:   600  |  train loss: 0.0001352375
+Epoch:   700  |  train loss: 0.0001244961
+Epoch:   800  |  train loss: 0.0001154235
+Epoch:   900  |  train loss: 0.0001080864
+Epoch:  1000  |  train loss: 0.0001018448
+Epoch:  1100  |  train loss: 0.0000968181
+Epoch:  1200  |  train loss: 0.0000925187
+Epoch:  1300  |  train loss: 0.0000888458
+Epoch:  1400  |  train loss: 0.0000856507
+Epoch:  1500  |  train loss: 0.0000829402
+Epoch:  1600  |  train loss: 0.0000805593
+Epoch:  1700  |  train loss: 0.0000782883
+Epoch:  1800  |  train loss: 0.0000762026
+Epoch:  1900  |  train loss: 0.0000742422
+Epoch:  2000  |  train loss: 0.0000723615
+Processing class: 75
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002825007
+Epoch:   200  |  train loss: 0.0002319404
+Epoch:   300  |  train loss: 0.0001826683
+Epoch:   400  |  train loss: 0.0001657134
+Epoch:   500  |  train loss: 0.0001494830
+Epoch:   600  |  train loss: 0.0001377250
+Epoch:   700  |  train loss: 0.0001298263
+Epoch:   800  |  train loss: 0.0001236826
+Epoch:   900  |  train loss: 0.0001183451
+Epoch:  1000  |  train loss: 0.0001127319
+Epoch:  1100  |  train loss: 0.0001074974
+Epoch:  1200  |  train loss: 0.0001027243
+Epoch:  1300  |  train loss: 0.0000982381
+Epoch:  1400  |  train loss: 0.0000943058
+Epoch:  1500  |  train loss: 0.0000907391
+Epoch:  1600  |  train loss: 0.0000875307
+Epoch:  1700  |  train loss: 0.0000846929
+Epoch:  1800  |  train loss: 0.0000821778
+Epoch:  1900  |  train loss: 0.0000800248
+Epoch:  2000  |  train loss: 0.0000780475
+Processing class: 76
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003741802
+Epoch:   200  |  train loss: 0.0002604771
+Epoch:   300  |  train loss: 0.0002335908
+Epoch:   400  |  train loss: 0.0002190100
+Epoch:   500  |  train loss: 0.0001987821
+Epoch:   600  |  train loss: 0.0001831908
+Epoch:   700  |  train loss: 0.0001694630
+Epoch:   800  |  train loss: 0.0001577607
+Epoch:   900  |  train loss: 0.0001491584
+Epoch:  1000  |  train loss: 0.0001414064
+Epoch:  1100  |  train loss: 0.0001348605
+Epoch:  1200  |  train loss: 0.0001283853
+Epoch:  1300  |  train loss: 0.0001216736
+Epoch:  1400  |  train loss: 0.0001158226
+Epoch:  1500  |  train loss: 0.0001108035
+Epoch:  1600  |  train loss: 0.0001065465
+Epoch:  1700  |  train loss: 0.0001027656
+Epoch:  1800  |  train loss: 0.0000993993
+Epoch:  1900  |  train loss: 0.0000964041
+Epoch:  2000  |  train loss: 0.0000935715
+Processing class: 77
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002898798
+Epoch:   200  |  train loss: 0.0002442404
+Epoch:   300  |  train loss: 0.0002227712
+Epoch:   400  |  train loss: 0.0001973690
+Epoch:   500  |  train loss: 0.0001811118
+Epoch:   600  |  train loss: 0.0001657298
+Epoch:   700  |  train loss: 0.0001530482
+Epoch:   800  |  train loss: 0.0001435605
+Epoch:   900  |  train loss: 0.0001356976
+Epoch:  1000  |  train loss: 0.0001287112
+Epoch:  1100  |  train loss: 0.0001225034
+Epoch:  1200  |  train loss: 0.0001170177
+Epoch:  1300  |  train loss: 0.0001122332
+Epoch:  1400  |  train loss: 0.0001081451
+Epoch:  1500  |  train loss: 0.0001043429
+Epoch:  1600  |  train loss: 0.0001008017
+Epoch:  1700  |  train loss: 0.0000977504
+Epoch:  1800  |  train loss: 0.0000945890
+Epoch:  1900  |  train loss: 0.0000917051
+Epoch:  2000  |  train loss: 0.0000890487
+Processing class: 78
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002989711
+Epoch:   200  |  train loss: 0.0002431102
+Epoch:   300  |  train loss: 0.0002118365
+Epoch:   400  |  train loss: 0.0001907538
+Epoch:   500  |  train loss: 0.0001766937
+Epoch:   600  |  train loss: 0.0001614442
+Epoch:   700  |  train loss: 0.0001480667
+Epoch:   800  |  train loss: 0.0001386197
+Epoch:   900  |  train loss: 0.0001312372
+Epoch:  1000  |  train loss: 0.0001249041
+Epoch:  1100  |  train loss: 0.0001192180
+Epoch:  1200  |  train loss: 0.0001143933
+Epoch:  1300  |  train loss: 0.0001100175
+Epoch:  1400  |  train loss: 0.0001064057
+Epoch:  1500  |  train loss: 0.0001027264
+Epoch:  1600  |  train loss: 0.0000995727
+Epoch:  1700  |  train loss: 0.0000968047
+Epoch:  1800  |  train loss: 0.0000944252
+Epoch:  1900  |  train loss: 0.0000922652
+Epoch:  2000  |  train loss: 0.0000902470
+Processing class: 79
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002492245
+Epoch:   200  |  train loss: 0.0002250003
+Epoch:   300  |  train loss: 0.0001997348
+Epoch:   400  |  train loss: 0.0001762812
+Epoch:   500  |  train loss: 0.0001560602
+Epoch:   600  |  train loss: 0.0001415328
+Epoch:   700  |  train loss: 0.0001298539
+Epoch:   800  |  train loss: 0.0001205011
+Epoch:   900  |  train loss: 0.0001126206
+Epoch:  1000  |  train loss: 0.0001064115
+Epoch:  1100  |  train loss: 0.0001007752
+Epoch:  1200  |  train loss: 0.0000958146
+Epoch:  1300  |  train loss: 0.0000914858
+Epoch:  1400  |  train loss: 0.0000875857
+Epoch:  1500  |  train loss: 0.0000841902
+Epoch:  1600  |  train loss: 0.0000812826
+Epoch:  1700  |  train loss: 0.0000787763
+Epoch:  1800  |  train loss: 0.0000763729
+Epoch:  1900  |  train loss: 0.0000742888
+Epoch:  2000  |  train loss: 0.0000723412
+2024-03-10 15:29:28,694 [trainer.py] => CNN: {'total': 59.18, '00-09': 73.6, '10-19': 68.4, '20-29': 76.9, '30-39': 69.1, '40-49': 60.6, '50-59': 37.2, '60-69': 45.7, '70-79': 41.9, 'old': 61.64, 'new': 41.9}
+2024-03-10 15:29:28,695 [trainer.py] => No NME accuracy
+2024-03-10 15:29:28,695 [trainer.py] => FeCAM: {'total': 61.31, '00-09': 78.8, '10-19': 69.0, '20-29': 78.3, '30-39': 71.0, '40-49': 70.6, '50-59': 35.0, '60-69': 46.3, '70-79': 41.5, 'old': 64.14, 'new': 41.5}
+2024-03-10 15:29:28,695 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66, 59.18]
+2024-03-10 15:29:28,695 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54, 84.09]
+2024-03-10 15:29:28,695 [trainer.py] => FeCAM top1 curve: [82.74, 72.32, 66.61, 61.31]
+2024-03-10 15:29:28,695 [trainer.py] => FeCAM top5 curve: [95.2, 90.73, 86.53, 83.62]
+
+2024-03-10 15:29:28,702 [fecam.py] => Learning on 80-90
+Processing class: 80
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003952065
+Epoch:   200  |  train loss: 0.0003066322
+Epoch:   300  |  train loss: 0.0002791567
+Epoch:   400  |  train loss: 0.0002382041
+Epoch:   500  |  train loss: 0.0002159076
+Epoch:   600  |  train loss: 0.0001957948
+Epoch:   700  |  train loss: 0.0001809217
+Epoch:   800  |  train loss: 0.0001696050
+Epoch:   900  |  train loss: 0.0001605502
+Epoch:  1000  |  train loss: 0.0001535054
+Epoch:  1100  |  train loss: 0.0001478278
+Epoch:  1200  |  train loss: 0.0001423431
+Epoch:  1300  |  train loss: 0.0001367757
+Epoch:  1400  |  train loss: 0.0001312150
+Epoch:  1500  |  train loss: 0.0001255185
+Epoch:  1600  |  train loss: 0.0001204187
+Epoch:  1700  |  train loss: 0.0001162139
+Epoch:  1800  |  train loss: 0.0001122071
+Epoch:  1900  |  train loss: 0.0001088420
+Epoch:  2000  |  train loss: 0.0001057404
+Processing class: 81
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002511763
+Epoch:   200  |  train loss: 0.0002075608
+Epoch:   300  |  train loss: 0.0001706624
+Epoch:   400  |  train loss: 0.0001512774
+Epoch:   500  |  train loss: 0.0001384704
+Epoch:   600  |  train loss: 0.0001276150
+Epoch:   700  |  train loss: 0.0001193315
+Epoch:   800  |  train loss: 0.0001130164
+Epoch:   900  |  train loss: 0.0001077703
+Epoch:  1000  |  train loss: 0.0001029393
+Epoch:  1100  |  train loss: 0.0000983870
+Epoch:  1200  |  train loss: 0.0000942426
+Epoch:  1300  |  train loss: 0.0000907508
+Epoch:  1400  |  train loss: 0.0000877480
+Epoch:  1500  |  train loss: 0.0000848965
+Epoch:  1600  |  train loss: 0.0000824911
+Epoch:  1700  |  train loss: 0.0000801670
+Epoch:  1800  |  train loss: 0.0000780627
+Epoch:  1900  |  train loss: 0.0000761042
+Epoch:  2000  |  train loss: 0.0000741980
+Processing class: 82
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003412218
+Epoch:   200  |  train loss: 0.0002765609
+Epoch:   300  |  train loss: 0.0002308844
+Epoch:   400  |  train loss: 0.0001936458
+Epoch:   500  |  train loss: 0.0001754311
+Epoch:   600  |  train loss: 0.0001620025
+Epoch:   700  |  train loss: 0.0001525958
+Epoch:   800  |  train loss: 0.0001454858
+Epoch:   900  |  train loss: 0.0001394342
+Epoch:  1000  |  train loss: 0.0001337393
+Epoch:  1100  |  train loss: 0.0001279287
+Epoch:  1200  |  train loss: 0.0001224745
+Epoch:  1300  |  train loss: 0.0001175943
+Epoch:  1400  |  train loss: 0.0001132683
+Epoch:  1500  |  train loss: 0.0001094314
+Epoch:  1600  |  train loss: 0.0001060246
+Epoch:  1700  |  train loss: 0.0001026923
+Epoch:  1800  |  train loss: 0.0000998603
+Epoch:  1900  |  train loss: 0.0000972446
+Epoch:  2000  |  train loss: 0.0000947670
+Processing class: 83
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003627593
+Epoch:   200  |  train loss: 0.0002572383
+Epoch:   300  |  train loss: 0.0002034937
+Epoch:   400  |  train loss: 0.0001734608
+Epoch:   500  |  train loss: 0.0001578685
+Epoch:   600  |  train loss: 0.0001474218
+Epoch:   700  |  train loss: 0.0001381111
+Epoch:   800  |  train loss: 0.0001300502
+Epoch:   900  |  train loss: 0.0001231391
+Epoch:  1000  |  train loss: 0.0001173439
+Epoch:  1100  |  train loss: 0.0001120644
+Epoch:  1200  |  train loss: 0.0001076266
+Epoch:  1300  |  train loss: 0.0001036850
+Epoch:  1400  |  train loss: 0.0001000790
+Epoch:  1500  |  train loss: 0.0000970139
+Epoch:  1600  |  train loss: 0.0000940078
+Epoch:  1700  |  train loss: 0.0000910584
+Epoch:  1800  |  train loss: 0.0000885056
+Epoch:  1900  |  train loss: 0.0000860441
+Epoch:  2000  |  train loss: 0.0000838762
+Processing class: 84
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003631205
+Epoch:   200  |  train loss: 0.0002647327
+Epoch:   300  |  train loss: 0.0002251040
+Epoch:   400  |  train loss: 0.0002087397
+Epoch:   500  |  train loss: 0.0001905348
+Epoch:   600  |  train loss: 0.0001761578
+Epoch:   700  |  train loss: 0.0001648877
+Epoch:   800  |  train loss: 0.0001552723
+Epoch:   900  |  train loss: 0.0001468974
+Epoch:  1000  |  train loss: 0.0001394385
+Epoch:  1100  |  train loss: 0.0001332603
+Epoch:  1200  |  train loss: 0.0001278506
+Epoch:  1300  |  train loss: 0.0001233666
+Epoch:  1400  |  train loss: 0.0001192774
+Epoch:  1500  |  train loss: 0.0001152794
+Epoch:  1600  |  train loss: 0.0001116749
+Epoch:  1700  |  train loss: 0.0001084873
+Epoch:  1800  |  train loss: 0.0001053609
+Epoch:  1900  |  train loss: 0.0001026316
+Epoch:  2000  |  train loss: 0.0001000524
+Processing class: 85
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003109974
+Epoch:   200  |  train loss: 0.0002610480
+Epoch:   300  |  train loss: 0.0002120843
+Epoch:   400  |  train loss: 0.0001832121
+Epoch:   500  |  train loss: 0.0001633690
+Epoch:   600  |  train loss: 0.0001496558
+Epoch:   700  |  train loss: 0.0001397782
+Epoch:   800  |  train loss: 0.0001317701
+Epoch:   900  |  train loss: 0.0001248584
+Epoch:  1000  |  train loss: 0.0001190208
+Epoch:  1100  |  train loss: 0.0001142140
+Epoch:  1200  |  train loss: 0.0001101262
+Epoch:  1300  |  train loss: 0.0001061924
+Epoch:  1400  |  train loss: 0.0001026969
+Epoch:  1500  |  train loss: 0.0000992079
+Epoch:  1600  |  train loss: 0.0000962831
+Epoch:  1700  |  train loss: 0.0000938026
+Epoch:  1800  |  train loss: 0.0000914399
+Epoch:  1900  |  train loss: 0.0000893807
+Epoch:  2000  |  train loss: 0.0000874699
+Processing class: 86
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003116400
+Epoch:   200  |  train loss: 0.0002665763
+Epoch:   300  |  train loss: 0.0002171237
+Epoch:   400  |  train loss: 0.0001841012
+Epoch:   500  |  train loss: 0.0001651662
+Epoch:   600  |  train loss: 0.0001523765
+Epoch:   700  |  train loss: 0.0001425624
+Epoch:   800  |  train loss: 0.0001349258
+Epoch:   900  |  train loss: 0.0001284876
+Epoch:  1000  |  train loss: 0.0001226685
+Epoch:  1100  |  train loss: 0.0001172411
+Epoch:  1200  |  train loss: 0.0001124114
+Epoch:  1300  |  train loss: 0.0001081482
+Epoch:  1400  |  train loss: 0.0001044412
+Epoch:  1500  |  train loss: 0.0001009603
+Epoch:  1600  |  train loss: 0.0000977572
+Epoch:  1700  |  train loss: 0.0000948995
+Epoch:  1800  |  train loss: 0.0000922999
+Epoch:  1900  |  train loss: 0.0000900137
+Epoch:  2000  |  train loss: 0.0000876531
+Processing class: 87
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003144648
+Epoch:   200  |  train loss: 0.0002243816
+Epoch:   300  |  train loss: 0.0001822470
+Epoch:   400  |  train loss: 0.0001647676
+Epoch:   500  |  train loss: 0.0001530413
+Epoch:   600  |  train loss: 0.0001438821
+Epoch:   700  |  train loss: 0.0001349241
+Epoch:   800  |  train loss: 0.0001272022
+Epoch:   900  |  train loss: 0.0001207252
+Epoch:  1000  |  train loss: 0.0001151022
+Epoch:  1100  |  train loss: 0.0001102622
+Epoch:  1200  |  train loss: 0.0001060948
+Epoch:  1300  |  train loss: 0.0001025457
+Epoch:  1400  |  train loss: 0.0000993020
+Epoch:  1500  |  train loss: 0.0000962648
+Epoch:  1600  |  train loss: 0.0000931619
+Epoch:  1700  |  train loss: 0.0000900894
+Epoch:  1800  |  train loss: 0.0000870644
+Epoch:  1900  |  train loss: 0.0000842018
+Epoch:  2000  |  train loss: 0.0000815825
+Processing class: 88
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002687548
+Epoch:   200  |  train loss: 0.0002504452
+Epoch:   300  |  train loss: 0.0002178081
+Epoch:   400  |  train loss: 0.0001876593
+Epoch:   500  |  train loss: 0.0001666322
+Epoch:   600  |  train loss: 0.0001537490
+Epoch:   700  |  train loss: 0.0001423221
+Epoch:   800  |  train loss: 0.0001329231
+Epoch:   900  |  train loss: 0.0001250038
+Epoch:  1000  |  train loss: 0.0001186102
+Epoch:  1100  |  train loss: 0.0001130356
+Epoch:  1200  |  train loss: 0.0001083644
+Epoch:  1300  |  train loss: 0.0001043296
+Epoch:  1400  |  train loss: 0.0001008268
+Epoch:  1500  |  train loss: 0.0000975299
+Epoch:  1600  |  train loss: 0.0000945710
+Epoch:  1700  |  train loss: 0.0000917088
+Epoch:  1800  |  train loss: 0.0000891515
+Epoch:  1900  |  train loss: 0.0000868272
+Epoch:  2000  |  train loss: 0.0000846399
+Processing class: 89
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003201218
+Epoch:   200  |  train loss: 0.0002546409
+Epoch:   300  |  train loss: 0.0002231513
+Epoch:   400  |  train loss: 0.0002003693
+Epoch:   500  |  train loss: 0.0001823247
+Epoch:   600  |  train loss: 0.0001638407
+Epoch:   700  |  train loss: 0.0001505586
+Epoch:   800  |  train loss: 0.0001407053
+Epoch:   900  |  train loss: 0.0001333585
+Epoch:  1000  |  train loss: 0.0001274957
+Epoch:  1100  |  train loss: 0.0001223217
+Epoch:  1200  |  train loss: 0.0001171599
+Epoch:  1300  |  train loss: 0.0001125988
+Epoch:  1400  |  train loss: 0.0001087961
+Epoch:  1500  |  train loss: 0.0001054985
+Epoch:  1600  |  train loss: 0.0001024379
+Epoch:  1700  |  train loss: 0.0000995449
+Epoch:  1800  |  train loss: 0.0000968967
+Epoch:  1900  |  train loss: 0.0000943113
+Epoch:  2000  |  train loss: 0.0000922056
+2024-03-10 15:43:40,552 [trainer.py] => CNN: {'total': 54.08, '00-09': 67.9, '10-19': 63.6, '20-29': 73.2, '30-39': 68.8, '40-49': 57.2, '50-59': 32.6, '60-69': 40.9, '70-79': 38.1, '80-89': 44.4, 'old': 55.29, 'new': 44.4}
+2024-03-10 15:43:40,552 [trainer.py] => No NME accuracy
+2024-03-10 15:43:40,552 [trainer.py] => FeCAM: {'total': 57.38, '00-09': 75.9, '10-19': 65.7, '20-29': 75.9, '30-39': 69.5, '40-49': 67.9, '50-59': 31.6, '60-69': 42.0, '70-79': 39.4, '80-89': 48.5, 'old': 58.49, 'new': 48.5}
+2024-03-10 15:43:40,552 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66, 59.18, 54.08]
+2024-03-10 15:43:40,552 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54, 84.09, 81.74]
+2024-03-10 15:43:40,552 [trainer.py] => FeCAM top1 curve: [82.74, 72.32, 66.61, 61.31, 57.38]
+2024-03-10 15:43:40,552 [trainer.py] => FeCAM top5 curve: [95.2, 90.73, 86.53, 83.62, 80.91]
+
+2024-03-10 15:43:40,561 [fecam.py] => Learning on 90-100
+Processing class: 90
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003215028
+Epoch:   200  |  train loss: 0.0002666311
+Epoch:   300  |  train loss: 0.0002174779
+Epoch:   400  |  train loss: 0.0001929286
+Epoch:   500  |  train loss: 0.0001762421
+Epoch:   600  |  train loss: 0.0001599413
+Epoch:   700  |  train loss: 0.0001467587
+Epoch:   800  |  train loss: 0.0001362938
+Epoch:   900  |  train loss: 0.0001276563
+Epoch:  1000  |  train loss: 0.0001204379
+Epoch:  1100  |  train loss: 0.0001139504
+Epoch:  1200  |  train loss: 0.0001084895
+Epoch:  1300  |  train loss: 0.0001036233
+Epoch:  1400  |  train loss: 0.0000994845
+Epoch:  1500  |  train loss: 0.0000959222
+Epoch:  1600  |  train loss: 0.0000927219
+Epoch:  1700  |  train loss: 0.0000897495
+Epoch:  1800  |  train loss: 0.0000868986
+Epoch:  1900  |  train loss: 0.0000843993
+Epoch:  2000  |  train loss: 0.0000820414
+Processing class: 91
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003581085
+Epoch:   200  |  train loss: 0.0002763994
+Epoch:   300  |  train loss: 0.0002446468
+Epoch:   400  |  train loss: 0.0002188280
+Epoch:   500  |  train loss: 0.0002016506
+Epoch:   600  |  train loss: 0.0001854020
+Epoch:   700  |  train loss: 0.0001725039
+Epoch:   800  |  train loss: 0.0001632423
+Epoch:   900  |  train loss: 0.0001545959
+Epoch:  1000  |  train loss: 0.0001465338
+Epoch:  1100  |  train loss: 0.0001393796
+Epoch:  1200  |  train loss: 0.0001332701
+Epoch:  1300  |  train loss: 0.0001284434
+Epoch:  1400  |  train loss: 0.0001244969
+Epoch:  1500  |  train loss: 0.0001206699
+Epoch:  1600  |  train loss: 0.0001172928
+Epoch:  1700  |  train loss: 0.0001136781
+Epoch:  1800  |  train loss: 0.0001100839
+Epoch:  1900  |  train loss: 0.0001068965
+Epoch:  2000  |  train loss: 0.0001037728
+Processing class: 92
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002881528
+Epoch:   200  |  train loss: 0.0002412718
+Epoch:   300  |  train loss: 0.0002036439
+Epoch:   400  |  train loss: 0.0001830920
+Epoch:   500  |  train loss: 0.0001673700
+Epoch:   600  |  train loss: 0.0001557313
+Epoch:   700  |  train loss: 0.0001457087
+Epoch:   800  |  train loss: 0.0001361068
+Epoch:   900  |  train loss: 0.0001271010
+Epoch:  1000  |  train loss: 0.0001197470
+Epoch:  1100  |  train loss: 0.0001137288
+Epoch:  1200  |  train loss: 0.0001087153
+Epoch:  1300  |  train loss: 0.0001046112
+Epoch:  1400  |  train loss: 0.0001009697
+Epoch:  1500  |  train loss: 0.0000976156
+Epoch:  1600  |  train loss: 0.0000944334
+Epoch:  1700  |  train loss: 0.0000913827
+Epoch:  1800  |  train loss: 0.0000886819
+Epoch:  1900  |  train loss: 0.0000861147
+Epoch:  2000  |  train loss: 0.0000837261
+Processing class: 93
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003453197
+Epoch:   200  |  train loss: 0.0002667480
+Epoch:   300  |  train loss: 0.0002280615
+Epoch:   400  |  train loss: 0.0002044262
+Epoch:   500  |  train loss: 0.0001843315
+Epoch:   600  |  train loss: 0.0001696618
+Epoch:   700  |  train loss: 0.0001580513
+Epoch:   800  |  train loss: 0.0001474877
+Epoch:   900  |  train loss: 0.0001386909
+Epoch:  1000  |  train loss: 0.0001319963
+Epoch:  1100  |  train loss: 0.0001264723
+Epoch:  1200  |  train loss: 0.0001216748
+Epoch:  1300  |  train loss: 0.0001170344
+Epoch:  1400  |  train loss: 0.0001128313
+Epoch:  1500  |  train loss: 0.0001089853
+Epoch:  1600  |  train loss: 0.0001053300
+Epoch:  1700  |  train loss: 0.0001021339
+Epoch:  1800  |  train loss: 0.0000991174
+Epoch:  1900  |  train loss: 0.0000963164
+Epoch:  2000  |  train loss: 0.0000939245
+Processing class: 94
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0004157657
+Epoch:   200  |  train loss: 0.0003152471
+Epoch:   300  |  train loss: 0.0002629709
+Epoch:   400  |  train loss: 0.0002277565
+Epoch:   500  |  train loss: 0.0001993048
+Epoch:   600  |  train loss: 0.0001791259
+Epoch:   700  |  train loss: 0.0001650476
+Epoch:   800  |  train loss: 0.0001543113
+Epoch:   900  |  train loss: 0.0001458879
+Epoch:  1000  |  train loss: 0.0001388427
+Epoch:  1100  |  train loss: 0.0001313293
+Epoch:  1200  |  train loss: 0.0001249666
+Epoch:  1300  |  train loss: 0.0001193388
+Epoch:  1400  |  train loss: 0.0001140906
+Epoch:  1500  |  train loss: 0.0001093458
+Epoch:  1600  |  train loss: 0.0001052771
+Epoch:  1700  |  train loss: 0.0001013833
+Epoch:  1800  |  train loss: 0.0000983876
+Epoch:  1900  |  train loss: 0.0000953487
+Epoch:  2000  |  train loss: 0.0000925234
+Processing class: 95
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002814731
+Epoch:   200  |  train loss: 0.0002399118
+Epoch:   300  |  train loss: 0.0002214321
+Epoch:   400  |  train loss: 0.0001951853
+Epoch:   500  |  train loss: 0.0001724673
+Epoch:   600  |  train loss: 0.0001560908
+Epoch:   700  |  train loss: 0.0001444374
+Epoch:   800  |  train loss: 0.0001356107
+Epoch:   900  |  train loss: 0.0001277233
+Epoch:  1000  |  train loss: 0.0001208190
+Epoch:  1100  |  train loss: 0.0001144780
+Epoch:  1200  |  train loss: 0.0001090460
+Epoch:  1300  |  train loss: 0.0001045164
+Epoch:  1400  |  train loss: 0.0001006273
+Epoch:  1500  |  train loss: 0.0000972877
+Epoch:  1600  |  train loss: 0.0000940115
+Epoch:  1700  |  train loss: 0.0000910205
+Epoch:  1800  |  train loss: 0.0000884550
+Epoch:  1900  |  train loss: 0.0000861922
+Epoch:  2000  |  train loss: 0.0000841762
+Processing class: 96
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002735474
+Epoch:   200  |  train loss: 0.0002330626
+Epoch:   300  |  train loss: 0.0001931418
+Epoch:   400  |  train loss: 0.0001710543
+Epoch:   500  |  train loss: 0.0001562809
+Epoch:   600  |  train loss: 0.0001422951
+Epoch:   700  |  train loss: 0.0001305040
+Epoch:   800  |  train loss: 0.0001215942
+Epoch:   900  |  train loss: 0.0001148647
+Epoch:  1000  |  train loss: 0.0001089570
+Epoch:  1100  |  train loss: 0.0001038002
+Epoch:  1200  |  train loss: 0.0000994391
+Epoch:  1300  |  train loss: 0.0000954983
+Epoch:  1400  |  train loss: 0.0000919810
+Epoch:  1500  |  train loss: 0.0000887879
+Epoch:  1600  |  train loss: 0.0000862270
+Epoch:  1700  |  train loss: 0.0000836567
+Epoch:  1800  |  train loss: 0.0000813981
+Epoch:  1900  |  train loss: 0.0000792327
+Epoch:  2000  |  train loss: 0.0000772716
+Processing class: 97
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0002745658
+Epoch:   200  |  train loss: 0.0002295290
+Epoch:   300  |  train loss: 0.0001819529
+Epoch:   400  |  train loss: 0.0001632461
+Epoch:   500  |  train loss: 0.0001525306
+Epoch:   600  |  train loss: 0.0001455025
+Epoch:   700  |  train loss: 0.0001382526
+Epoch:   800  |  train loss: 0.0001309017
+Epoch:   900  |  train loss: 0.0001238118
+Epoch:  1000  |  train loss: 0.0001179627
+Epoch:  1100  |  train loss: 0.0001126588
+Epoch:  1200  |  train loss: 0.0001077500
+Epoch:  1300  |  train loss: 0.0001033438
+Epoch:  1400  |  train loss: 0.0000996925
+Epoch:  1500  |  train loss: 0.0000965999
+Epoch:  1600  |  train loss: 0.0000940133
+Epoch:  1700  |  train loss: 0.0000915345
+Epoch:  1800  |  train loss: 0.0000893245
+Epoch:  1900  |  train loss: 0.0000869852
+Epoch:  2000  |  train loss: 0.0000848802
+Processing class: 98
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003487978
+Epoch:   200  |  train loss: 0.0002775026
+Epoch:   300  |  train loss: 0.0002134032
+Epoch:   400  |  train loss: 0.0001894460
+Epoch:   500  |  train loss: 0.0001748309
+Epoch:   600  |  train loss: 0.0001609185
+Epoch:   700  |  train loss: 0.0001499190
+Epoch:   800  |  train loss: 0.0001416475
+Epoch:   900  |  train loss: 0.0001347690
+Epoch:  1000  |  train loss: 0.0001281603
+Epoch:  1100  |  train loss: 0.0001224332
+Epoch:  1200  |  train loss: 0.0001173667
+Epoch:  1300  |  train loss: 0.0001125843
+Epoch:  1400  |  train loss: 0.0001084644
+Epoch:  1500  |  train loss: 0.0001045105
+Epoch:  1600  |  train loss: 0.0001009706
+Epoch:  1700  |  train loss: 0.0000980724
+Epoch:  1800  |  train loss: 0.0000953707
+Epoch:  1900  |  train loss: 0.0000929253
+Epoch:  2000  |  train loss: 0.0000908867
+Processing class: 99
+Training regular Auto Encoder
+Epoch:   100  |  train loss: 0.0003337635
+Epoch:   200  |  train loss: 0.0002511272
+Epoch:   300  |  train loss: 0.0002153592
+Epoch:   400  |  train loss: 0.0001920397
+Epoch:   500  |  train loss: 0.0001756403
+Epoch:   600  |  train loss: 0.0001634388
+Epoch:   700  |  train loss: 0.0001526599
+Epoch:   800  |  train loss: 0.0001433742
+Epoch:   900  |  train loss: 0.0001356984
+Epoch:  1000  |  train loss: 0.0001297228
+Epoch:  1100  |  train loss: 0.0001246561
+Epoch:  1200  |  train loss: 0.0001200425
+Epoch:  1300  |  train loss: 0.0001158709
+Epoch:  1400  |  train loss: 0.0001121712
+Epoch:  1500  |  train loss: 0.0001088631
+Epoch:  1600  |  train loss: 0.0001058619
+Epoch:  1700  |  train loss: 0.0001028744
+Epoch:  1800  |  train loss: 0.0001002407
+Epoch:  1900  |  train loss: 0.0000976611
+Epoch:  2000  |  train loss: 0.0000953594
+2024-03-10 15:59:16,759 [trainer.py] => CNN: {'total': 50.36, '00-09': 57.7, '10-19': 63.6, '20-29': 71.4, '30-39': 68.5, '40-49': 56.8, '50-59': 29.6, '60-69': 38.9, '70-79': 36.6, '80-89': 42.7, '90-99': 37.8, 'old': 51.76, 'new': 37.8}
+2024-03-10 15:59:16,760 [trainer.py] => No NME accuracy
+2024-03-10 15:59:16,760 [trainer.py] => FeCAM: {'total': 54.43, '00-09': 72.9, '10-19': 65.1, '20-29': 74.9, '30-39': 68.7, '40-49': 67.2, '50-59': 29.4, '60-69': 41.1, '70-79': 36.8, '80-89': 47.3, '90-99': 40.9, 'old': 55.93, 'new': 40.9}
+2024-03-10 15:59:16,760 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66, 59.18, 54.08, 50.36]
+2024-03-10 15:59:16,760 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54, 84.09, 81.74, 79.63]
+2024-03-10 15:59:16,760 [trainer.py] => FeCAM top1 curve: [82.74, 72.32, 66.61, 61.31, 57.38, 54.43]
+2024-03-10 15:59:16,760 [trainer.py] => FeCAM top5 curve: [95.2, 90.73, 86.53, 83.62, 80.91, 78.52]

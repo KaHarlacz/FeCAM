@@ -58,7 +58,50 @@ class BaseLearner(object):
         cnn_accy = self._evaluate(y_pred, y_true)
 
         if self.args["full_cov"] or self.args["diagonal"]:
-            y_pred, y_true = self._eval_maha(self.test_loader, self._init_protos, self._protos)
+
+            # OCSMV
+            # y_pred, y_true = self._eval_ocsvm(self.test_loader)
+            
+            # ISLOATION FORESTS
+            # y_pred, y_true = self._eval_isolation_forests(self.test_loader)
+            
+            # ELLIPTIC ENVELOPES
+            # y_pred, y_true = self._eval_elliptic_envelopes(self.test_loader)
+
+            # PCA + (n1 | n2 | maha | ocsvm)
+            # if self.args['pca_dist'] == 'norm1':
+            #     print('Classifying using 1st norm')
+            #     y_pred, y_true = self._eval_pca_norm(self.test_loader, norm=1)
+            # elif self.args['pca_dist'] == 'norm2':
+            #     print('Classifying using 2nd norm')
+            #     y_pred, y_true = self._eval_pca_norm(self.test_loader, norm=2)
+            # elif self.args['pca_dist'] == 'maha':
+            #     print('Classifying using Mahalanobis distance')
+            #     y_pred, y_true = self._eval_pca_maha(self.test_loader)
+            # elif self.args['pca_dist'] == 'ocsvm':
+            #     print('Classifying using one-class SVM')
+            #     y_pred, y_true = self._eval_pca_ocsvm(self.test_loader)
+            # else:
+            #     print('ERROR: INVALID VALUE FOR "pca_dist" PARAMETER')
+            #     raise ValueError()
+
+            # AutoEncoder
+            if self.args['ae_clsf'] == 'recon-cost': #
+                print('Clasifying using reconstruction function cost')
+                y_pred, y_true = self._eval_auto_encoder(self.test_loader)
+            elif self.args['ae_clsf'] == 'maha-dist':
+                print('Clasifying using maha dist from latent proto')
+                y_pred, y_true = self._eval_ae_maha_dist(self.test_loader) 
+            elif self.args['ae_clsf'] == 'eucl-dist': #
+                print('Clasifying using eucl dist from latent proto')
+                y_pred, y_true = self._eval_ae_eucl_dist(self.test_loader)    
+            elif self.args['ae_clsf'] == 'n-times-ae-eucl-dist': #
+                print('Clasifying using eucl dist with n times AE')
+                y_pred, y_true = self._eval_n_times_ae_eucl(self.test_loader)
+            elif self.args['ae_clsf'] == 'maha-recon-cost': #
+                print('Clasifying using reconstruction function cost + maha')
+                y_pred, y_true = self._eval_auto_encoder_maha_recon(self.test_loader)
+            
             maha_accy = self._evaluate(y_pred, y_true)
         else:
             maha_accy = None
@@ -66,6 +109,224 @@ class BaseLearner(object):
         nme_accy = None
 
         return cnn_accy, nme_accy, maha_accy
+
+    # OCSVM
+    def _eval_ocsvm(self, loader):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+        # vectors = (vectors.T / (np.linalg.norm(vectors.T, axis=0) + EPSILON)).T
+
+        dists = np.zeros((len(vectors), len(self._ocsvm_models)))
+
+        for i, (cls, model) in enumerate(self._ocsvm_models.items()):
+            dists[:, i] = model.score_samples(vectors)
+        
+        scores = dists.T  # [N, nb_classes], choose the one with the smallest distance
+
+        return np.argsort(-scores, axis=1)[:, : self.topk], y_true  # [N, topk]
+    
+    # ELLIPTIC ENVELOPE
+    def _eval_elliptic_envelopes(self, loader):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+        vectors = (vectors.T / (np.linalg.norm(vectors.T, axis=0) + EPSILON)).T
+
+        dists = np.zeros((len(vectors), len(self._elliptic_envelopes)))
+
+        for i, (cls, model) in enumerate(self._elliptic_envelopes.items()):
+            dists[:, i] = model.score_samples(vectors)
+        
+        scores = dists  # [N, nb_classes], choose the one with the smallest distance
+
+        return np.argsort(-scores, axis=1)[:, : self.topk], y_true  # [N, topk]
+
+    # ISOLATION FORESTS
+    def _eval_isolation_forests(self, loader):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+        vectors = (vectors.T / (np.linalg.norm(vectors.T, axis=0) + EPSILON)).T
+
+        dists = np.zeros((len(vectors), len(self._isolation_forests)))
+
+        for i, (cls, model) in enumerate(self._isolation_forests.items()):
+            dists[:, i] = model.score_samples(vectors)
+        
+        scores = dists  # [N, nb_classes], choose the one with the smallest distance
+
+        return np.argsort(-scores, axis=1)[:, : self.topk], y_true  # [N, topk]
+       
+    # PCA + (n1 | n2 | maha | ocsvm)
+
+    def _eval_pca_norm(self, loader, norm):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+
+        if (self.args['pca_vecnorm']):
+            print('Normalising the embedded test vectors before PCA')
+            vectors = (vectors.T / (np.linalg.norm(vectors.T, axis=0) + EPSILON)).T
+        
+        dists = np.zeros((len(vectors), len(self._pca)))
+        for vec_idx, vec in enumerate(vectors):
+            for cls_idx, pca in enumerate(self._pca):
+                pca_vec = torch.from_numpy(pca.transform(vec.reshape(1, -1)))
+                pca_proto = self._pca_protos[cls_idx]
+                dists[vec_idx, cls_idx] = np.linalg.norm(pca_vec - pca_proto, ord=norm)
+
+        return np.argsort(-dists, axis=1)[:, : self.topk], y_true
+    
+    def _eval_pca_maha(self, loader):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+
+        if (self.args['pca_vecnorm']):
+            print('Normalising the embedded test vectors before PCA')
+            vectors = (vectors.T / (np.linalg.norm(vectors.T, axis=0) + EPSILON)).T
+
+        dists = self._maha_dist(vectors, self._pca_protos, self._pca_protos)
+        scores = dists.T
+
+        print('scores', scores[:5][:5])
+
+        return np.argsort(-scores, axis=1)[:, : self.topk], y_true
+
+    def _eval_pca_ocsvm(self, loader):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+
+        if (self.args['pca_vecnorm']):
+            print('Normalising the embedded test vectors before PCA')
+            vectors = (vectors.T / (np.linalg.norm(vectors.T, axis=0) + EPSILON)).T
+
+        dists = np.zeros((len(vectors), len(self._pca)))
+        for cls_idx, pca in enumerate(self._pca):
+            ocsvm = self._ocsvm_models[cls_idx]
+            dists[:, cls_idx] = ocsvm.decision_function(pca.transform(vectors))
+        
+        return np.argsort(-dists, axis=1)[:, : self.topk], y_true
+
+    # AutoEncoder
+    def _eval_auto_encoder(self, loader):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+        
+        dists = np.zeros((len(vectors), len(self._auto_encoders)))
+        recon_cost = torch.nn.MSELoss()
+
+        for vec_idx, vec in enumerate(vectors):
+            vec = torch.tensor(vec).cuda()
+
+            for cls_idx, autoencoder in enumerate(self._auto_encoders):                
+                if self.args['ae_standarization']:
+                    scaler = self._scalers[cls_idx]
+                    scaled_vec = scaler.transform([vec.cpu().detach().numpy()])
+                    scaled_vec = torch.tensor(scaled_vec[0]).float().cuda()
+                    
+                    _, decoded = autoencoder(scaled_vec)
+                    inv_decoded = scaler.inverse_transform([decoded.cpu().detach().numpy()])
+                    inv_decoded = torch.tensor(inv_decoded[0]).cuda()
+
+                    dists[vec_idx, cls_idx] = recon_cost(inv_decoded, vec)
+                else:
+                    if self.args['ae_pca']:
+                        pca = self._ae_pca[cls_idx]
+                        pca_vec = pca.transform(vec.cpu().detach().numpy().reshape(1, -1))
+                        pca_vec = torch.tensor(pca_vec).float().cuda()
+                        _, decoded = autoencoder(pca_vec)
+                        dists[vec_idx, cls_idx] = recon_cost(decoded, pca_vec)
+                    else:
+                        vec = torch.tensor(vec).float().cuda()
+                        _, decoded = autoencoder(vec)
+                        dists[vec_idx, cls_idx] = recon_cost(decoded, vec)
+
+        return np.argsort(dists, axis=1)[:, : self.topk], y_true
+
+    def _eval_ae_eucl_dist(self, loader):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+        
+        dists = np.zeros((len(vectors), len(self._auto_encoders)))
+        
+        for vec_idx, vec in enumerate(vectors):
+            for cls_idx, autoencoder in enumerate(self._auto_encoders):
+                encoded_vec, _ = autoencoder(torch.tensor(vec).cuda())
+                encoded_proto = self._ae_protos[cls_idx]
+                dists[vec_idx, cls_idx] = torch.norm(encoded_vec - encoded_proto)
+
+        return np.argsort(dists, axis=1)[:, : self.topk], y_true
+
+
+    def _eval_ae_maha_dist(self, loader):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+        
+        dists = np.zeros((len(vectors), len(self._auto_encoders)))
+        
+        for vec_idx, vec in enumerate(vectors):
+            for cls_idx, autoencoder in enumerate(self._auto_encoders):
+                encoded_vec, _ = autoencoder(torch.tensor(vec).cuda())
+                encoded_proto = self._ae_protos[cls_idx]
+                encoded_cov = self._ae_covs[cls_idx]
+
+                x_minus_mu = (F.normalize(encoded_vec, p=2, dim=-1) - F.normalize(encoded_proto, p=2, dim=-1)).double()
+                inv_covmat = torch.linalg.pinv(encoded_cov).double().to(self._device)
+                left_term = torch.matmul(x_minus_mu, inv_covmat)
+                mahal = torch.matmul(left_term, x_minus_mu.T)
+                det = torch.det(2 * torch.pi * encoded_cov)
+                dists[vec_idx, cls_idx] = (1 / (torch.sqrt(det) + EPSILON)) * (-torch.exp(-torch.diagonal(mahal, 0)) / 2).cpu().numpy()
+
+        return np.argsort(dists, axis=1)[:, : self.topk], y_true
+
+
+    def _eval_n_times_ae_eucl(self, loader):
+        self._network.eval()
+        vectors, y_true = self._extract_vectors(loader)
+
+        dists = np.zeros((len(vectors), len(self._auto_encoders)))
+        
+        for vec_idx, vec in enumerate(vectors):
+            if (vec_idx + 1) % 100 == 0:
+                print(f'Clasifying vector {vec_idx+1}/{len(vectors)}')
+            
+            for cls_idx, autoencoder in enumerate(self._auto_encoders):
+                vec = torch.tensor(vec).cuda()
+                for _ in range(self.args['ae_n']):
+                    _, vec = autoencoder(vec) 
+
+                proto = self._ae_protos[cls_idx]
+                dists[vec_idx, cls_idx] = torch.norm(vec - proto)
+
+        return np.argsort(dists, axis=1)[:, : self.topk], y_true
+
+    def _eval_auto_encoder_maha_recon(self, loader):
+        self._network.eval()
+        test_data, y_true = self._extract_vectors(loader)
+        
+        dists = np.zeros((len(test_data), len(self._auto_encoders)))
+        cost_fn = torch.nn.MSELoss()
+
+        for data_point_idx, data_point in enumerate(test_data):
+            data_point = torch.tensor(data_point).cuda()
+
+            for cls_idx, autoencoder in enumerate(self._auto_encoders):
+                data_point = torch.tensor(data_point).float().cuda()
+                encoded_data_point, decoded_data_point = autoencoder(data_point)
+
+                a = self.args['maha_alpha']
+                b = self.args['maha_beta']
+                encoded_cls_data_mean = self._ae_protos[cls_idx]
+                encoded_cls_data_cov = self._ae_covs[cls_idx]
+
+                point_mean_diff = encoded_data_point - encoded_cls_data_mean
+                inv_encoded_cls_data_cov = torch.inverse(encoded_cls_data_cov)
+                maha_dist = torch.sqrt(point_mean_diff.t() @ inv_encoded_cls_data_cov @ point_mean_diff)
+
+                recon_cost = cost_fn(decoded_data_point, data_point)
+
+                dists[data_point_idx, cls_idx] = a * maha_dist + b * recon_cost
+
+        return np.argsort(dists, axis=1)[:, : self.topk], y_true
+
+    # ------------------ AutoEncoder
 
     def incremental_train(self):
         pass
@@ -103,7 +364,7 @@ class BaseLearner(object):
 
         return np.concatenate(y_pred), np.concatenate(y_true)  # [N, topk]
 
-    
+
     def _eval_maha(self, loader, init_means, class_means):
         self._network.eval()
         vectors, y_true = self._extract_vectors(loader)
@@ -113,32 +374,40 @@ class BaseLearner(object):
         scores = dists.T  # [N, nb_classes], choose the one with the smallest distance
 
         return np.argsort(scores, axis=1)[:, : self.topk], y_true  # [N, topk]
-    
 
     def _maha_dist(self, vectors, init_means, class_means):
         vectors = torch.tensor(vectors).to(self._device)
+
         if self.args["tukey"] and self._cur_task > 0:
             vectors = self._tukeys_transform(vectors)
         maha_dist = []
         for class_index in range(self._total_classes):
+            # PCA + (n1 | n2 | maha | ocsvm) ------------------
+            
+            pca = self._pca[class_index]
+            pca_vectors = torch.from_numpy(pca.transform(vectors.cpu())).to(self._device)
+
+            # ------------------ PCA + (n1 | n2 | maha | ocsvm) 
             if self._cur_task == 0:
-                dist = self._mahalanobis(vectors, init_means[class_index])
+                dist = self._mahalanobis(pca_vectors, init_means[class_index])
             else:
                 if self.args["ncm"]:
-                    dist = self._mahalanobis(vectors, class_means[class_index])
+                    dist = self._mahalanobis(pca_vectors, class_means[class_index])
                 elif self.args["full_cov"]:
                     if self.args["per_class"]:
                         if self.args["norm_cov"]:
-                            dist = self._mahalanobis(vectors, class_means[class_index], self._norm_cov_mat[class_index])
+                            dist = self._mahalanobis(pca_vectors, class_means[class_index], self._norm_cov_mat[class_index])
                         elif self.args["shrink"]:
-                            dist = self._mahalanobis(vectors, class_means[class_index], self._cov_mat_shrink[class_index])
+                            print('Using shrinked, full, per class covariance')
+                            # TEST: Using _pca_cov
+                            dist = self._mahalanobis(pca_vectors, class_means[class_index], self._pca_cov[class_index])
                         else:
-                            dist = self._mahalanobis(vectors, class_means[class_index], self._cov_mat[class_index])
+                            dist = self._mahalanobis(pca_vectors, class_means[class_index], self._cov_mat[class_index])
                     else:
-                        dist = self._mahalanobis(vectors, class_means[class_index], self._common_cov)
+                        dist = self._mahalanobis(pca_vectors, class_means[class_index], self._common_cov)
                 elif self.args["diagonal"]:
                     if self.args["per_class"]:
-                        dist = self._mahalanobis(vectors, class_means[class_index], self._diag_mat[class_index])
+                        dist = self._mahalanobis(pca_vectors, class_means[class_index], self._diag_mat[class_index])
             maha_dist.append(dist)
         maha_dist = np.array(maha_dist)  # [nb_classes, N]  
         return maha_dist
@@ -146,13 +415,16 @@ class BaseLearner(object):
     def _mahalanobis(self, vectors, class_means, cov=None):
         if self.args["tukey"] and self._cur_task > 0:
             class_means = self._tukeys_transform(class_means)
-        x_minus_mu = F.normalize(vectors, p=2, dim=-1) - F.normalize(class_means, p=2, dim=-1)
+        x_minus_mu = (F.normalize(vectors, p=2, dim=-1) - F.normalize(class_means, p=2, dim=-1)).double()
         if cov is None:
-            cov = torch.eye(self._network.feature_dim)  # identity covariance matrix for euclidean distance
-        inv_covmat = torch.linalg.pinv(cov).float().to(self._device)
+            # PCA + (n1 | n2 | maha | ocsvm) ------------------
+            cov = torch.eye(self.args['pca_components'])  # identity covariance matrix for euclidean distance
+            # ------------------ PCA + (n1 | n2 | maha | ocsvm) 
+        inv_covmat = torch.linalg.pinv(cov).double().to(self._device)
         left_term = torch.matmul(x_minus_mu, inv_covmat)
         mahal = torch.matmul(left_term, x_minus_mu.T)
-        return torch.diagonal(mahal, 0).cpu().numpy()
+        det = torch.det(2 * torch.pi * cov)
+        return (1 / (torch.sqrt(det) + EPSILON)) * (-torch.exp(-torch.diagonal(mahal, 0)) / 2).cpu().numpy()
     
     def diagonalization(self, cov):
         diag = cov.clone()

@@ -6,11 +6,20 @@ from utils import factory
 from utils.data_manager import DataManager
 from utils.toolkit import count_parameters
 import os
+import json
+import seaborn as sns
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
+torch.set_printoptions(threshold=10000)
 
 def train(args):
     seed_list = copy.deepcopy(args["seed"])
     device = copy.deepcopy(args["device"])
+
+    print('=========================================')
+    # print(f'nu: {args["ocsvm_nu"]}, gamma: {args["ocsvm_gamma"]}, kernel: {args["ocsvm_kernel"]}')
 
     for seed in seed_list:
         args["seed"] = seed
@@ -56,11 +65,15 @@ def _train(args):
     )
     model = factory.get_model(args["model_name"], args)
 
+    file = open('result.json', 'w')
+
     cnn_curve, nme_curve, fecam_curve = {"top1": [], "top5": []}, {"top1": [], "top5": []}, {"top1": [], "top5": []}
     for task in range(data_manager.nb_tasks):
         model.incremental_train(data_manager)
         cnn_accy, nme_accy, fecam_accy = model.eval_task()
         model.after_task()
+
+        json.dump(fecam_accy, file)
 
         if nme_accy is not None and fecam_accy is None:
             logging.info("CNN: {}".format(cnn_accy["grouped"]))
@@ -112,6 +125,7 @@ def _train(args):
             logging.info("CNN top1 curve: {}".format(cnn_curve["top1"]))
             logging.info("CNN top5 curve: {}\n".format(cnn_curve["top5"]))
 
+    file.close()
 
 def _set_device(args):
     device_type = args["device"]

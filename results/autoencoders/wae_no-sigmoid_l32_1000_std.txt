@@ -1,0 +1,1427 @@
+=========================================
+2024-03-10 18:39:04,200 [trainer.py] => config: ./exps/FeCAM_cifar100.json
+2024-03-10 18:39:04,200 [trainer.py] => prefix: train
+2024-03-10 18:39:04,200 [trainer.py] => dataset: cifar100
+2024-03-10 18:39:04,201 [trainer.py] => memory_size: 0
+2024-03-10 18:39:04,201 [trainer.py] => shuffle: True
+2024-03-10 18:39:04,201 [trainer.py] => init_cls: 50
+2024-03-10 18:39:04,201 [trainer.py] => increment: 10
+2024-03-10 18:39:04,201 [trainer.py] => model_name: fecam
+2024-03-10 18:39:04,201 [trainer.py] => convnet_type: resnet18
+2024-03-10 18:39:04,201 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-03-10 18:39:04,201 [trainer.py] => seed: 1993
+2024-03-10 18:39:04,201 [trainer.py] => init_epochs: 200
+2024-03-10 18:39:04,201 [trainer.py] => init_lr: 0.1
+2024-03-10 18:39:04,201 [trainer.py] => init_weight_decay: 0.0005
+2024-03-10 18:39:04,201 [trainer.py] => batch_size: 128
+2024-03-10 18:39:04,201 [trainer.py] => num_workers: 8
+2024-03-10 18:39:04,201 [trainer.py] => T: 5
+2024-03-10 18:39:04,201 [trainer.py] => beta: 0.5
+2024-03-10 18:39:04,201 [trainer.py] => alpha1: 1
+2024-03-10 18:39:04,201 [trainer.py] => alpha2: 1
+2024-03-10 18:39:04,201 [trainer.py] => ncm: False
+2024-03-10 18:39:04,201 [trainer.py] => tukey: False
+2024-03-10 18:39:04,201 [trainer.py] => diagonal: False
+2024-03-10 18:39:04,201 [trainer.py] => per_class: True
+2024-03-10 18:39:04,201 [trainer.py] => full_cov: True
+2024-03-10 18:39:04,201 [trainer.py] => shrink: True
+2024-03-10 18:39:04,201 [trainer.py] => norm_cov: False
+2024-03-10 18:39:04,201 [trainer.py] => vecnorm: False
+2024-03-10 18:39:04,201 [trainer.py] => ae_type: wae
+2024-03-10 18:39:04,201 [trainer.py] => ae_standarization: True
+2024-03-10 18:39:04,201 [trainer.py] => epochs: 1000
+2024-03-10 18:39:04,201 [trainer.py] => ae_latent_dim: 32
+2024-03-10 18:39:04,201 [trainer.py] => wae_sigma: 10
+2024-03-10 18:39:04,201 [trainer.py] => wae_C: 0.1
+Files already downloaded and verified
+Files already downloaded and verified
+2024-03-10 18:39:06,389 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2024-03-10 18:39:06,656 [fecam.py] => Learning on 0-50
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Processing class: 0
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7599099278
+Epoch:   200  |  train loss: 0.6346526861
+Epoch:   300  |  train loss: 0.5628456593
+Epoch:   400  |  train loss: 0.5091955900
+Epoch:   500  |  train loss: 0.4678060353
+Epoch:   600  |  train loss: 0.4348699450
+Epoch:   700  |  train loss: 0.4079996586
+Epoch:   800  |  train loss: 0.3849841118
+Epoch:   900  |  train loss: 0.3657309949
+Epoch:  1000  |  train loss: 0.3482031107
+Processing class: 1
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7460892439
+Epoch:   200  |  train loss: 0.6164893270
+Epoch:   300  |  train loss: 0.5442389250
+Epoch:   400  |  train loss: 0.4938076138
+Epoch:   500  |  train loss: 0.4549966276
+Epoch:   600  |  train loss: 0.4229453623
+Epoch:   700  |  train loss: 0.3962089300
+Epoch:   800  |  train loss: 0.3731623292
+Epoch:   900  |  train loss: 0.3536334217
+Epoch:  1000  |  train loss: 0.3370632887
+Processing class: 2
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7424389601
+Epoch:   200  |  train loss: 0.6062334061
+Epoch:   300  |  train loss: 0.5357784986
+Epoch:   400  |  train loss: 0.4841818154
+Epoch:   500  |  train loss: 0.4447365463
+Epoch:   600  |  train loss: 0.4128085375
+Epoch:   700  |  train loss: 0.3874961972
+Epoch:   800  |  train loss: 0.3661986411
+Epoch:   900  |  train loss: 0.3483364642
+Epoch:  1000  |  train loss: 0.3321497202
+Processing class: 3
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7446278095
+Epoch:   200  |  train loss: 0.6253480077
+Epoch:   300  |  train loss: 0.5530327678
+Epoch:   400  |  train loss: 0.5023836076
+Epoch:   500  |  train loss: 0.4642037153
+Epoch:   600  |  train loss: 0.4338813484
+Epoch:   700  |  train loss: 0.4076353312
+Epoch:   800  |  train loss: 0.3854268789
+Epoch:   900  |  train loss: 0.3664035082
+Epoch:  1000  |  train loss: 0.3506361723
+Processing class: 4
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7379653215
+Epoch:   200  |  train loss: 0.6030132413
+Epoch:   300  |  train loss: 0.5234129548
+Epoch:   400  |  train loss: 0.4696775913
+Epoch:   500  |  train loss: 0.4293919027
+Epoch:   600  |  train loss: 0.3970662475
+Epoch:   700  |  train loss: 0.3709117353
+Epoch:   800  |  train loss: 0.3488361478
+Epoch:   900  |  train loss: 0.3293237448
+Epoch:  1000  |  train loss: 0.3119861901
+Processing class: 5
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7489705443
+Epoch:   200  |  train loss: 0.6199177742
+Epoch:   300  |  train loss: 0.5422174931
+Epoch:   400  |  train loss: 0.4906398177
+Epoch:   500  |  train loss: 0.4520214498
+Epoch:   600  |  train loss: 0.4197539151
+Epoch:   700  |  train loss: 0.3936472356
+Epoch:   800  |  train loss: 0.3713441551
+Epoch:   900  |  train loss: 0.3525295019
+Epoch:  1000  |  train loss: 0.3364377439
+Processing class: 6
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7649503350
+Epoch:   200  |  train loss: 0.6313484669
+Epoch:   300  |  train loss: 0.5531635284
+Epoch:   400  |  train loss: 0.4996814311
+Epoch:   500  |  train loss: 0.4590597153
+Epoch:   600  |  train loss: 0.4281121731
+Epoch:   700  |  train loss: 0.4014220536
+Epoch:   800  |  train loss: 0.3787321806
+Epoch:   900  |  train loss: 0.3599298000
+Epoch:  1000  |  train loss: 0.3437702596
+Processing class: 7
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7358122587
+Epoch:   200  |  train loss: 0.6164646149
+Epoch:   300  |  train loss: 0.5441426873
+Epoch:   400  |  train loss: 0.4969332755
+Epoch:   500  |  train loss: 0.4599732161
+Epoch:   600  |  train loss: 0.4300095201
+Epoch:   700  |  train loss: 0.4046992421
+Epoch:   800  |  train loss: 0.3835694253
+Epoch:   900  |  train loss: 0.3659723639
+Epoch:  1000  |  train loss: 0.3499309957
+Processing class: 8
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7580079198
+Epoch:   200  |  train loss: 0.6115312457
+Epoch:   300  |  train loss: 0.5333193779
+Epoch:   400  |  train loss: 0.4809851885
+Epoch:   500  |  train loss: 0.4416411340
+Epoch:   600  |  train loss: 0.4097942591
+Epoch:   700  |  train loss: 0.3835224986
+Epoch:   800  |  train loss: 0.3616498649
+Epoch:   900  |  train loss: 0.3429298639
+Epoch:  1000  |  train loss: 0.3263032019
+Processing class: 9
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7444597006
+Epoch:   200  |  train loss: 0.6173431396
+Epoch:   300  |  train loss: 0.5392512679
+Epoch:   400  |  train loss: 0.4846677303
+Epoch:   500  |  train loss: 0.4449185371
+Epoch:   600  |  train loss: 0.4148187041
+Epoch:   700  |  train loss: 0.3906494319
+Epoch:   800  |  train loss: 0.3701645672
+Epoch:   900  |  train loss: 0.3521994710
+Epoch:  1000  |  train loss: 0.3371202707
+Processing class: 10
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7449397445
+Epoch:   200  |  train loss: 0.6091595531
+Epoch:   300  |  train loss: 0.5344777346
+Epoch:   400  |  train loss: 0.4819836617
+Epoch:   500  |  train loss: 0.4416278720
+Epoch:   600  |  train loss: 0.4102983296
+Epoch:   700  |  train loss: 0.3844239235
+Epoch:   800  |  train loss: 0.3633962393
+Epoch:   900  |  train loss: 0.3446157992
+Epoch:  1000  |  train loss: 0.3288692534
+Processing class: 11
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7389208198
+Epoch:   200  |  train loss: 0.6119392157
+Epoch:   300  |  train loss: 0.5361075282
+Epoch:   400  |  train loss: 0.4835835576
+Epoch:   500  |  train loss: 0.4455124140
+Epoch:   600  |  train loss: 0.4156076193
+Epoch:   700  |  train loss: 0.3904945970
+Epoch:   800  |  train loss: 0.3689651966
+Epoch:   900  |  train loss: 0.3506553650
+Epoch:  1000  |  train loss: 0.3346369624
+Processing class: 12
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7415778041
+Epoch:   200  |  train loss: 0.6132931590
+Epoch:   300  |  train loss: 0.5373428583
+Epoch:   400  |  train loss: 0.4848551095
+Epoch:   500  |  train loss: 0.4457950473
+Epoch:   600  |  train loss: 0.4155097306
+Epoch:   700  |  train loss: 0.3910215437
+Epoch:   800  |  train loss: 0.3700953245
+Epoch:   900  |  train loss: 0.3521091998
+Epoch:  1000  |  train loss: 0.3368045270
+Processing class: 13
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7416013956
+Epoch:   200  |  train loss: 0.6171501279
+Epoch:   300  |  train loss: 0.5423267901
+Epoch:   400  |  train loss: 0.4901898026
+Epoch:   500  |  train loss: 0.4524882495
+Epoch:   600  |  train loss: 0.4227101803
+Epoch:   700  |  train loss: 0.3981698036
+Epoch:   800  |  train loss: 0.3777916789
+Epoch:   900  |  train loss: 0.3593646526
+Epoch:  1000  |  train loss: 0.3435154021
+Processing class: 14
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7501993537
+Epoch:   200  |  train loss: 0.6190376282
+Epoch:   300  |  train loss: 0.5502301812
+Epoch:   400  |  train loss: 0.5025067627
+Epoch:   500  |  train loss: 0.4662714958
+Epoch:   600  |  train loss: 0.4373876572
+Epoch:   700  |  train loss: 0.4122882664
+Epoch:   800  |  train loss: 0.3907293856
+Epoch:   900  |  train loss: 0.3731689692
+Epoch:  1000  |  train loss: 0.3576600313
+Processing class: 15
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7448319435
+Epoch:   200  |  train loss: 0.5869292617
+Epoch:   300  |  train loss: 0.5029407442
+Epoch:   400  |  train loss: 0.4495415449
+Epoch:   500  |  train loss: 0.4098071098
+Epoch:   600  |  train loss: 0.3796814263
+Epoch:   700  |  train loss: 0.3547813892
+Epoch:   800  |  train loss: 0.3333998501
+Epoch:   900  |  train loss: 0.3154165208
+Epoch:  1000  |  train loss: 0.3004178762
+Processing class: 16
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7336202264
+Epoch:   200  |  train loss: 0.6147108197
+Epoch:   300  |  train loss: 0.5460975170
+Epoch:   400  |  train loss: 0.4942938089
+Epoch:   500  |  train loss: 0.4530719817
+Epoch:   600  |  train loss: 0.4201172471
+Epoch:   700  |  train loss: 0.3931908965
+Epoch:   800  |  train loss: 0.3710425675
+Epoch:   900  |  train loss: 0.3520307302
+Epoch:  1000  |  train loss: 0.3356391490
+Processing class: 17
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7664345980
+Epoch:   200  |  train loss: 0.6212254524
+Epoch:   300  |  train loss: 0.5418005347
+Epoch:   400  |  train loss: 0.4890184283
+Epoch:   500  |  train loss: 0.4493824363
+Epoch:   600  |  train loss: 0.4179953873
+Epoch:   700  |  train loss: 0.3925476372
+Epoch:   800  |  train loss: 0.3712912977
+Epoch:   900  |  train loss: 0.3524143934
+Epoch:  1000  |  train loss: 0.3363424361
+Processing class: 18
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7312219501
+Epoch:   200  |  train loss: 0.6053509593
+Epoch:   300  |  train loss: 0.5278032422
+Epoch:   400  |  train loss: 0.4757643342
+Epoch:   500  |  train loss: 0.4384445488
+Epoch:   600  |  train loss: 0.4081454992
+Epoch:   700  |  train loss: 0.3830736935
+Epoch:   800  |  train loss: 0.3620839477
+Epoch:   900  |  train loss: 0.3439890981
+Epoch:  1000  |  train loss: 0.3277087271
+Processing class: 19
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7347332954
+Epoch:   200  |  train loss: 0.6022889018
+Epoch:   300  |  train loss: 0.5301270723
+Epoch:   400  |  train loss: 0.4797954798
+Epoch:   500  |  train loss: 0.4399226904
+Epoch:   600  |  train loss: 0.4090231180
+Epoch:   700  |  train loss: 0.3832881570
+Epoch:   800  |  train loss: 0.3612034798
+Epoch:   900  |  train loss: 0.3422037125
+Epoch:  1000  |  train loss: 0.3262403965
+Processing class: 20
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7321537375
+Epoch:   200  |  train loss: 0.6041025162
+Epoch:   300  |  train loss: 0.5282237411
+Epoch:   400  |  train loss: 0.4743113935
+Epoch:   500  |  train loss: 0.4343966067
+Epoch:   600  |  train loss: 0.4030933321
+Epoch:   700  |  train loss: 0.3777773380
+Epoch:   800  |  train loss: 0.3562305868
+Epoch:   900  |  train loss: 0.3378165305
+Epoch:  1000  |  train loss: 0.3215831637
+Processing class: 21
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7451947689
+Epoch:   200  |  train loss: 0.6009068966
+Epoch:   300  |  train loss: 0.5186339736
+Epoch:   400  |  train loss: 0.4632276416
+Epoch:   500  |  train loss: 0.4226140976
+Epoch:   600  |  train loss: 0.3912386954
+Epoch:   700  |  train loss: 0.3657114327
+Epoch:   800  |  train loss: 0.3447740257
+Epoch:   900  |  train loss: 0.3269029737
+Epoch:  1000  |  train loss: 0.3112895548
+Processing class: 22
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7594015598
+Epoch:   200  |  train loss: 0.6235779166
+Epoch:   300  |  train loss: 0.5529868126
+Epoch:   400  |  train loss: 0.5026355565
+Epoch:   500  |  train loss: 0.4654210627
+Epoch:   600  |  train loss: 0.4346336484
+Epoch:   700  |  train loss: 0.4103299558
+Epoch:   800  |  train loss: 0.3894849777
+Epoch:   900  |  train loss: 0.3722233534
+Epoch:  1000  |  train loss: 0.3561280191
+Processing class: 23
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7425911784
+Epoch:   200  |  train loss: 0.6173313975
+Epoch:   300  |  train loss: 0.5449539661
+Epoch:   400  |  train loss: 0.4949009299
+Epoch:   500  |  train loss: 0.4563315332
+Epoch:   600  |  train loss: 0.4257527292
+Epoch:   700  |  train loss: 0.4004202604
+Epoch:   800  |  train loss: 0.3801237524
+Epoch:   900  |  train loss: 0.3622094691
+Epoch:  1000  |  train loss: 0.3470850646
+Processing class: 24
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7534992814
+Epoch:   200  |  train loss: 0.6269328475
+Epoch:   300  |  train loss: 0.5467295349
+Epoch:   400  |  train loss: 0.4921917737
+Epoch:   500  |  train loss: 0.4506099463
+Epoch:   600  |  train loss: 0.4178131759
+Epoch:   700  |  train loss: 0.3915608943
+Epoch:   800  |  train loss: 0.3691589415
+Epoch:   900  |  train loss: 0.3494109869
+Epoch:  1000  |  train loss: 0.3337550581
+Processing class: 25
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7540427446
+Epoch:   200  |  train loss: 0.6182677031
+Epoch:   300  |  train loss: 0.5433885038
+Epoch:   400  |  train loss: 0.4911805212
+Epoch:   500  |  train loss: 0.4511866808
+Epoch:   600  |  train loss: 0.4196931183
+Epoch:   700  |  train loss: 0.3924799323
+Epoch:   800  |  train loss: 0.3708281934
+Epoch:   900  |  train loss: 0.3524473488
+Epoch:  1000  |  train loss: 0.3363359213
+Processing class: 26
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7652876019
+Epoch:   200  |  train loss: 0.6303003430
+Epoch:   300  |  train loss: 0.5538127899
+Epoch:   400  |  train loss: 0.5014234722
+Epoch:   500  |  train loss: 0.4619110942
+Epoch:   600  |  train loss: 0.4300025046
+Epoch:   700  |  train loss: 0.4038381934
+Epoch:   800  |  train loss: 0.3813198566
+Epoch:   900  |  train loss: 0.3620860100
+Epoch:  1000  |  train loss: 0.3457400203
+Processing class: 27
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7657894611
+Epoch:   200  |  train loss: 0.6302457690
+Epoch:   300  |  train loss: 0.5552361965
+Epoch:   400  |  train loss: 0.5022628427
+Epoch:   500  |  train loss: 0.4623536944
+Epoch:   600  |  train loss: 0.4304973662
+Epoch:   700  |  train loss: 0.4049300253
+Epoch:   800  |  train loss: 0.3831724465
+Epoch:   900  |  train loss: 0.3646969736
+Epoch:  1000  |  train loss: 0.3492027283
+Processing class: 28
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7508224607
+Epoch:   200  |  train loss: 0.6198235273
+Epoch:   300  |  train loss: 0.5465681553
+Epoch:   400  |  train loss: 0.4952193439
+Epoch:   500  |  train loss: 0.4548227847
+Epoch:   600  |  train loss: 0.4237913609
+Epoch:   700  |  train loss: 0.3988548636
+Epoch:   800  |  train loss: 0.3776110291
+Epoch:   900  |  train loss: 0.3593380630
+Epoch:  1000  |  train loss: 0.3426380217
+Processing class: 29
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7247608542
+Epoch:   200  |  train loss: 0.6003449440
+Epoch:   300  |  train loss: 0.5259096026
+Epoch:   400  |  train loss: 0.4738069117
+Epoch:   500  |  train loss: 0.4367857933
+Epoch:   600  |  train loss: 0.4073042095
+Epoch:   700  |  train loss: 0.3828616321
+Epoch:   800  |  train loss: 0.3616111279
+Epoch:   900  |  train loss: 0.3435759068
+Epoch:  1000  |  train loss: 0.3279666245
+Processing class: 30
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7580970526
+Epoch:   200  |  train loss: 0.6272474527
+Epoch:   300  |  train loss: 0.5518396735
+Epoch:   400  |  train loss: 0.4970843077
+Epoch:   500  |  train loss: 0.4547391415
+Epoch:   600  |  train loss: 0.4228977263
+Epoch:   700  |  train loss: 0.3964850605
+Epoch:   800  |  train loss: 0.3738726437
+Epoch:   900  |  train loss: 0.3546786726
+Epoch:  1000  |  train loss: 0.3384479702
+Processing class: 31
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7870708108
+Epoch:   200  |  train loss: 0.6640194893
+Epoch:   300  |  train loss: 0.5872707367
+Epoch:   400  |  train loss: 0.5333996534
+Epoch:   500  |  train loss: 0.4924595296
+Epoch:   600  |  train loss: 0.4612767816
+Epoch:   700  |  train loss: 0.4351669788
+Epoch:   800  |  train loss: 0.4121863365
+Epoch:   900  |  train loss: 0.3924486101
+Epoch:  1000  |  train loss: 0.3754140973
+Processing class: 32
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7318796396
+Epoch:   200  |  train loss: 0.6061371565
+Epoch:   300  |  train loss: 0.5328502357
+Epoch:   400  |  train loss: 0.4835918665
+Epoch:   500  |  train loss: 0.4457348168
+Epoch:   600  |  train loss: 0.4162131071
+Epoch:   700  |  train loss: 0.3916862190
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epoch:   800  |  train loss: 0.3720828593
+Epoch:   900  |  train loss: 0.3547683120
+Epoch:  1000  |  train loss: 0.3401100039
+Processing class: 33
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7181976080
+Epoch:   200  |  train loss: 0.5927443147
+Epoch:   300  |  train loss: 0.5217568338
+Epoch:   400  |  train loss: 0.4738128006
+Epoch:   500  |  train loss: 0.4350368142
+Epoch:   600  |  train loss: 0.4031681001
+Epoch:   700  |  train loss: 0.3784067690
+Epoch:   800  |  train loss: 0.3568994284
+Epoch:   900  |  train loss: 0.3380495727
+Epoch:  1000  |  train loss: 0.3219416618
+Processing class: 34
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7500991583
+Epoch:   200  |  train loss: 0.6102961063
+Epoch:   300  |  train loss: 0.5305874586
+Epoch:   400  |  train loss: 0.4790533841
+Epoch:   500  |  train loss: 0.4407044291
+Epoch:   600  |  train loss: 0.4099362612
+Epoch:   700  |  train loss: 0.3854271114
+Epoch:   800  |  train loss: 0.3652148783
+Epoch:   900  |  train loss: 0.3480011642
+Epoch:  1000  |  train loss: 0.3326554120
+Processing class: 35
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7735234141
+Epoch:   200  |  train loss: 0.6454562187
+Epoch:   300  |  train loss: 0.5619121552
+Epoch:   400  |  train loss: 0.5065351486
+Epoch:   500  |  train loss: 0.4657415688
+Epoch:   600  |  train loss: 0.4327893555
+Epoch:   700  |  train loss: 0.4061044991
+Epoch:   800  |  train loss: 0.3831616700
+Epoch:   900  |  train loss: 0.3635627687
+Epoch:  1000  |  train loss: 0.3460086167
+Processing class: 36
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7555828691
+Epoch:   200  |  train loss: 0.6288344622
+Epoch:   300  |  train loss: 0.5540060043
+Epoch:   400  |  train loss: 0.4981395602
+Epoch:   500  |  train loss: 0.4570695400
+Epoch:   600  |  train loss: 0.4246320605
+Epoch:   700  |  train loss: 0.3986794829
+Epoch:   800  |  train loss: 0.3767589271
+Epoch:   900  |  train loss: 0.3585073411
+Epoch:  1000  |  train loss: 0.3429791272
+Processing class: 37
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7171975374
+Epoch:   200  |  train loss: 0.5943163514
+Epoch:   300  |  train loss: 0.5200596392
+Epoch:   400  |  train loss: 0.4702986598
+Epoch:   500  |  train loss: 0.4324941337
+Epoch:   600  |  train loss: 0.4028551817
+Epoch:   700  |  train loss: 0.3787631810
+Epoch:   800  |  train loss: 0.3585528314
+Epoch:   900  |  train loss: 0.3416359663
+Epoch:  1000  |  train loss: 0.3266662717
+Processing class: 38
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7529590249
+Epoch:   200  |  train loss: 0.6335009694
+Epoch:   300  |  train loss: 0.5621017218
+Epoch:   400  |  train loss: 0.5095550537
+Epoch:   500  |  train loss: 0.4691180468
+Epoch:   600  |  train loss: 0.4377078235
+Epoch:   700  |  train loss: 0.4123879075
+Epoch:   800  |  train loss: 0.3913973212
+Epoch:   900  |  train loss: 0.3741438329
+Epoch:  1000  |  train loss: 0.3590008974
+Processing class: 39
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7493299007
+Epoch:   200  |  train loss: 0.6259821415
+Epoch:   300  |  train loss: 0.5499305129
+Epoch:   400  |  train loss: 0.4989975572
+Epoch:   500  |  train loss: 0.4591143429
+Epoch:   600  |  train loss: 0.4268645167
+Epoch:   700  |  train loss: 0.4006051838
+Epoch:   800  |  train loss: 0.3775537789
+Epoch:   900  |  train loss: 0.3583495796
+Epoch:  1000  |  train loss: 0.3416331947
+Processing class: 40
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7500258923
+Epoch:   200  |  train loss: 0.6144419670
+Epoch:   300  |  train loss: 0.5355008006
+Epoch:   400  |  train loss: 0.4822612405
+Epoch:   500  |  train loss: 0.4436331272
+Epoch:   600  |  train loss: 0.4134484231
+Epoch:   700  |  train loss: 0.3879927635
+Epoch:   800  |  train loss: 0.3669319808
+Epoch:   900  |  train loss: 0.3484990954
+Epoch:  1000  |  train loss: 0.3320597768
+Processing class: 41
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7319780588
+Epoch:   200  |  train loss: 0.6009919882
+Epoch:   300  |  train loss: 0.5244987011
+Epoch:   400  |  train loss: 0.4737777233
+Epoch:   500  |  train loss: 0.4364921153
+Epoch:   600  |  train loss: 0.4059781671
+Epoch:   700  |  train loss: 0.3804189503
+Epoch:   800  |  train loss: 0.3589060068
+Epoch:   900  |  train loss: 0.3404793859
+Epoch:  1000  |  train loss: 0.3240720332
+Processing class: 42
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7443780184
+Epoch:   200  |  train loss: 0.6058166623
+Epoch:   300  |  train loss: 0.5291740060
+Epoch:   400  |  train loss: 0.4806952477
+Epoch:   500  |  train loss: 0.4426303864
+Epoch:   600  |  train loss: 0.4129653871
+Epoch:   700  |  train loss: 0.3885692954
+Epoch:   800  |  train loss: 0.3684131861
+Epoch:   900  |  train loss: 0.3510980248
+Epoch:  1000  |  train loss: 0.3355881989
+Processing class: 43
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7483171225
+Epoch:   200  |  train loss: 0.6187891006
+Epoch:   300  |  train loss: 0.5371243000
+Epoch:   400  |  train loss: 0.4818512499
+Epoch:   500  |  train loss: 0.4416216016
+Epoch:   600  |  train loss: 0.4102084816
+Epoch:   700  |  train loss: 0.3853510678
+Epoch:   800  |  train loss: 0.3644460559
+Epoch:   900  |  train loss: 0.3462374032
+Epoch:  1000  |  train loss: 0.3303047597
+Processing class: 44
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7451073408
+Epoch:   200  |  train loss: 0.6200913429
+Epoch:   300  |  train loss: 0.5503263831
+Epoch:   400  |  train loss: 0.4985642791
+Epoch:   500  |  train loss: 0.4569995761
+Epoch:   600  |  train loss: 0.4258069277
+Epoch:   700  |  train loss: 0.4007640302
+Epoch:   800  |  train loss: 0.3795276701
+Epoch:   900  |  train loss: 0.3620576859
+Epoch:  1000  |  train loss: 0.3463013768
+Processing class: 45
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7460330606
+Epoch:   200  |  train loss: 0.6216106892
+Epoch:   300  |  train loss: 0.5493529081
+Epoch:   400  |  train loss: 0.4970592976
+Epoch:   500  |  train loss: 0.4583751976
+Epoch:   600  |  train loss: 0.4268759668
+Epoch:   700  |  train loss: 0.4007419467
+Epoch:   800  |  train loss: 0.3791998446
+Epoch:   900  |  train loss: 0.3604142189
+Epoch:  1000  |  train loss: 0.3442696452
+Processing class: 46
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7387107491
+Epoch:   200  |  train loss: 0.6296386719
+Epoch:   300  |  train loss: 0.5526237607
+Epoch:   400  |  train loss: 0.4955579340
+Epoch:   500  |  train loss: 0.4533270299
+Epoch:   600  |  train loss: 0.4204252660
+Epoch:   700  |  train loss: 0.3946830451
+Epoch:   800  |  train loss: 0.3728816926
+Epoch:   900  |  train loss: 0.3547694623
+Epoch:  1000  |  train loss: 0.3386055291
+Processing class: 47
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7544569016
+Epoch:   200  |  train loss: 0.6050015926
+Epoch:   300  |  train loss: 0.5229970932
+Epoch:   400  |  train loss: 0.4681007326
+Epoch:   500  |  train loss: 0.4280464530
+Epoch:   600  |  train loss: 0.3958593309
+Epoch:   700  |  train loss: 0.3704383314
+Epoch:   800  |  train loss: 0.3489810705
+Epoch:   900  |  train loss: 0.3308283210
+Epoch:  1000  |  train loss: 0.3145162284
+Processing class: 48
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7348573685
+Epoch:   200  |  train loss: 0.6084656477
+Epoch:   300  |  train loss: 0.5337484360
+Epoch:   400  |  train loss: 0.4794834614
+Epoch:   500  |  train loss: 0.4384139955
+Epoch:   600  |  train loss: 0.4059488475
+Epoch:   700  |  train loss: 0.3800161839
+Epoch:   800  |  train loss: 0.3577007532
+Epoch:   900  |  train loss: 0.3385505617
+Epoch:  1000  |  train loss: 0.3221810639
+Processing class: 49
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7461000919
+Epoch:   200  |  train loss: 0.6139782906
+Epoch:   300  |  train loss: 0.5375007987
+Epoch:   400  |  train loss: 0.4837262094
+Epoch:   500  |  train loss: 0.4449604988
+Epoch:   600  |  train loss: 0.4147479475
+Epoch:   700  |  train loss: 0.3897547185
+Epoch:   800  |  train loss: 0.3687378168
+Epoch:   900  |  train loss: 0.3503398836
+Epoch:  1000  |  train loss: 0.3344228029
+2024-03-10 18:58:19,032 [trainer.py] => CNN: {'total': 83.44, '00-09': 87.7, '10-19': 79.6, '20-29': 84.9, '30-39': 81.0, '40-49': 84.0, 'old': 0, 'new': 83.44}
+2024-03-10 18:58:19,034 [trainer.py] => No NME accuracy
+2024-03-10 18:58:19,034 [trainer.py] => FeCAM: {'total': 78.9, '00-09': 83.6, '10-19': 74.8, '20-29': 79.7, '30-39': 77.4, '40-49': 79.0, 'old': 0, 'new': 78.9}
+2024-03-10 18:58:19,034 [trainer.py] => CNN top1 curve: [83.44]
+2024-03-10 18:58:19,034 [trainer.py] => CNN top5 curve: [96.5]
+2024-03-10 18:58:19,034 [trainer.py] => FeCAM top1 curve: [78.9]
+2024-03-10 18:58:19,034 [trainer.py] => FeCAM top5 curve: [92.02]
+
+2024-03-10 18:58:19,043 [fecam.py] => Learning on 50-60
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Processing class: 50
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7235161543
+Epoch:   200  |  train loss: 0.5859911323
+Epoch:   300  |  train loss: 0.5095494211
+Epoch:   400  |  train loss: 0.4573961258
+Epoch:   500  |  train loss: 0.4191343784
+Epoch:   600  |  train loss: 0.3890676439
+Epoch:   700  |  train loss: 0.3639267325
+Epoch:   800  |  train loss: 0.3431164980
+Epoch:   900  |  train loss: 0.3250316978
+Epoch:  1000  |  train loss: 0.3092074752
+Processing class: 51
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6846714020
+Epoch:   200  |  train loss: 0.5520031571
+Epoch:   300  |  train loss: 0.4829249740
+Epoch:   400  |  train loss: 0.4337866902
+Epoch:   500  |  train loss: 0.3969754755
+Epoch:   600  |  train loss: 0.3673513293
+Epoch:   700  |  train loss: 0.3432078660
+Epoch:   800  |  train loss: 0.3230275035
+Epoch:   900  |  train loss: 0.3055768907
+Epoch:  1000  |  train loss: 0.2912839353
+Processing class: 52
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7152422428
+Epoch:   200  |  train loss: 0.5786796331
+Epoch:   300  |  train loss: 0.5084038854
+Epoch:   400  |  train loss: 0.4593986988
+Epoch:   500  |  train loss: 0.4210018039
+Epoch:   600  |  train loss: 0.3903102875
+Epoch:   700  |  train loss: 0.3649861693
+Epoch:   800  |  train loss: 0.3436789393
+Epoch:   900  |  train loss: 0.3258084714
+Epoch:  1000  |  train loss: 0.3101893365
+Processing class: 53
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7195461988
+Epoch:   200  |  train loss: 0.5908393025
+Epoch:   300  |  train loss: 0.5122267842
+Epoch:   400  |  train loss: 0.4559995770
+Epoch:   500  |  train loss: 0.4133804083
+Epoch:   600  |  train loss: 0.3798948824
+Epoch:   700  |  train loss: 0.3535125852
+Epoch:   800  |  train loss: 0.3316059113
+Epoch:   900  |  train loss: 0.3128458619
+Epoch:  1000  |  train loss: 0.2972837627
+Processing class: 54
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7005166888
+Epoch:   200  |  train loss: 0.5580093682
+Epoch:   300  |  train loss: 0.4885098994
+Epoch:   400  |  train loss: 0.4399532914
+Epoch:   500  |  train loss: 0.4021291077
+Epoch:   600  |  train loss: 0.3730139852
+Epoch:   700  |  train loss: 0.3494987071
+Epoch:   800  |  train loss: 0.3300946474
+Epoch:   900  |  train loss: 0.3133148134
+Epoch:  1000  |  train loss: 0.2988513291
+Processing class: 55
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7188638687
+Epoch:   200  |  train loss: 0.5902752161
+Epoch:   300  |  train loss: 0.5117651105
+Epoch:   400  |  train loss: 0.4601363719
+Epoch:   500  |  train loss: 0.4240894079
+Epoch:   600  |  train loss: 0.3961432517
+Epoch:   700  |  train loss: 0.3737942815
+Epoch:   800  |  train loss: 0.3547307134
+Epoch:   900  |  train loss: 0.3381888807
+Epoch:  1000  |  train loss: 0.3233406842
+Processing class: 56
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6955909729
+Epoch:   200  |  train loss: 0.5741431475
+Epoch:   300  |  train loss: 0.5003383517
+Epoch:   400  |  train loss: 0.4535008490
+Epoch:   500  |  train loss: 0.4199279487
+Epoch:   600  |  train loss: 0.3943829358
+Epoch:   700  |  train loss: 0.3725107431
+Epoch:   800  |  train loss: 0.3540412545
+Epoch:   900  |  train loss: 0.3380767882
+Epoch:  1000  |  train loss: 0.3236730993
+Processing class: 57
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7429205298
+Epoch:   200  |  train loss: 0.6073804140
+Epoch:   300  |  train loss: 0.5264222920
+Epoch:   400  |  train loss: 0.4736710370
+Epoch:   500  |  train loss: 0.4362871945
+Epoch:   600  |  train loss: 0.4073308408
+Epoch:   700  |  train loss: 0.3827946067
+Epoch:   800  |  train loss: 0.3624331594
+Epoch:   900  |  train loss: 0.3446143508
+Epoch:  1000  |  train loss: 0.3299567699
+Processing class: 58
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6818430543
+Epoch:   200  |  train loss: 0.5468513012
+Epoch:   300  |  train loss: 0.4791023076
+Epoch:   400  |  train loss: 0.4315042615
+Epoch:   500  |  train loss: 0.3974211216
+Epoch:   600  |  train loss: 0.3706257284
+Epoch:   700  |  train loss: 0.3479674220
+Epoch:   800  |  train loss: 0.3289691269
+Epoch:   900  |  train loss: 0.3121777654
+Epoch:  1000  |  train loss: 0.2984778583
+Processing class: 59
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7093183041
+Epoch:   200  |  train loss: 0.5882265568
+Epoch:   300  |  train loss: 0.5169700384
+Epoch:   400  |  train loss: 0.4662362158
+Epoch:   500  |  train loss: 0.4279043078
+Epoch:   600  |  train loss: 0.3978355169
+Epoch:   700  |  train loss: 0.3740047276
+Epoch:   800  |  train loss: 0.3523238122
+Epoch:   900  |  train loss: 0.3347770810
+Epoch:  1000  |  train loss: 0.3192469418
+2024-03-10 19:06:26,628 [trainer.py] => CNN: {'total': 71.75, '00-09': 82.2, '10-19': 72.8, '20-29': 78.5, '30-39': 74.9, '40-49': 68.4, '50-59': 53.7, 'old': 75.36, 'new': 53.7}
+2024-03-10 19:06:26,629 [trainer.py] => No NME accuracy
+2024-03-10 19:06:26,629 [trainer.py] => FeCAM: {'total': 63.38, '00-09': 72.3, '10-19': 58.6, '20-29': 69.3, '30-39': 63.1, '40-49': 65.0, '50-59': 52.0, 'old': 65.66, 'new': 52.0}
+2024-03-10 19:06:26,629 [trainer.py] => CNN top1 curve: [83.44, 71.75]
+2024-03-10 19:06:26,629 [trainer.py] => CNN top5 curve: [96.5, 89.6]
+2024-03-10 19:06:26,629 [trainer.py] => FeCAM top1 curve: [78.9, 63.38]
+2024-03-10 19:06:26,629 [trainer.py] => FeCAM top5 curve: [92.02, 85.17]
+
+2024-03-10 19:06:26,636 [fecam.py] => Learning on 60-70
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Processing class: 60
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7077522755
+Epoch:   200  |  train loss: 0.5744399786
+Epoch:   300  |  train loss: 0.5038682759
+Epoch:   400  |  train loss: 0.4565015793
+Epoch:   500  |  train loss: 0.4206051767
+Epoch:   600  |  train loss: 0.3917242885
+Epoch:   700  |  train loss: 0.3686362565
+Epoch:   800  |  train loss: 0.3502653122
+Epoch:   900  |  train loss: 0.3345208466
+Epoch:  1000  |  train loss: 0.3205662668
+Processing class: 61
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6945623755
+Epoch:   200  |  train loss: 0.5512095451
+Epoch:   300  |  train loss: 0.4820851624
+Epoch:   400  |  train loss: 0.4335266829
+Epoch:   500  |  train loss: 0.3979428947
+Epoch:   600  |  train loss: 0.3705906808
+Epoch:   700  |  train loss: 0.3465115964
+Epoch:   800  |  train loss: 0.3267742515
+Epoch:   900  |  train loss: 0.3095620155
+Epoch:  1000  |  train loss: 0.2949622333
+Processing class: 62
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7256526589
+Epoch:   200  |  train loss: 0.5941104412
+Epoch:   300  |  train loss: 0.5221615434
+Epoch:   400  |  train loss: 0.4694337010
+Epoch:   500  |  train loss: 0.4302930295
+Epoch:   600  |  train loss: 0.3989913046
+Epoch:   700  |  train loss: 0.3739569545
+Epoch:   800  |  train loss: 0.3531870365
+Epoch:   900  |  train loss: 0.3351329148
+Epoch:  1000  |  train loss: 0.3198195338
+Processing class: 63
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7009454727
+Epoch:   200  |  train loss: 0.5720118165
+Epoch:   300  |  train loss: 0.5015010953
+Epoch:   400  |  train loss: 0.4540140390
+Epoch:   500  |  train loss: 0.4180752218
+Epoch:   600  |  train loss: 0.3895497739
+Epoch:   700  |  train loss: 0.3662488878
+Epoch:   800  |  train loss: 0.3468734384
+Epoch:   900  |  train loss: 0.3298366427
+Epoch:  1000  |  train loss: 0.3149286985
+Processing class: 64
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6931649446
+Epoch:   200  |  train loss: 0.5517265558
+Epoch:   300  |  train loss: 0.4812001288
+Epoch:   400  |  train loss: 0.4328800976
+Epoch:   500  |  train loss: 0.3970475614
+Epoch:   600  |  train loss: 0.3688664615
+Epoch:   700  |  train loss: 0.3465234220
+Epoch:   800  |  train loss: 0.3264769495
+Epoch:   900  |  train loss: 0.3100604415
+Epoch:  1000  |  train loss: 0.2954045713
+Processing class: 65
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6970690966
+Epoch:   200  |  train loss: 0.5640229821
+Epoch:   300  |  train loss: 0.4978903413
+Epoch:   400  |  train loss: 0.4536348104
+Epoch:   500  |  train loss: 0.4197404683
+Epoch:   600  |  train loss: 0.3917226076
+Epoch:   700  |  train loss: 0.3679913521
+Epoch:   800  |  train loss: 0.3480370998
+Epoch:   900  |  train loss: 0.3303327203
+Epoch:  1000  |  train loss: 0.3150375545
+Processing class: 66
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7082533717
+Epoch:   200  |  train loss: 0.5720901012
+Epoch:   300  |  train loss: 0.5025837004
+Epoch:   400  |  train loss: 0.4536955833
+Epoch:   500  |  train loss: 0.4163484514
+Epoch:   600  |  train loss: 0.3864438653
+Epoch:   700  |  train loss: 0.3618796706
+Epoch:   800  |  train loss: 0.3411723316
+Epoch:   900  |  train loss: 0.3239688873
+Epoch:  1000  |  train loss: 0.3081167102
+Processing class: 67
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6983349919
+Epoch:   200  |  train loss: 0.5657107711
+Epoch:   300  |  train loss: 0.4902465940
+Epoch:   400  |  train loss: 0.4415212929
+Epoch:   500  |  train loss: 0.4051652193
+Epoch:   600  |  train loss: 0.3771410465
+Epoch:   700  |  train loss: 0.3540239334
+Epoch:   800  |  train loss: 0.3339454114
+Epoch:   900  |  train loss: 0.3169761539
+Epoch:  1000  |  train loss: 0.3020008206
+Processing class: 68
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7148364425
+Epoch:   200  |  train loss: 0.5747689366
+Epoch:   300  |  train loss: 0.4977405965
+Epoch:   400  |  train loss: 0.4437267959
+Epoch:   500  |  train loss: 0.4055098295
+Epoch:   600  |  train loss: 0.3761129260
+Epoch:   700  |  train loss: 0.3518661141
+Epoch:   800  |  train loss: 0.3323111296
+Epoch:   900  |  train loss: 0.3155422032
+Epoch:  1000  |  train loss: 0.3003464401
+Processing class: 69
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6953454971
+Epoch:   200  |  train loss: 0.5686991334
+Epoch:   300  |  train loss: 0.4916606665
+Epoch:   400  |  train loss: 0.4427201807
+Epoch:   500  |  train loss: 0.4070152581
+Epoch:   600  |  train loss: 0.3791769803
+Epoch:   700  |  train loss: 0.3561355114
+Epoch:   800  |  train loss: 0.3371427417
+Epoch:   900  |  train loss: 0.3200637221
+Epoch:  1000  |  train loss: 0.3051028728
+2024-03-10 19:16:18,291 [trainer.py] => CNN: {'total': 64.66, '00-09': 75.0, '10-19': 70.1, '20-29': 77.1, '30-39': 70.6, '40-49': 64.0, '50-59': 45.8, '60-69': 50.0, 'old': 67.1, 'new': 50.0}
+2024-03-10 19:16:18,292 [trainer.py] => No NME accuracy
+2024-03-10 19:16:18,292 [trainer.py] => FeCAM: {'total': 57.57, '00-09': 70.2, '10-19': 53.7, '20-29': 67.7, '30-39': 59.3, '40-49': 60.1, '50-59': 44.9, '60-69': 47.1, 'old': 59.32, 'new': 47.1}
+2024-03-10 19:16:18,292 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66]
+2024-03-10 19:16:18,292 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54]
+2024-03-10 19:16:18,292 [trainer.py] => FeCAM top1 curve: [78.9, 63.38, 57.57]
+2024-03-10 19:16:18,292 [trainer.py] => FeCAM top5 curve: [92.02, 85.17, 80.83]
+
+2024-03-10 19:16:18,297 [fecam.py] => Learning on 70-80
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Processing class: 70
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6954853535
+Epoch:   200  |  train loss: 0.5752783179
+Epoch:   300  |  train loss: 0.5067639589
+Epoch:   400  |  train loss: 0.4562519133
+Epoch:   500  |  train loss: 0.4184743285
+Epoch:   600  |  train loss: 0.3881241322
+Epoch:   700  |  train loss: 0.3635329843
+Epoch:   800  |  train loss: 0.3433996916
+Epoch:   900  |  train loss: 0.3259105444
+Epoch:  1000  |  train loss: 0.3107889771
+Processing class: 71
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7083082318
+Epoch:   200  |  train loss: 0.5769147515
+Epoch:   300  |  train loss: 0.5012150526
+Epoch:   400  |  train loss: 0.4490978360
+Epoch:   500  |  train loss: 0.4118855894
+Epoch:   600  |  train loss: 0.3829104304
+Epoch:   700  |  train loss: 0.3587357581
+Epoch:   800  |  train loss: 0.3385954738
+Epoch:   900  |  train loss: 0.3211313605
+Epoch:  1000  |  train loss: 0.3062873960
+Processing class: 72
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6933839679
+Epoch:   200  |  train loss: 0.5605761528
+Epoch:   300  |  train loss: 0.4915339231
+Epoch:   400  |  train loss: 0.4427470028
+Epoch:   500  |  train loss: 0.4056578934
+Epoch:   600  |  train loss: 0.3772429824
+Epoch:   700  |  train loss: 0.3540776789
+Epoch:   800  |  train loss: 0.3344354570
+Epoch:   900  |  train loss: 0.3175723076
+Epoch:  1000  |  train loss: 0.3035454988
+Processing class: 73
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7234524012
+Epoch:   200  |  train loss: 0.6083308578
+Epoch:   300  |  train loss: 0.5338386893
+Epoch:   400  |  train loss: 0.4827194512
+Epoch:   500  |  train loss: 0.4439472616
+Epoch:   600  |  train loss: 0.4142147839
+Epoch:   700  |  train loss: 0.3891639233
+Epoch:   800  |  train loss: 0.3688071072
+Epoch:   900  |  train loss: 0.3511082292
+Epoch:  1000  |  train loss: 0.3358174741
+Processing class: 74
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7071372747
+Epoch:   200  |  train loss: 0.5786838651
+Epoch:   300  |  train loss: 0.5015136838
+Epoch:   400  |  train loss: 0.4536423504
+Epoch:   500  |  train loss: 0.4183337152
+Epoch:   600  |  train loss: 0.3907357931
+Epoch:   700  |  train loss: 0.3672524810
+Epoch:   800  |  train loss: 0.3487129509
+Epoch:   900  |  train loss: 0.3323959231
+Epoch:  1000  |  train loss: 0.3178616762
+Processing class: 75
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7241706491
+Epoch:   200  |  train loss: 0.5848605394
+Epoch:   300  |  train loss: 0.5112681925
+Epoch:   400  |  train loss: 0.4612031877
+Epoch:   500  |  train loss: 0.4244158268
+Epoch:   600  |  train loss: 0.3945433080
+Epoch:   700  |  train loss: 0.3707430601
+Epoch:   800  |  train loss: 0.3497063458
+Epoch:   900  |  train loss: 0.3315394044
+Epoch:  1000  |  train loss: 0.3156008005
+Processing class: 76
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7311096191
+Epoch:   200  |  train loss: 0.6003556252
+Epoch:   300  |  train loss: 0.5259001374
+Epoch:   400  |  train loss: 0.4762629151
+Epoch:   500  |  train loss: 0.4397846758
+Epoch:   600  |  train loss: 0.4097382843
+Epoch:   700  |  train loss: 0.3855081856
+Epoch:   800  |  train loss: 0.3648622930
+Epoch:   900  |  train loss: 0.3465334713
+Epoch:  1000  |  train loss: 0.3309199154
+Processing class: 77
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7161545873
+Epoch:   200  |  train loss: 0.5839701772
+Epoch:   300  |  train loss: 0.5059826434
+Epoch:   400  |  train loss: 0.4558922172
+Epoch:   500  |  train loss: 0.4203619897
+Epoch:   600  |  train loss: 0.3924967349
+Epoch:   700  |  train loss: 0.3687036514
+Epoch:   800  |  train loss: 0.3483305097
+Epoch:   900  |  train loss: 0.3318279326
+Epoch:  1000  |  train loss: 0.3173131466
+Processing class: 78
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6989102840
+Epoch:   200  |  train loss: 0.5652051330
+Epoch:   300  |  train loss: 0.4940423071
+Epoch:   400  |  train loss: 0.4477822661
+Epoch:   500  |  train loss: 0.4124865711
+Epoch:   600  |  train loss: 0.3844597340
+Epoch:   700  |  train loss: 0.3612549603
+Epoch:   800  |  train loss: 0.3419538021
+Epoch:   900  |  train loss: 0.3248770118
+Epoch:  1000  |  train loss: 0.3103444397
+Processing class: 79
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7057506442
+Epoch:   200  |  train loss: 0.5758455515
+Epoch:   300  |  train loss: 0.4991667449
+Epoch:   400  |  train loss: 0.4505293727
+Epoch:   500  |  train loss: 0.4144705832
+Epoch:   600  |  train loss: 0.3856892705
+Epoch:   700  |  train loss: 0.3618234694
+Epoch:   800  |  train loss: 0.3413627505
+Epoch:   900  |  train loss: 0.3241877735
+Epoch:  1000  |  train loss: 0.3091913879
+2024-03-10 19:28:16,958 [trainer.py] => CNN: {'total': 59.18, '00-09': 73.6, '10-19': 68.4, '20-29': 76.9, '30-39': 69.1, '40-49': 60.6, '50-59': 37.2, '60-69': 45.7, '70-79': 41.9, 'old': 61.64, 'new': 41.9}
+2024-03-10 19:28:16,959 [trainer.py] => No NME accuracy
+2024-03-10 19:28:16,959 [trainer.py] => FeCAM: {'total': 52.05, '00-09': 65.5, '10-19': 51.3, '20-29': 64.9, '30-39': 56.4, '40-49': 55.9, '50-59': 37.0, '60-69': 41.6, '70-79': 43.8, 'old': 53.23, 'new': 43.8}
+2024-03-10 19:28:16,959 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66, 59.18]
+2024-03-10 19:28:16,959 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54, 84.09]
+2024-03-10 19:28:16,959 [trainer.py] => FeCAM top1 curve: [78.9, 63.38, 57.57, 52.05]
+2024-03-10 19:28:16,959 [trainer.py] => FeCAM top5 curve: [92.02, 85.17, 80.83, 77.06]
+
+2024-03-10 19:28:16,965 [fecam.py] => Learning on 80-90
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Processing class: 80
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6825138807
+Epoch:   200  |  train loss: 0.5620799541
+Epoch:   300  |  train loss: 0.4899247646
+Epoch:   400  |  train loss: 0.4411512375
+Epoch:   500  |  train loss: 0.4040117741
+Epoch:   600  |  train loss: 0.3734169126
+Epoch:   700  |  train loss: 0.3484206975
+Epoch:   800  |  train loss: 0.3274625897
+Epoch:   900  |  train loss: 0.3106466115
+Epoch:  1000  |  train loss: 0.2953380644
+Processing class: 81
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6873901367
+Epoch:   200  |  train loss: 0.5582831264
+Epoch:   300  |  train loss: 0.4850166082
+Epoch:   400  |  train loss: 0.4368363559
+Epoch:   500  |  train loss: 0.3999143243
+Epoch:   600  |  train loss: 0.3698161483
+Epoch:   700  |  train loss: 0.3457252383
+Epoch:   800  |  train loss: 0.3255131602
+Epoch:   900  |  train loss: 0.3083404124
+Epoch:  1000  |  train loss: 0.2930207312
+Processing class: 82
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6981452465
+Epoch:   200  |  train loss: 0.5795701861
+Epoch:   300  |  train loss: 0.5080295444
+Epoch:   400  |  train loss: 0.4578918099
+Epoch:   500  |  train loss: 0.4221975744
+Epoch:   600  |  train loss: 0.3942299485
+Epoch:   700  |  train loss: 0.3712742090
+Epoch:   800  |  train loss: 0.3515564859
+Epoch:   900  |  train loss: 0.3344669282
+Epoch:  1000  |  train loss: 0.3192158699
+Processing class: 83
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6753316522
+Epoch:   200  |  train loss: 0.5379040420
+Epoch:   300  |  train loss: 0.4670026958
+Epoch:   400  |  train loss: 0.4160178423
+Epoch:   500  |  train loss: 0.3800298691
+Epoch:   600  |  train loss: 0.3518065333
+Epoch:   700  |  train loss: 0.3286830127
+Epoch:   800  |  train loss: 0.3098318398
+Epoch:   900  |  train loss: 0.2935530722
+Epoch:  1000  |  train loss: 0.2798032641
+Processing class: 84
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6829428554
+Epoch:   200  |  train loss: 0.5539133191
+Epoch:   300  |  train loss: 0.4802548349
+Epoch:   400  |  train loss: 0.4332761228
+Epoch:   500  |  train loss: 0.3974620879
+Epoch:   600  |  train loss: 0.3694833338
+Epoch:   700  |  train loss: 0.3472577512
+Epoch:   800  |  train loss: 0.3284366727
+Epoch:   900  |  train loss: 0.3129660785
+Epoch:  1000  |  train loss: 0.2985268533
+Processing class: 85
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6931844831
+Epoch:   200  |  train loss: 0.5625866652
+Epoch:   300  |  train loss: 0.4951248527
+Epoch:   400  |  train loss: 0.4470104933
+Epoch:   500  |  train loss: 0.4128961205
+Epoch:   600  |  train loss: 0.3867134631
+Epoch:   700  |  train loss: 0.3648735106
+Epoch:   800  |  train loss: 0.3466798961
+Epoch:   900  |  train loss: 0.3304123819
+Epoch:  1000  |  train loss: 0.3163731277
+Processing class: 86
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6939767480
+Epoch:   200  |  train loss: 0.5575026870
+Epoch:   300  |  train loss: 0.4849855661
+Epoch:   400  |  train loss: 0.4355889559
+Epoch:   500  |  train loss: 0.4008631587
+Epoch:   600  |  train loss: 0.3728745699
+Epoch:   700  |  train loss: 0.3498473048
+Epoch:   800  |  train loss: 0.3309012711
+Epoch:   900  |  train loss: 0.3147824943
+Epoch:  1000  |  train loss: 0.2999318600
+Processing class: 87
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7243246436
+Epoch:   200  |  train loss: 0.6103373766
+Epoch:   300  |  train loss: 0.5366389155
+Epoch:   400  |  train loss: 0.4855683208
+Epoch:   500  |  train loss: 0.4451508641
+Epoch:   600  |  train loss: 0.4139907837
+Epoch:   700  |  train loss: 0.3870952249
+Epoch:   800  |  train loss: 0.3647031665
+Epoch:   900  |  train loss: 0.3460973382
+Epoch:  1000  |  train loss: 0.3295061111
+Processing class: 88
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6954826355
+Epoch:   200  |  train loss: 0.5594929099
+Epoch:   300  |  train loss: 0.4888212323
+Epoch:   400  |  train loss: 0.4417324483
+Epoch:   500  |  train loss: 0.4075786471
+Epoch:   600  |  train loss: 0.3812987924
+Epoch:   700  |  train loss: 0.3591302395
+Epoch:   800  |  train loss: 0.3401553929
+Epoch:   900  |  train loss: 0.3237754762
+Epoch:  1000  |  train loss: 0.3091896534
+Processing class: 89
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7042584419
+Epoch:   200  |  train loss: 0.5771119356
+Epoch:   300  |  train loss: 0.5072867155
+Epoch:   400  |  train loss: 0.4599009752
+Epoch:   500  |  train loss: 0.4229502916
+Epoch:   600  |  train loss: 0.3938142657
+Epoch:   700  |  train loss: 0.3685436189
+Epoch:   800  |  train loss: 0.3475411177
+Epoch:   900  |  train loss: 0.3293573260
+Epoch:  1000  |  train loss: 0.3136531472
+2024-03-10 19:42:30,510 [trainer.py] => CNN: {'total': 54.08, '00-09': 67.9, '10-19': 63.6, '20-29': 73.2, '30-39': 68.8, '40-49': 57.2, '50-59': 32.6, '60-69': 40.9, '70-79': 38.1, '80-89': 44.4, 'old': 55.29, 'new': 44.4}
+2024-03-10 19:42:30,511 [trainer.py] => No NME accuracy
+2024-03-10 19:42:30,511 [trainer.py] => FeCAM: {'total': 48.08, '00-09': 63.0, '10-19': 46.9, '20-29': 61.5, '30-39': 54.9, '40-49': 53.7, '50-59': 33.3, '60-69': 36.9, '70-79': 40.6, '80-89': 41.9, 'old': 48.85, 'new': 41.9}
+2024-03-10 19:42:30,511 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66, 59.18, 54.08]
+2024-03-10 19:42:30,511 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54, 84.09, 81.74]
+2024-03-10 19:42:30,511 [trainer.py] => FeCAM top1 curve: [78.9, 63.38, 57.57, 52.05, 48.08]
+2024-03-10 19:42:30,511 [trainer.py] => FeCAM top5 curve: [92.02, 85.17, 80.83, 77.06, 74.34]
+
+2024-03-10 19:42:30,515 [fecam.py] => Learning on 90-100
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Processing class: 90
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6888926864
+Epoch:   200  |  train loss: 0.5539873600
+Epoch:   300  |  train loss: 0.4853492081
+Epoch:   400  |  train loss: 0.4384886861
+Epoch:   500  |  train loss: 0.4001953900
+Epoch:   600  |  train loss: 0.3699668884
+Epoch:   700  |  train loss: 0.3470627785
+Epoch:   800  |  train loss: 0.3279640198
+Epoch:   900  |  train loss: 0.3112439156
+Epoch:  1000  |  train loss: 0.2966938078
+Processing class: 91
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7105702639
+Epoch:   200  |  train loss: 0.5863171577
+Epoch:   300  |  train loss: 0.5065853000
+Epoch:   400  |  train loss: 0.4551211417
+Epoch:   500  |  train loss: 0.4178041875
+Epoch:   600  |  train loss: 0.3897695601
+Epoch:   700  |  train loss: 0.3673491955
+Epoch:   800  |  train loss: 0.3488714397
+Epoch:   900  |  train loss: 0.3318755150
+Epoch:  1000  |  train loss: 0.3175286651
+Processing class: 92
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6932955861
+Epoch:   200  |  train loss: 0.5634372711
+Epoch:   300  |  train loss: 0.4859247386
+Epoch:   400  |  train loss: 0.4329361975
+Epoch:   500  |  train loss: 0.3953066409
+Epoch:   600  |  train loss: 0.3669614017
+Epoch:   700  |  train loss: 0.3429189086
+Epoch:   800  |  train loss: 0.3238457978
+Epoch:   900  |  train loss: 0.3071316779
+Epoch:  1000  |  train loss: 0.2924436986
+Processing class: 93
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6974438906
+Epoch:   200  |  train loss: 0.5680587053
+Epoch:   300  |  train loss: 0.4953801513
+Epoch:   400  |  train loss: 0.4463596404
+Epoch:   500  |  train loss: 0.4104420662
+Epoch:   600  |  train loss: 0.3819724381
+Epoch:   700  |  train loss: 0.3578188658
+Epoch:   800  |  train loss: 0.3386577010
+Epoch:   900  |  train loss: 0.3225851655
+Epoch:  1000  |  train loss: 0.3079161823
+Processing class: 94
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6797167301
+Epoch:   200  |  train loss: 0.5393412828
+Epoch:   300  |  train loss: 0.4657709241
+Epoch:   400  |  train loss: 0.4160765111
+Epoch:   500  |  train loss: 0.3805228114
+Epoch:   600  |  train loss: 0.3523646891
+Epoch:   700  |  train loss: 0.3293900788
+Epoch:   800  |  train loss: 0.3102609873
+Epoch:   900  |  train loss: 0.2931981802
+Epoch:  1000  |  train loss: 0.2788050532
+Processing class: 95
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7006269097
+Epoch:   200  |  train loss: 0.5596552730
+Epoch:   300  |  train loss: 0.4849243402
+Epoch:   400  |  train loss: 0.4389805496
+Epoch:   500  |  train loss: 0.4061416626
+Epoch:   600  |  train loss: 0.3802382052
+Epoch:   700  |  train loss: 0.3582786500
+Epoch:   800  |  train loss: 0.3401828706
+Epoch:   900  |  train loss: 0.3228591800
+Epoch:  1000  |  train loss: 0.3080620289
+Processing class: 96
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6875255346
+Epoch:   200  |  train loss: 0.5472507596
+Epoch:   300  |  train loss: 0.4705199420
+Epoch:   400  |  train loss: 0.4226351082
+Epoch:   500  |  train loss: 0.3879689872
+Epoch:   600  |  train loss: 0.3598140478
+Epoch:   700  |  train loss: 0.3373249590
+Epoch:   800  |  train loss: 0.3182230115
+Epoch:   900  |  train loss: 0.3015108168
+Epoch:  1000  |  train loss: 0.2876405656
+Processing class: 97
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7115848660
+Epoch:   200  |  train loss: 0.5916162133
+Epoch:   300  |  train loss: 0.5146575928
+Epoch:   400  |  train loss: 0.4626219749
+Epoch:   500  |  train loss: 0.4245373011
+Epoch:   600  |  train loss: 0.3940575659
+Epoch:   700  |  train loss: 0.3691567421
+Epoch:   800  |  train loss: 0.3482164681
+Epoch:   900  |  train loss: 0.3301700830
+Epoch:  1000  |  train loss: 0.3142980933
+Processing class: 98
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.6857151389
+Epoch:   200  |  train loss: 0.5768729806
+Epoch:   300  |  train loss: 0.5032215834
+Epoch:   400  |  train loss: 0.4513334334
+Epoch:   500  |  train loss: 0.4153333068
+Epoch:   600  |  train loss: 0.3848977089
+Epoch:   700  |  train loss: 0.3619202971
+Epoch:   800  |  train loss: 0.3423045874
+Epoch:   900  |  train loss: 0.3259807706
+Epoch:  1000  |  train loss: 0.3109380543
+Processing class: 99
+Standarizing class data
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.7059755802
+Epoch:   200  |  train loss: 0.5717092633
+Epoch:   300  |  train loss: 0.4936784089
+Epoch:   400  |  train loss: 0.4389967740
+Epoch:   500  |  train loss: 0.4008038700
+Epoch:   600  |  train loss: 0.3709212184
+Epoch:   700  |  train loss: 0.3456668794
+Epoch:   800  |  train loss: 0.3239092410
+Epoch:   900  |  train loss: 0.3070927560
+Epoch:  1000  |  train loss: 0.2922301173
+2024-03-10 19:59:20,902 [trainer.py] => CNN: {'total': 50.36, '00-09': 57.7, '10-19': 63.6, '20-29': 71.4, '30-39': 68.5, '40-49': 56.8, '50-59': 29.6, '60-69': 38.9, '70-79': 36.6, '80-89': 42.7, '90-99': 37.8, 'old': 51.76, 'new': 37.8}
+2024-03-10 19:59:20,903 [trainer.py] => No NME accuracy
+2024-03-10 19:59:20,903 [trainer.py] => FeCAM: {'total': 44.89, '00-09': 58.6, '10-19': 45.6, '20-29': 58.4, '30-39': 53.3, '40-49': 50.5, '50-59': 28.6, '60-69': 35.5, '70-79': 37.9, '80-89': 39.0, '90-99': 41.5, 'old': 45.27, 'new': 41.5}
+2024-03-10 19:59:20,904 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66, 59.18, 54.08, 50.36]
+2024-03-10 19:59:20,904 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54, 84.09, 81.74, 79.63]
+2024-03-10 19:59:20,904 [trainer.py] => FeCAM top1 curve: [78.9, 63.38, 57.57, 52.05, 48.08, 44.89]
+2024-03-10 19:59:20,904 [trainer.py] => FeCAM top5 curve: [92.02, 85.17, 80.83, 77.06, 74.34, 71.32]

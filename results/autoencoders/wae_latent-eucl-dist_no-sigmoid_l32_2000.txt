@@ -1,0 +1,2404 @@
+=========================================
+2024-03-11 20:01:38,014 [trainer.py] => config: ./exps/FeCAM_cifar100.json
+2024-03-11 20:01:38,014 [trainer.py] => prefix: train
+2024-03-11 20:01:38,014 [trainer.py] => dataset: cifar100
+2024-03-11 20:01:38,014 [trainer.py] => memory_size: 0
+2024-03-11 20:01:38,014 [trainer.py] => shuffle: True
+2024-03-11 20:01:38,014 [trainer.py] => init_cls: 50
+2024-03-11 20:01:38,014 [trainer.py] => increment: 10
+2024-03-11 20:01:38,014 [trainer.py] => model_name: fecam
+2024-03-11 20:01:38,014 [trainer.py] => convnet_type: resnet18
+2024-03-11 20:01:38,014 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-03-11 20:01:38,014 [trainer.py] => seed: 1993
+2024-03-11 20:01:38,014 [trainer.py] => init_epochs: 200
+2024-03-11 20:01:38,014 [trainer.py] => init_lr: 0.1
+2024-03-11 20:01:38,014 [trainer.py] => init_weight_decay: 0.0005
+2024-03-11 20:01:38,014 [trainer.py] => batch_size: 128
+2024-03-11 20:01:38,014 [trainer.py] => num_workers: 8
+2024-03-11 20:01:38,014 [trainer.py] => T: 5
+2024-03-11 20:01:38,014 [trainer.py] => beta: 0.5
+2024-03-11 20:01:38,014 [trainer.py] => alpha1: 1
+2024-03-11 20:01:38,014 [trainer.py] => alpha2: 1
+2024-03-11 20:01:38,014 [trainer.py] => ncm: False
+2024-03-11 20:01:38,014 [trainer.py] => tukey: False
+2024-03-11 20:01:38,014 [trainer.py] => diagonal: False
+2024-03-11 20:01:38,014 [trainer.py] => per_class: True
+2024-03-11 20:01:38,015 [trainer.py] => full_cov: True
+2024-03-11 20:01:38,015 [trainer.py] => shrink: True
+2024-03-11 20:01:38,015 [trainer.py] => norm_cov: False
+2024-03-11 20:01:38,015 [trainer.py] => vecnorm: False
+2024-03-11 20:01:38,015 [trainer.py] => ae_type: wae
+2024-03-11 20:01:38,015 [trainer.py] => ae_standarization: False
+2024-03-11 20:01:38,015 [trainer.py] => epochs: 2000
+2024-03-11 20:01:38,015 [trainer.py] => ae_latent_dim: 32
+2024-03-11 20:01:38,015 [trainer.py] => wae_sigma: 10
+2024-03-11 20:01:38,015 [trainer.py] => wae_C: 0.1
+2024-03-11 20:01:38,015 [trainer.py] => ae_clsf: eucl-dist
+2024-03-11 20:01:38,015 [trainer.py] => ae_n: 20
+Files already downloaded and verified
+Files already downloaded and verified
+2024-03-11 20:01:40,447 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2024-03-11 20:01:40,730 [fecam.py] => Learning on 0-50
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/z1165703/miniconda3/lib/python3.11/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Processing class: 0
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0535358913
+Epoch:   200  |  train loss: 0.0510571331
+Epoch:   300  |  train loss: 0.0512374640
+Epoch:   400  |  train loss: 0.0503644168
+Epoch:   500  |  train loss: 0.0496262453
+Epoch:   600  |  train loss: 0.0494880907
+Epoch:   700  |  train loss: 0.0492332593
+Epoch:   800  |  train loss: 0.0491254717
+Epoch:   900  |  train loss: 0.0485796534
+Epoch:  1000  |  train loss: 0.0481373914
+Epoch:  1100  |  train loss: 0.0482567228
+Epoch:  1200  |  train loss: 0.0478900634
+Epoch:  1300  |  train loss: 0.0473009773
+Epoch:  1400  |  train loss: 0.0470042758
+Epoch:  1500  |  train loss: 0.0466140039
+Epoch:  1600  |  train loss: 0.0467115320
+Epoch:  1700  |  train loss: 0.0461567178
+Epoch:  1800  |  train loss: 0.0456320360
+Epoch:  1900  |  train loss: 0.0461269289
+Epoch:  2000  |  train loss: 0.0455205709
+Calculating proto and cov in AE latent
+Processing class: 1
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0578124188
+Epoch:   200  |  train loss: 0.0576954491
+Epoch:   300  |  train loss: 0.0550604716
+Epoch:   400  |  train loss: 0.0539312921
+Epoch:   500  |  train loss: 0.0527338900
+Epoch:   600  |  train loss: 0.0531652085
+Epoch:   700  |  train loss: 0.0525174454
+Epoch:   800  |  train loss: 0.0519025505
+Epoch:   900  |  train loss: 0.0511838652
+Epoch:  1000  |  train loss: 0.0511454992
+Epoch:  1100  |  train loss: 0.0511515699
+Epoch:  1200  |  train loss: 0.0504179567
+Epoch:  1300  |  train loss: 0.0504194900
+Epoch:  1400  |  train loss: 0.0501796938
+Epoch:  1500  |  train loss: 0.0503063016
+Epoch:  1600  |  train loss: 0.0490234606
+Epoch:  1700  |  train loss: 0.0491163664
+Epoch:  1800  |  train loss: 0.0486618705
+Epoch:  1900  |  train loss: 0.0484504513
+Epoch:  2000  |  train loss: 0.0479202457
+Calculating proto and cov in AE latent
+Processing class: 2
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0585883699
+Epoch:   200  |  train loss: 0.0575651392
+Epoch:   300  |  train loss: 0.0574625872
+Epoch:   400  |  train loss: 0.0556688949
+Epoch:   500  |  train loss: 0.0541068971
+Epoch:   600  |  train loss: 0.0527343415
+Epoch:   700  |  train loss: 0.0517950736
+Epoch:   800  |  train loss: 0.0513865620
+Epoch:   900  |  train loss: 0.0502212889
+Epoch:  1000  |  train loss: 0.0501992896
+Epoch:  1100  |  train loss: 0.0491980307
+Epoch:  1200  |  train loss: 0.0488562129
+Epoch:  1300  |  train loss: 0.0481573425
+Epoch:  1400  |  train loss: 0.0476524726
+Epoch:  1500  |  train loss: 0.0469892398
+Epoch:  1600  |  train loss: 0.0467611834
+Epoch:  1700  |  train loss: 0.0460697487
+Epoch:  1800  |  train loss: 0.0456139930
+Epoch:  1900  |  train loss: 0.0450293019
+Epoch:  2000  |  train loss: 0.0451388478
+Calculating proto and cov in AE latent
+Processing class: 3
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0583545230
+Epoch:   200  |  train loss: 0.0582594305
+Epoch:   300  |  train loss: 0.0577860072
+Epoch:   400  |  train loss: 0.0572049834
+Epoch:   500  |  train loss: 0.0563972600
+Epoch:   600  |  train loss: 0.0554745451
+Epoch:   700  |  train loss: 0.0546121024
+Epoch:   800  |  train loss: 0.0545521371
+Epoch:   900  |  train loss: 0.0536735252
+Epoch:  1000  |  train loss: 0.0533757620
+Epoch:  1100  |  train loss: 0.0538736410
+Epoch:  1200  |  train loss: 0.0525529295
+Epoch:  1300  |  train loss: 0.0527007110
+Epoch:  1400  |  train loss: 0.0521871597
+Epoch:  1500  |  train loss: 0.0518054157
+Epoch:  1600  |  train loss: 0.0513103962
+Epoch:  1700  |  train loss: 0.0510220759
+Epoch:  1800  |  train loss: 0.0499914937
+Epoch:  1900  |  train loss: 0.0503046513
+Epoch:  2000  |  train loss: 0.0496446967
+Calculating proto and cov in AE latent
+Processing class: 4
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0557371989
+Epoch:   200  |  train loss: 0.0549921766
+Epoch:   300  |  train loss: 0.0545012727
+Epoch:   400  |  train loss: 0.0537956707
+Epoch:   500  |  train loss: 0.0538063779
+Epoch:   600  |  train loss: 0.0525406010
+Epoch:   700  |  train loss: 0.0524365179
+Epoch:   800  |  train loss: 0.0517845690
+Epoch:   900  |  train loss: 0.0514074996
+Epoch:  1000  |  train loss: 0.0507295609
+Epoch:  1100  |  train loss: 0.0498670563
+Epoch:  1200  |  train loss: 0.0499797784
+Epoch:  1300  |  train loss: 0.0492036581
+Epoch:  1400  |  train loss: 0.0485238992
+Epoch:  1500  |  train loss: 0.0484313652
+Epoch:  1600  |  train loss: 0.0476786755
+Epoch:  1700  |  train loss: 0.0474299736
+Epoch:  1800  |  train loss: 0.0471992902
+Epoch:  1900  |  train loss: 0.0466450006
+Epoch:  2000  |  train loss: 0.0460341863
+Calculating proto and cov in AE latent
+Processing class: 5
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0590897799
+Epoch:   200  |  train loss: 0.0578974552
+Epoch:   300  |  train loss: 0.0554801539
+Epoch:   400  |  train loss: 0.0552259654
+Epoch:   500  |  train loss: 0.0538691819
+Epoch:   600  |  train loss: 0.0531540796
+Epoch:   700  |  train loss: 0.0529490031
+Epoch:   800  |  train loss: 0.0515731223
+Epoch:   900  |  train loss: 0.0510361359
+Epoch:  1000  |  train loss: 0.0506680563
+Epoch:  1100  |  train loss: 0.0501005299
+Epoch:  1200  |  train loss: 0.0503470466
+Epoch:  1300  |  train loss: 0.0493350543
+Epoch:  1400  |  train loss: 0.0489709444
+Epoch:  1500  |  train loss: 0.0484987713
+Epoch:  1600  |  train loss: 0.0483048014
+Epoch:  1700  |  train loss: 0.0477362052
+Epoch:  1800  |  train loss: 0.0474944063
+Epoch:  1900  |  train loss: 0.0472909935
+Epoch:  2000  |  train loss: 0.0465349957
+Calculating proto and cov in AE latent
+Processing class: 6
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0573071107
+Epoch:   200  |  train loss: 0.0576208197
+Epoch:   300  |  train loss: 0.0564735971
+Epoch:   400  |  train loss: 0.0555957749
+Epoch:   500  |  train loss: 0.0548442878
+Epoch:   600  |  train loss: 0.0547813252
+Epoch:   700  |  train loss: 0.0542305209
+Epoch:   800  |  train loss: 0.0538705952
+Epoch:   900  |  train loss: 0.0537340410
+Epoch:  1000  |  train loss: 0.0532700814
+Epoch:  1100  |  train loss: 0.0523676328
+Epoch:  1200  |  train loss: 0.0528829791
+Epoch:  1300  |  train loss: 0.0516189404
+Epoch:  1400  |  train loss: 0.0513143905
+Epoch:  1500  |  train loss: 0.0507012978
+Epoch:  1600  |  train loss: 0.0504962757
+Epoch:  1700  |  train loss: 0.0500839956
+Epoch:  1800  |  train loss: 0.0499050900
+Epoch:  1900  |  train loss: 0.0500139430
+Epoch:  2000  |  train loss: 0.0496535711
+Calculating proto and cov in AE latent
+Processing class: 7
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0585439630
+Epoch:   200  |  train loss: 0.0569957882
+Epoch:   300  |  train loss: 0.0563117638
+Epoch:   400  |  train loss: 0.0543114722
+Epoch:   500  |  train loss: 0.0538287595
+Epoch:   600  |  train loss: 0.0526900284
+Epoch:   700  |  train loss: 0.0523762010
+Epoch:   800  |  train loss: 0.0525941409
+Epoch:   900  |  train loss: 0.0518277608
+Epoch:  1000  |  train loss: 0.0516334951
+Epoch:  1100  |  train loss: 0.0513867654
+Epoch:  1200  |  train loss: 0.0503498919
+Epoch:  1300  |  train loss: 0.0496156909
+Epoch:  1400  |  train loss: 0.0494281523
+Epoch:  1500  |  train loss: 0.0487609491
+Epoch:  1600  |  train loss: 0.0482958555
+Epoch:  1700  |  train loss: 0.0479853943
+Epoch:  1800  |  train loss: 0.0476296619
+Epoch:  1900  |  train loss: 0.0473204792
+Epoch:  2000  |  train loss: 0.0469877377
+Calculating proto and cov in AE latent
+Processing class: 8
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0560321100
+Epoch:   200  |  train loss: 0.0541826345
+Epoch:   300  |  train loss: 0.0526902363
+Epoch:   400  |  train loss: 0.0523123011
+Epoch:   500  |  train loss: 0.0518007100
+Epoch:   600  |  train loss: 0.0512425005
+Epoch:   700  |  train loss: 0.0498219810
+Epoch:   800  |  train loss: 0.0490463272
+Epoch:   900  |  train loss: 0.0483284868
+Epoch:  1000  |  train loss: 0.0482741386
+Epoch:  1100  |  train loss: 0.0471865691
+Epoch:  1200  |  train loss: 0.0469942495
+Epoch:  1300  |  train loss: 0.0463040449
+Epoch:  1400  |  train loss: 0.0457792632
+Epoch:  1500  |  train loss: 0.0450273402
+Epoch:  1600  |  train loss: 0.0445194155
+Epoch:  1700  |  train loss: 0.0442772090
+Epoch:  1800  |  train loss: 0.0432049274
+Epoch:  1900  |  train loss: 0.0430132091
+Epoch:  2000  |  train loss: 0.0429901868
+Calculating proto and cov in AE latent
+Processing class: 9
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0569466233
+Epoch:   200  |  train loss: 0.0563179284
+Epoch:   300  |  train loss: 0.0568547003
+Epoch:   400  |  train loss: 0.0541120864
+Epoch:   500  |  train loss: 0.0525891900
+Epoch:   600  |  train loss: 0.0522955626
+Epoch:   700  |  train loss: 0.0518112190
+Epoch:   800  |  train loss: 0.0508877076
+Epoch:   900  |  train loss: 0.0509946458
+Epoch:  1000  |  train loss: 0.0505130433
+Epoch:  1100  |  train loss: 0.0501567371
+Epoch:  1200  |  train loss: 0.0505440459
+Epoch:  1300  |  train loss: 0.0501867637
+Epoch:  1400  |  train loss: 0.0497039087
+Epoch:  1500  |  train loss: 0.0486991018
+Epoch:  1600  |  train loss: 0.0489040941
+Epoch:  1700  |  train loss: 0.0491842739
+Epoch:  1800  |  train loss: 0.0483935945
+Epoch:  1900  |  train loss: 0.0479748048
+Epoch:  2000  |  train loss: 0.0480617531
+Calculating proto and cov in AE latent
+Processing class: 10
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0563254684
+Epoch:   200  |  train loss: 0.0543752365
+Epoch:   300  |  train loss: 0.0545856602
+Epoch:   400  |  train loss: 0.0529915437
+Epoch:   500  |  train loss: 0.0523627110
+Epoch:   600  |  train loss: 0.0511079870
+Epoch:   700  |  train loss: 0.0502823040
+Epoch:   800  |  train loss: 0.0499299496
+Epoch:   900  |  train loss: 0.0493416317
+Epoch:  1000  |  train loss: 0.0484244600
+Epoch:  1100  |  train loss: 0.0482198559
+Epoch:  1200  |  train loss: 0.0478112169
+Epoch:  1300  |  train loss: 0.0473698229
+Epoch:  1400  |  train loss: 0.0469596893
+Epoch:  1500  |  train loss: 0.0462669842
+Epoch:  1600  |  train loss: 0.0461720929
+Epoch:  1700  |  train loss: 0.0456374258
+Epoch:  1800  |  train loss: 0.0451713108
+Epoch:  1900  |  train loss: 0.0448164530
+Epoch:  2000  |  train loss: 0.0443762101
+Calculating proto and cov in AE latent
+Processing class: 11
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0554443143
+Epoch:   200  |  train loss: 0.0542658135
+Epoch:   300  |  train loss: 0.0540928826
+Epoch:   400  |  train loss: 0.0523625463
+Epoch:   500  |  train loss: 0.0510907523
+Epoch:   600  |  train loss: 0.0507411256
+Epoch:   700  |  train loss: 0.0499437600
+Epoch:   800  |  train loss: 0.0490216874
+Epoch:   900  |  train loss: 0.0486761406
+Epoch:  1000  |  train loss: 0.0487550013
+Epoch:  1100  |  train loss: 0.0478440113
+Epoch:  1200  |  train loss: 0.0474803448
+Epoch:  1300  |  train loss: 0.0474899873
+Epoch:  1400  |  train loss: 0.0467741005
+Epoch:  1500  |  train loss: 0.0464161001
+Epoch:  1600  |  train loss: 0.0459554203
+Epoch:  1700  |  train loss: 0.0457892716
+Epoch:  1800  |  train loss: 0.0452711210
+Epoch:  1900  |  train loss: 0.0454510644
+Epoch:  2000  |  train loss: 0.0446677044
+Calculating proto and cov in AE latent
+Processing class: 12
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0573479585
+Epoch:   200  |  train loss: 0.0558019407
+Epoch:   300  |  train loss: 0.0540872715
+Epoch:   400  |  train loss: 0.0527696587
+Epoch:   500  |  train loss: 0.0516413480
+Epoch:   600  |  train loss: 0.0507097781
+Epoch:   700  |  train loss: 0.0494150378
+Epoch:   800  |  train loss: 0.0486182131
+Epoch:   900  |  train loss: 0.0477754034
+Epoch:  1000  |  train loss: 0.0476260573
+Epoch:  1100  |  train loss: 0.0466544583
+Epoch:  1200  |  train loss: 0.0463010721
+Epoch:  1300  |  train loss: 0.0459042951
+Epoch:  1400  |  train loss: 0.0456885479
+Epoch:  1500  |  train loss: 0.0454083264
+Epoch:  1600  |  train loss: 0.0451809250
+Epoch:  1700  |  train loss: 0.0452494130
+Epoch:  1800  |  train loss: 0.0445213377
+Epoch:  1900  |  train loss: 0.0442707092
+Epoch:  2000  |  train loss: 0.0439287886
+Calculating proto and cov in AE latent
+Processing class: 13
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0550346643
+Epoch:   200  |  train loss: 0.0514431633
+Epoch:   300  |  train loss: 0.0500501864
+Epoch:   400  |  train loss: 0.0482142501
+Epoch:   500  |  train loss: 0.0474596269
+Epoch:   600  |  train loss: 0.0471615866
+Epoch:   700  |  train loss: 0.0462318465
+Epoch:   800  |  train loss: 0.0454138987
+Epoch:   900  |  train loss: 0.0452264011
+Epoch:  1000  |  train loss: 0.0442679346
+Epoch:  1100  |  train loss: 0.0437736586
+Epoch:  1200  |  train loss: 0.0433906153
+Epoch:  1300  |  train loss: 0.0429373026
+Epoch:  1400  |  train loss: 0.0426440507
+Epoch:  1500  |  train loss: 0.0425295569
+Epoch:  1600  |  train loss: 0.0423116758
+Epoch:  1700  |  train loss: 0.0416941792
+Epoch:  1800  |  train loss: 0.0415069357
+Epoch:  1900  |  train loss: 0.0411891453
+Epoch:  2000  |  train loss: 0.0405499652
+Calculating proto and cov in AE latent
+Processing class: 14
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0597994789
+Epoch:   200  |  train loss: 0.0594524436
+Epoch:   300  |  train loss: 0.0579092108
+Epoch:   400  |  train loss: 0.0569797605
+Epoch:   500  |  train loss: 0.0561727017
+Epoch:   600  |  train loss: 0.0548891872
+Epoch:   700  |  train loss: 0.0548022613
+Epoch:   800  |  train loss: 0.0539870426
+Epoch:   900  |  train loss: 0.0532172926
+Epoch:  1000  |  train loss: 0.0530019991
+Epoch:  1100  |  train loss: 0.0526057556
+Epoch:  1200  |  train loss: 0.0518167898
+Epoch:  1300  |  train loss: 0.0515439011
+Epoch:  1400  |  train loss: 0.0514064245
+Epoch:  1500  |  train loss: 0.0513211511
+Epoch:  1600  |  train loss: 0.0506619044
+Epoch:  1700  |  train loss: 0.0502593480
+Epoch:  1800  |  train loss: 0.0500891946
+Epoch:  1900  |  train loss: 0.0494389571
+Epoch:  2000  |  train loss: 0.0490915619
+Calculating proto and cov in AE latent
+Processing class: 15
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0558119260
+Epoch:   200  |  train loss: 0.0535326712
+Epoch:   300  |  train loss: 0.0515110016
+Epoch:   400  |  train loss: 0.0512734488
+Epoch:   500  |  train loss: 0.0502776183
+Epoch:   600  |  train loss: 0.0489907131
+Epoch:   700  |  train loss: 0.0490957074
+Epoch:   800  |  train loss: 0.0485173173
+Epoch:   900  |  train loss: 0.0487813704
+Epoch:  1000  |  train loss: 0.0484679677
+Epoch:  1100  |  train loss: 0.0474613629
+Epoch:  1200  |  train loss: 0.0472156696
+Epoch:  1300  |  train loss: 0.0469906554
+Epoch:  1400  |  train loss: 0.0460192904
+Epoch:  1500  |  train loss: 0.0459378265
+Epoch:  1600  |  train loss: 0.0459633321
+Epoch:  1700  |  train loss: 0.0447116852
+Epoch:  1800  |  train loss: 0.0455260672
+Epoch:  1900  |  train loss: 0.0451606482
+Epoch:  2000  |  train loss: 0.0446841508
+Calculating proto and cov in AE latent
+Processing class: 16
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0555750519
+Epoch:   200  |  train loss: 0.0537479058
+Epoch:   300  |  train loss: 0.0526123412
+Epoch:   400  |  train loss: 0.0516930744
+Epoch:   500  |  train loss: 0.0520561814
+Epoch:   600  |  train loss: 0.0509197496
+Epoch:   700  |  train loss: 0.0503744066
+Epoch:   800  |  train loss: 0.0492833324
+Epoch:   900  |  train loss: 0.0488059416
+Epoch:  1000  |  train loss: 0.0477478184
+Epoch:  1100  |  train loss: 0.0465843268
+Epoch:  1200  |  train loss: 0.0473371342
+Epoch:  1300  |  train loss: 0.0464847550
+Epoch:  1400  |  train loss: 0.0459095486
+Epoch:  1500  |  train loss: 0.0454838559
+Epoch:  1600  |  train loss: 0.0452179953
+Epoch:  1700  |  train loss: 0.0448866665
+Epoch:  1800  |  train loss: 0.0448531948
+Epoch:  1900  |  train loss: 0.0443342879
+Epoch:  2000  |  train loss: 0.0440343492
+Calculating proto and cov in AE latent
+Processing class: 17
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0558869615
+Epoch:   200  |  train loss: 0.0561107844
+Epoch:   300  |  train loss: 0.0560741052
+Epoch:   400  |  train loss: 0.0541972913
+Epoch:   500  |  train loss: 0.0534847796
+Epoch:   600  |  train loss: 0.0535549782
+Epoch:   700  |  train loss: 0.0519523472
+Epoch:   800  |  train loss: 0.0512073070
+Epoch:   900  |  train loss: 0.0509900816
+Epoch:  1000  |  train loss: 0.0507800862
+Epoch:  1100  |  train loss: 0.0502689749
+Epoch:  1200  |  train loss: 0.0499723278
+Epoch:  1300  |  train loss: 0.0498958908
+Epoch:  1400  |  train loss: 0.0488202676
+Epoch:  1500  |  train loss: 0.0484152660
+Epoch:  1600  |  train loss: 0.0486062311
+Epoch:  1700  |  train loss: 0.0478466362
+Epoch:  1800  |  train loss: 0.0478303790
+Epoch:  1900  |  train loss: 0.0477299362
+Epoch:  2000  |  train loss: 0.0471594185
+Calculating proto and cov in AE latent
+Processing class: 18
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0541087911
+Epoch:   200  |  train loss: 0.0518769175
+Epoch:   300  |  train loss: 0.0512982845
+Epoch:   400  |  train loss: 0.0503140621
+Epoch:   500  |  train loss: 0.0498491824
+Epoch:   600  |  train loss: 0.0487355441
+Epoch:   700  |  train loss: 0.0484089643
+Epoch:   800  |  train loss: 0.0473731756
+Epoch:   900  |  train loss: 0.0470112436
+Epoch:  1000  |  train loss: 0.0463820599
+Epoch:  1100  |  train loss: 0.0461871408
+Epoch:  1200  |  train loss: 0.0460299715
+Epoch:  1300  |  train loss: 0.0453444228
+Epoch:  1400  |  train loss: 0.0446722530
+Epoch:  1500  |  train loss: 0.0446176186
+Epoch:  1600  |  train loss: 0.0443454817
+Epoch:  1700  |  train loss: 0.0441369586
+Epoch:  1800  |  train loss: 0.0439682022
+Epoch:  1900  |  train loss: 0.0435167186
+Epoch:  2000  |  train loss: 0.0433984809
+Calculating proto and cov in AE latent
+Processing class: 19
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0569533028
+Epoch:   200  |  train loss: 0.0569150999
+Epoch:   300  |  train loss: 0.0548085600
+Epoch:   400  |  train loss: 0.0544814058
+Epoch:   500  |  train loss: 0.0533104070
+Epoch:   600  |  train loss: 0.0523590662
+Epoch:   700  |  train loss: 0.0521816559
+Epoch:   800  |  train loss: 0.0518682651
+Epoch:   900  |  train loss: 0.0508896403
+Epoch:  1000  |  train loss: 0.0501646832
+Epoch:  1100  |  train loss: 0.0500617653
+Epoch:  1200  |  train loss: 0.0494982630
+Epoch:  1300  |  train loss: 0.0492039442
+Epoch:  1400  |  train loss: 0.0483612277
+Epoch:  1500  |  train loss: 0.0488589652
+Epoch:  1600  |  train loss: 0.0483803086
+Epoch:  1700  |  train loss: 0.0478649281
+Epoch:  1800  |  train loss: 0.0479708351
+Epoch:  1900  |  train loss: 0.0477647863
+Epoch:  2000  |  train loss: 0.0475496434
+Calculating proto and cov in AE latent
+Processing class: 20
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0580117986
+Epoch:   200  |  train loss: 0.0557477035
+Epoch:   300  |  train loss: 0.0548758909
+Epoch:   400  |  train loss: 0.0548936836
+Epoch:   500  |  train loss: 0.0540726915
+Epoch:   600  |  train loss: 0.0534964725
+Epoch:   700  |  train loss: 0.0532377601
+Epoch:   800  |  train loss: 0.0528053150
+Epoch:   900  |  train loss: 0.0526670575
+Epoch:  1000  |  train loss: 0.0526974320
+Epoch:  1100  |  train loss: 0.0521822177
+Epoch:  1200  |  train loss: 0.0514288388
+Epoch:  1300  |  train loss: 0.0515003741
+Epoch:  1400  |  train loss: 0.0506681740
+Epoch:  1500  |  train loss: 0.0503695428
+Epoch:  1600  |  train loss: 0.0496961266
+Epoch:  1700  |  train loss: 0.0499335572
+Epoch:  1800  |  train loss: 0.0497024916
+Epoch:  1900  |  train loss: 0.0487077989
+Epoch:  2000  |  train loss: 0.0487372048
+Calculating proto and cov in AE latent
+Processing class: 21
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0580708094
+Epoch:   200  |  train loss: 0.0584620833
+Epoch:   300  |  train loss: 0.0545677669
+Epoch:   400  |  train loss: 0.0534593001
+Epoch:   500  |  train loss: 0.0525017716
+Epoch:   600  |  train loss: 0.0524745747
+Epoch:   700  |  train loss: 0.0521174490
+Epoch:   800  |  train loss: 0.0511902496
+Epoch:   900  |  train loss: 0.0503907710
+Epoch:  1000  |  train loss: 0.0494348496
+Epoch:  1100  |  train loss: 0.0495873369
+Epoch:  1200  |  train loss: 0.0490703419
+Epoch:  1300  |  train loss: 0.0484625280
+Epoch:  1400  |  train loss: 0.0485080950
+Epoch:  1500  |  train loss: 0.0481169686
+Epoch:  1600  |  train loss: 0.0475597844
+Epoch:  1700  |  train loss: 0.0472557373
+Epoch:  1800  |  train loss: 0.0469030038
+Epoch:  1900  |  train loss: 0.0462281913
+Epoch:  2000  |  train loss: 0.0459031716
+Calculating proto and cov in AE latent
+Processing class: 22
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0584101617
+Epoch:   200  |  train loss: 0.0588673383
+Epoch:   300  |  train loss: 0.0569622368
+Epoch:   400  |  train loss: 0.0564002678
+Epoch:   500  |  train loss: 0.0552181125
+Epoch:   600  |  train loss: 0.0543110363
+Epoch:   700  |  train loss: 0.0533640377
+Epoch:   800  |  train loss: 0.0533288755
+Epoch:   900  |  train loss: 0.0524288334
+Epoch:  1000  |  train loss: 0.0519582212
+Epoch:  1100  |  train loss: 0.0514624014
+Epoch:  1200  |  train loss: 0.0512732811
+Epoch:  1300  |  train loss: 0.0507586613
+Epoch:  1400  |  train loss: 0.0503084973
+Epoch:  1500  |  train loss: 0.0498646513
+Epoch:  1600  |  train loss: 0.0499922462
+Epoch:  1700  |  train loss: 0.0494483829
+Epoch:  1800  |  train loss: 0.0488744102
+Epoch:  1900  |  train loss: 0.0491078086
+Epoch:  2000  |  train loss: 0.0489871234
+Calculating proto and cov in AE latent
+Processing class: 23
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0558480710
+Epoch:   200  |  train loss: 0.0552883051
+Epoch:   300  |  train loss: 0.0536853209
+Epoch:   400  |  train loss: 0.0520281650
+Epoch:   500  |  train loss: 0.0504849516
+Epoch:   600  |  train loss: 0.0493318088
+Epoch:   700  |  train loss: 0.0485985592
+Epoch:   800  |  train loss: 0.0486428656
+Epoch:   900  |  train loss: 0.0472666085
+Epoch:  1000  |  train loss: 0.0467122123
+Epoch:  1100  |  train loss: 0.0460124552
+Epoch:  1200  |  train loss: 0.0459171861
+Epoch:  1300  |  train loss: 0.0451455407
+Epoch:  1400  |  train loss: 0.0445665464
+Epoch:  1500  |  train loss: 0.0444095135
+Epoch:  1600  |  train loss: 0.0439570338
+Epoch:  1700  |  train loss: 0.0433636442
+Epoch:  1800  |  train loss: 0.0436490446
+Epoch:  1900  |  train loss: 0.0435470067
+Epoch:  2000  |  train loss: 0.0426922552
+Calculating proto and cov in AE latent
+Processing class: 24
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0585899420
+Epoch:   200  |  train loss: 0.0584640324
+Epoch:   300  |  train loss: 0.0578989372
+Epoch:   400  |  train loss: 0.0563497633
+Epoch:   500  |  train loss: 0.0562336214
+Epoch:   600  |  train loss: 0.0556638345
+Epoch:   700  |  train loss: 0.0541244119
+Epoch:   800  |  train loss: 0.0540438540
+Epoch:   900  |  train loss: 0.0533648141
+Epoch:  1000  |  train loss: 0.0532435961
+Epoch:  1100  |  train loss: 0.0524058804
+Epoch:  1200  |  train loss: 0.0523300625
+Epoch:  1300  |  train loss: 0.0520216279
+Epoch:  1400  |  train loss: 0.0516624205
+Epoch:  1500  |  train loss: 0.0510105453
+Epoch:  1600  |  train loss: 0.0508618675
+Epoch:  1700  |  train loss: 0.0507479176
+Epoch:  1800  |  train loss: 0.0504575327
+Epoch:  1900  |  train loss: 0.0495745905
+Epoch:  2000  |  train loss: 0.0498877116
+Calculating proto and cov in AE latent
+Processing class: 25
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0587376676
+Epoch:   200  |  train loss: 0.0574249350
+Epoch:   300  |  train loss: 0.0556616731
+Epoch:   400  |  train loss: 0.0551975489
+Epoch:   500  |  train loss: 0.0540273197
+Epoch:   600  |  train loss: 0.0527684815
+Epoch:   700  |  train loss: 0.0518114686
+Epoch:   800  |  train loss: 0.0508146912
+Epoch:   900  |  train loss: 0.0504974231
+Epoch:  1000  |  train loss: 0.0497173600
+Epoch:  1100  |  train loss: 0.0496703759
+Epoch:  1200  |  train loss: 0.0487988085
+Epoch:  1300  |  train loss: 0.0487551697
+Epoch:  1400  |  train loss: 0.0483608894
+Epoch:  1500  |  train loss: 0.0479683496
+Epoch:  1600  |  train loss: 0.0475771822
+Epoch:  1700  |  train loss: 0.0472889811
+Epoch:  1800  |  train loss: 0.0470029898
+Epoch:  1900  |  train loss: 0.0467767440
+Epoch:  2000  |  train loss: 0.0460506976
+Calculating proto and cov in AE latent
+Processing class: 26
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0593714520
+Epoch:   200  |  train loss: 0.0587534793
+Epoch:   300  |  train loss: 0.0580071814
+Epoch:   400  |  train loss: 0.0569443397
+Epoch:   500  |  train loss: 0.0559779912
+Epoch:   600  |  train loss: 0.0547481529
+Epoch:   700  |  train loss: 0.0544648983
+Epoch:   800  |  train loss: 0.0542806350
+Epoch:   900  |  train loss: 0.0541348591
+Epoch:  1000  |  train loss: 0.0539789245
+Epoch:  1100  |  train loss: 0.0532272473
+Epoch:  1200  |  train loss: 0.0535214156
+Epoch:  1300  |  train loss: 0.0527199604
+Epoch:  1400  |  train loss: 0.0523140572
+Epoch:  1500  |  train loss: 0.0518787712
+Epoch:  1600  |  train loss: 0.0522578545
+Epoch:  1700  |  train loss: 0.0520706505
+Epoch:  1800  |  train loss: 0.0507736087
+Epoch:  1900  |  train loss: 0.0511479765
+Epoch:  2000  |  train loss: 0.0505321503
+Calculating proto and cov in AE latent
+Processing class: 27
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0571072347
+Epoch:   200  |  train loss: 0.0567172006
+Epoch:   300  |  train loss: 0.0562933944
+Epoch:   400  |  train loss: 0.0549431056
+Epoch:   500  |  train loss: 0.0549360819
+Epoch:   600  |  train loss: 0.0534692436
+Epoch:   700  |  train loss: 0.0530221120
+Epoch:   800  |  train loss: 0.0522351615
+Epoch:   900  |  train loss: 0.0530493759
+Epoch:  1000  |  train loss: 0.0514253058
+Epoch:  1100  |  train loss: 0.0513762802
+Epoch:  1200  |  train loss: 0.0508470900
+Epoch:  1300  |  train loss: 0.0499259003
+Epoch:  1400  |  train loss: 0.0497191407
+Epoch:  1500  |  train loss: 0.0502471879
+Epoch:  1600  |  train loss: 0.0492490567
+Epoch:  1700  |  train loss: 0.0485711187
+Epoch:  1800  |  train loss: 0.0489624679
+Epoch:  1900  |  train loss: 0.0482557751
+Epoch:  2000  |  train loss: 0.0482609965
+Calculating proto and cov in AE latent
+Processing class: 28
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0593425393
+Epoch:   200  |  train loss: 0.0587892637
+Epoch:   300  |  train loss: 0.0575751036
+Epoch:   400  |  train loss: 0.0575456962
+Epoch:   500  |  train loss: 0.0571536802
+Epoch:   600  |  train loss: 0.0560304984
+Epoch:   700  |  train loss: 0.0556516081
+Epoch:   800  |  train loss: 0.0553040341
+Epoch:   900  |  train loss: 0.0549114518
+Epoch:  1000  |  train loss: 0.0547680750
+Epoch:  1100  |  train loss: 0.0537210137
+Epoch:  1200  |  train loss: 0.0539616950
+Epoch:  1300  |  train loss: 0.0532259576
+Epoch:  1400  |  train loss: 0.0529668339
+Epoch:  1500  |  train loss: 0.0530388661
+Epoch:  1600  |  train loss: 0.0524138026
+Epoch:  1700  |  train loss: 0.0523786567
+Epoch:  1800  |  train loss: 0.0521369301
+Epoch:  1900  |  train loss: 0.0519567341
+Epoch:  2000  |  train loss: 0.0512236856
+Calculating proto and cov in AE latent
+Processing class: 29
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0565308779
+Epoch:   200  |  train loss: 0.0549141921
+Epoch:   300  |  train loss: 0.0532865413
+Epoch:   400  |  train loss: 0.0524524935
+Epoch:   500  |  train loss: 0.0508660845
+Epoch:   600  |  train loss: 0.0498426042
+Epoch:   700  |  train loss: 0.0491249904
+Epoch:   800  |  train loss: 0.0481810771
+Epoch:   900  |  train loss: 0.0477675870
+Epoch:  1000  |  train loss: 0.0468258753
+Epoch:  1100  |  train loss: 0.0464828081
+Epoch:  1200  |  train loss: 0.0467103444
+Epoch:  1300  |  train loss: 0.0450893842
+Epoch:  1400  |  train loss: 0.0447250046
+Epoch:  1500  |  train loss: 0.0447914392
+Epoch:  1600  |  train loss: 0.0444593765
+Epoch:  1700  |  train loss: 0.0443870656
+Epoch:  1800  |  train loss: 0.0438925669
+Epoch:  1900  |  train loss: 0.0438508637
+Epoch:  2000  |  train loss: 0.0438331380
+Calculating proto and cov in AE latent
+Processing class: 30
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0598975256
+Epoch:   200  |  train loss: 0.0585146084
+Epoch:   300  |  train loss: 0.0570516929
+Epoch:   400  |  train loss: 0.0569151446
+Epoch:   500  |  train loss: 0.0567719556
+Epoch:   600  |  train loss: 0.0563754722
+Epoch:   700  |  train loss: 0.0562478758
+Epoch:   800  |  train loss: 0.0558409020
+Epoch:   900  |  train loss: 0.0552738130
+Epoch:  1000  |  train loss: 0.0549532585
+Epoch:  1100  |  train loss: 0.0547173485
+Epoch:  1200  |  train loss: 0.0539810039
+Epoch:  1300  |  train loss: 0.0539373331
+Epoch:  1400  |  train loss: 0.0538938180
+Epoch:  1500  |  train loss: 0.0541591167
+Epoch:  1600  |  train loss: 0.0532028802
+Epoch:  1700  |  train loss: 0.0528055333
+Epoch:  1800  |  train loss: 0.0532264292
+Epoch:  1900  |  train loss: 0.0524162851
+Epoch:  2000  |  train loss: 0.0525449835
+Calculating proto and cov in AE latent
+Processing class: 31
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0590026677
+Epoch:   200  |  train loss: 0.0585889056
+Epoch:   300  |  train loss: 0.0562198788
+Epoch:   400  |  train loss: 0.0562186994
+Epoch:   500  |  train loss: 0.0551116407
+Epoch:   600  |  train loss: 0.0548406914
+Epoch:   700  |  train loss: 0.0544941470
+Epoch:   800  |  train loss: 0.0540911891
+Epoch:   900  |  train loss: 0.0540104806
+Epoch:  1000  |  train loss: 0.0538999803
+Epoch:  1100  |  train loss: 0.0528161928
+Epoch:  1200  |  train loss: 0.0526990831
+Epoch:  1300  |  train loss: 0.0527461328
+Epoch:  1400  |  train loss: 0.0522280864
+Epoch:  1500  |  train loss: 0.0521997936
+Epoch:  1600  |  train loss: 0.0525532775
+Epoch:  1700  |  train loss: 0.0517864622
+Epoch:  1800  |  train loss: 0.0516056150
+Epoch:  1900  |  train loss: 0.0515247487
+Epoch:  2000  |  train loss: 0.0518080555
+Calculating proto and cov in AE latent
+Processing class: 32
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0602723248
+Epoch:   200  |  train loss: 0.0590916879
+Epoch:   300  |  train loss: 0.0587583095
+Epoch:   400  |  train loss: 0.0572538324
+Epoch:   500  |  train loss: 0.0557343833
+Epoch:   600  |  train loss: 0.0552408509
+Epoch:   700  |  train loss: 0.0539074674
+Epoch:   800  |  train loss: 0.0538142391
+Epoch:   900  |  train loss: 0.0530161574
+Epoch:  1000  |  train loss: 0.0520473763
+Epoch:  1100  |  train loss: 0.0520879976
+Epoch:  1200  |  train loss: 0.0509841338
+Epoch:  1300  |  train loss: 0.0504446611
+Epoch:  1400  |  train loss: 0.0505626060
+Epoch:  1500  |  train loss: 0.0495383725
+Epoch:  1600  |  train loss: 0.0493500352
+Epoch:  1700  |  train loss: 0.0488532916
+Epoch:  1800  |  train loss: 0.0490534469
+Epoch:  1900  |  train loss: 0.0478316717
+Epoch:  2000  |  train loss: 0.0479311548
+Calculating proto and cov in AE latent
+Processing class: 33
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0563373387
+Epoch:   200  |  train loss: 0.0552031130
+Epoch:   300  |  train loss: 0.0512543201
+Epoch:   400  |  train loss: 0.0493323326
+Epoch:   500  |  train loss: 0.0483282641
+Epoch:   600  |  train loss: 0.0471074224
+Epoch:   700  |  train loss: 0.0461370006
+Epoch:   800  |  train loss: 0.0454491891
+Epoch:   900  |  train loss: 0.0444902062
+Epoch:  1000  |  train loss: 0.0438855618
+Epoch:  1100  |  train loss: 0.0432620689
+Epoch:  1200  |  train loss: 0.0428174779
+Epoch:  1300  |  train loss: 0.0425700888
+Epoch:  1400  |  train loss: 0.0421553873
+Epoch:  1500  |  train loss: 0.0418283522
+Epoch:  1600  |  train loss: 0.0416354224
+Epoch:  1700  |  train loss: 0.0411515728
+Epoch:  1800  |  train loss: 0.0410570405
+Epoch:  1900  |  train loss: 0.0409044564
+Epoch:  2000  |  train loss: 0.0405747421
+Calculating proto and cov in AE latent
+Processing class: 34
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0580748186
+Epoch:   200  |  train loss: 0.0579637893
+Epoch:   300  |  train loss: 0.0560767293
+Epoch:   400  |  train loss: 0.0552978031
+Epoch:   500  |  train loss: 0.0540484332
+Epoch:   600  |  train loss: 0.0525279097
+Epoch:   700  |  train loss: 0.0526479825
+Epoch:   800  |  train loss: 0.0515839264
+Epoch:   900  |  train loss: 0.0507718571
+Epoch:  1000  |  train loss: 0.0507427335
+Epoch:  1100  |  train loss: 0.0496540681
+Epoch:  1200  |  train loss: 0.0495167360
+Epoch:  1300  |  train loss: 0.0489252873
+Epoch:  1400  |  train loss: 0.0486735515
+Epoch:  1500  |  train loss: 0.0476843581
+Epoch:  1600  |  train loss: 0.0480138473
+Epoch:  1700  |  train loss: 0.0475988574
+Epoch:  1800  |  train loss: 0.0470901407
+Epoch:  1900  |  train loss: 0.0467630275
+Epoch:  2000  |  train loss: 0.0462180160
+Calculating proto and cov in AE latent
+Processing class: 35
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0615748227
+Epoch:   200  |  train loss: 0.0589077935
+Epoch:   300  |  train loss: 0.0580138944
+Epoch:   400  |  train loss: 0.0581983924
+Epoch:   500  |  train loss: 0.0570961572
+Epoch:   600  |  train loss: 0.0566918403
+Epoch:   700  |  train loss: 0.0569876835
+Epoch:   800  |  train loss: 0.0559954524
+Epoch:   900  |  train loss: 0.0560573444
+Epoch:  1000  |  train loss: 0.0555037878
+Epoch:  1100  |  train loss: 0.0552737303
+Epoch:  1200  |  train loss: 0.0552852072
+Epoch:  1300  |  train loss: 0.0543611266
+Epoch:  1400  |  train loss: 0.0545156509
+Epoch:  1500  |  train loss: 0.0538308829
+Epoch:  1600  |  train loss: 0.0537111029
+Epoch:  1700  |  train loss: 0.0531058237
+Epoch:  1800  |  train loss: 0.0527068660
+Epoch:  1900  |  train loss: 0.0531628832
+Epoch:  2000  |  train loss: 0.0526469193
+Calculating proto and cov in AE latent
+Processing class: 36
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0563195989
+Epoch:   200  |  train loss: 0.0561571836
+Epoch:   300  |  train loss: 0.0549414970
+Epoch:   400  |  train loss: 0.0535370737
+Epoch:   500  |  train loss: 0.0534404062
+Epoch:   600  |  train loss: 0.0518673025
+Epoch:   700  |  train loss: 0.0521047816
+Epoch:   800  |  train loss: 0.0510641754
+Epoch:   900  |  train loss: 0.0503084384
+Epoch:  1000  |  train loss: 0.0497445792
+Epoch:  1100  |  train loss: 0.0496127509
+Epoch:  1200  |  train loss: 0.0491930842
+Epoch:  1300  |  train loss: 0.0488342702
+Epoch:  1400  |  train loss: 0.0478006966
+Epoch:  1500  |  train loss: 0.0480254687
+Epoch:  1600  |  train loss: 0.0476343952
+Epoch:  1700  |  train loss: 0.0469159476
+Epoch:  1800  |  train loss: 0.0466478035
+Epoch:  1900  |  train loss: 0.0460118853
+Epoch:  2000  |  train loss: 0.0458041452
+Calculating proto and cov in AE latent
+Processing class: 37
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0562857889
+Epoch:   200  |  train loss: 0.0559857763
+Epoch:   300  |  train loss: 0.0532371692
+Epoch:   400  |  train loss: 0.0515181355
+Epoch:   500  |  train loss: 0.0507939726
+Epoch:   600  |  train loss: 0.0497747011
+Epoch:   700  |  train loss: 0.0500596821
+Epoch:   800  |  train loss: 0.0486706242
+Epoch:   900  |  train loss: 0.0479250796
+Epoch:  1000  |  train loss: 0.0477755405
+Epoch:  1100  |  train loss: 0.0466993526
+Epoch:  1200  |  train loss: 0.0462710567
+Epoch:  1300  |  train loss: 0.0459415719
+Epoch:  1400  |  train loss: 0.0451157801
+Epoch:  1500  |  train loss: 0.0445691042
+Epoch:  1600  |  train loss: 0.0446356460
+Epoch:  1700  |  train loss: 0.0430800073
+Epoch:  1800  |  train loss: 0.0432951964
+Epoch:  1900  |  train loss: 0.0429468758
+Epoch:  2000  |  train loss: 0.0426471151
+Calculating proto and cov in AE latent
+Processing class: 38
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0543559425
+Epoch:   200  |  train loss: 0.0539613001
+Epoch:   300  |  train loss: 0.0528414160
+Epoch:   400  |  train loss: 0.0516868398
+Epoch:   500  |  train loss: 0.0510792889
+Epoch:   600  |  train loss: 0.0507322177
+Epoch:   700  |  train loss: 0.0496450149
+Epoch:   800  |  train loss: 0.0484656006
+Epoch:   900  |  train loss: 0.0480229653
+Epoch:  1000  |  train loss: 0.0471898437
+Epoch:  1100  |  train loss: 0.0469070964
+Epoch:  1200  |  train loss: 0.0467092700
+Epoch:  1300  |  train loss: 0.0456677414
+Epoch:  1400  |  train loss: 0.0450293586
+Epoch:  1500  |  train loss: 0.0448103771
+Epoch:  1600  |  train loss: 0.0443729922
+Epoch:  1700  |  train loss: 0.0435329147
+Epoch:  1800  |  train loss: 0.0432857327
+Epoch:  1900  |  train loss: 0.0434221178
+Epoch:  2000  |  train loss: 0.0427958533
+Calculating proto and cov in AE latent
+Processing class: 39
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0570908152
+Epoch:   200  |  train loss: 0.0573988125
+Epoch:   300  |  train loss: 0.0551527165
+Epoch:   400  |  train loss: 0.0533208407
+Epoch:   500  |  train loss: 0.0526584864
+Epoch:   600  |  train loss: 0.0520368762
+Epoch:   700  |  train loss: 0.0510201521
+Epoch:   800  |  train loss: 0.0505921490
+Epoch:   900  |  train loss: 0.0496589079
+Epoch:  1000  |  train loss: 0.0490626343
+Epoch:  1100  |  train loss: 0.0484655991
+Epoch:  1200  |  train loss: 0.0476510204
+Epoch:  1300  |  train loss: 0.0470718250
+Epoch:  1400  |  train loss: 0.0463651992
+Epoch:  1500  |  train loss: 0.0459537670
+Epoch:  1600  |  train loss: 0.0457161419
+Epoch:  1700  |  train loss: 0.0453455918
+Epoch:  1800  |  train loss: 0.0447087392
+Epoch:  1900  |  train loss: 0.0453640603
+Epoch:  2000  |  train loss: 0.0441242516
+Calculating proto and cov in AE latent
+Processing class: 40
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0546606041
+Epoch:   200  |  train loss: 0.0541122310
+Epoch:   300  |  train loss: 0.0530062981
+Epoch:   400  |  train loss: 0.0529424340
+Epoch:   500  |  train loss: 0.0511850841
+Epoch:   600  |  train loss: 0.0505133897
+Epoch:   700  |  train loss: 0.0494440578
+Epoch:   800  |  train loss: 0.0488629542
+Epoch:   900  |  train loss: 0.0482028939
+Epoch:  1000  |  train loss: 0.0479428463
+Epoch:  1100  |  train loss: 0.0472810648
+Epoch:  1200  |  train loss: 0.0476480685
+Epoch:  1300  |  train loss: 0.0466585182
+Epoch:  1400  |  train loss: 0.0461903408
+Epoch:  1500  |  train loss: 0.0457426362
+Epoch:  1600  |  train loss: 0.0458494902
+Epoch:  1700  |  train loss: 0.0453753561
+Epoch:  1800  |  train loss: 0.0454578407
+Epoch:  1900  |  train loss: 0.0446868032
+Epoch:  2000  |  train loss: 0.0441222109
+Calculating proto and cov in AE latent
+Processing class: 41
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0561747484
+Epoch:   200  |  train loss: 0.0546374783
+Epoch:   300  |  train loss: 0.0534307919
+Epoch:   400  |  train loss: 0.0526065722
+Epoch:   500  |  train loss: 0.0518666647
+Epoch:   600  |  train loss: 0.0513436221
+Epoch:   700  |  train loss: 0.0502102315
+Epoch:   800  |  train loss: 0.0500884265
+Epoch:   900  |  train loss: 0.0490875587
+Epoch:  1000  |  train loss: 0.0483544216
+Epoch:  1100  |  train loss: 0.0475849979
+Epoch:  1200  |  train loss: 0.0475953944
+Epoch:  1300  |  train loss: 0.0466831647
+Epoch:  1400  |  train loss: 0.0465852037
+Epoch:  1500  |  train loss: 0.0462552868
+Epoch:  1600  |  train loss: 0.0457800873
+Epoch:  1700  |  train loss: 0.0455082245
+Epoch:  1800  |  train loss: 0.0455106616
+Epoch:  1900  |  train loss: 0.0451544523
+Epoch:  2000  |  train loss: 0.0447063871
+Calculating proto and cov in AE latent
+Processing class: 42
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0559272252
+Epoch:   200  |  train loss: 0.0546991386
+Epoch:   300  |  train loss: 0.0534070112
+Epoch:   400  |  train loss: 0.0523237705
+Epoch:   500  |  train loss: 0.0519664675
+Epoch:   600  |  train loss: 0.0504556358
+Epoch:   700  |  train loss: 0.0498922415
+Epoch:   800  |  train loss: 0.0489559159
+Epoch:   900  |  train loss: 0.0480507821
+Epoch:  1000  |  train loss: 0.0475165226
+Epoch:  1100  |  train loss: 0.0470747970
+Epoch:  1200  |  train loss: 0.0463358171
+Epoch:  1300  |  train loss: 0.0462594286
+Epoch:  1400  |  train loss: 0.0457131200
+Epoch:  1500  |  train loss: 0.0450518511
+Epoch:  1600  |  train loss: 0.0445161983
+Epoch:  1700  |  train loss: 0.0443644822
+Epoch:  1800  |  train loss: 0.0440804139
+Epoch:  1900  |  train loss: 0.0436489217
+Epoch:  2000  |  train loss: 0.0432200707
+Calculating proto and cov in AE latent
+Processing class: 43
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0569309592
+Epoch:   200  |  train loss: 0.0538772181
+Epoch:   300  |  train loss: 0.0537594795
+Epoch:   400  |  train loss: 0.0526699856
+Epoch:   500  |  train loss: 0.0520511992
+Epoch:   600  |  train loss: 0.0517749719
+Epoch:   700  |  train loss: 0.0522520229
+Epoch:   800  |  train loss: 0.0514825232
+Epoch:   900  |  train loss: 0.0509779632
+Epoch:  1000  |  train loss: 0.0514241897
+Epoch:  1100  |  train loss: 0.0507145628
+Epoch:  1200  |  train loss: 0.0502360351
+Epoch:  1300  |  train loss: 0.0500331841
+Epoch:  1400  |  train loss: 0.0493040211
+Epoch:  1500  |  train loss: 0.0492260918
+Epoch:  1600  |  train loss: 0.0495836519
+Epoch:  1700  |  train loss: 0.0494024858
+Epoch:  1800  |  train loss: 0.0491364948
+Epoch:  1900  |  train loss: 0.0487438299
+Epoch:  2000  |  train loss: 0.0480352968
+Calculating proto and cov in AE latent
+Processing class: 44
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0584520981
+Epoch:   200  |  train loss: 0.0566031329
+Epoch:   300  |  train loss: 0.0547761425
+Epoch:   400  |  train loss: 0.0544648379
+Epoch:   500  |  train loss: 0.0534988001
+Epoch:   600  |  train loss: 0.0525427699
+Epoch:   700  |  train loss: 0.0517440736
+Epoch:   800  |  train loss: 0.0508379623
+Epoch:   900  |  train loss: 0.0501504011
+Epoch:  1000  |  train loss: 0.0496567555
+Epoch:  1100  |  train loss: 0.0491818771
+Epoch:  1200  |  train loss: 0.0486603335
+Epoch:  1300  |  train loss: 0.0485867277
+Epoch:  1400  |  train loss: 0.0478246912
+Epoch:  1500  |  train loss: 0.0479008429
+Epoch:  1600  |  train loss: 0.0474066645
+Epoch:  1700  |  train loss: 0.0473680779
+Epoch:  1800  |  train loss: 0.0470056280
+Epoch:  1900  |  train loss: 0.0464657620
+Epoch:  2000  |  train loss: 0.0464549437
+Calculating proto and cov in AE latent
+Processing class: 45
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0575482480
+Epoch:   200  |  train loss: 0.0569231667
+Epoch:   300  |  train loss: 0.0563859038
+Epoch:   400  |  train loss: 0.0555118844
+Epoch:   500  |  train loss: 0.0553345837
+Epoch:   600  |  train loss: 0.0555201374
+Epoch:   700  |  train loss: 0.0548082493
+Epoch:   800  |  train loss: 0.0535931163
+Epoch:   900  |  train loss: 0.0537321769
+Epoch:  1000  |  train loss: 0.0539282560
+Epoch:  1100  |  train loss: 0.0535772517
+Epoch:  1200  |  train loss: 0.0529790111
+Epoch:  1300  |  train loss: 0.0532150388
+Epoch:  1400  |  train loss: 0.0529721245
+Epoch:  1500  |  train loss: 0.0529412284
+Epoch:  1600  |  train loss: 0.0524897657
+Epoch:  1700  |  train loss: 0.0524063095
+Epoch:  1800  |  train loss: 0.0517557710
+Epoch:  1900  |  train loss: 0.0519820504
+Epoch:  2000  |  train loss: 0.0519853838
+Calculating proto and cov in AE latent
+Processing class: 46
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0571543306
+Epoch:   200  |  train loss: 0.0569138348
+Epoch:   300  |  train loss: 0.0555640012
+Epoch:   400  |  train loss: 0.0557169951
+Epoch:   500  |  train loss: 0.0553934857
+Epoch:   600  |  train loss: 0.0554823972
+Epoch:   700  |  train loss: 0.0547489181
+Epoch:   800  |  train loss: 0.0536300868
+Epoch:   900  |  train loss: 0.0537289955
+Epoch:  1000  |  train loss: 0.0533415519
+Epoch:  1100  |  train loss: 0.0528012216
+Epoch:  1200  |  train loss: 0.0523820139
+Epoch:  1300  |  train loss: 0.0522986352
+Epoch:  1400  |  train loss: 0.0525963351
+Epoch:  1500  |  train loss: 0.0522627085
+Epoch:  1600  |  train loss: 0.0515069894
+Epoch:  1700  |  train loss: 0.0519520499
+Epoch:  1800  |  train loss: 0.0514402650
+Epoch:  1900  |  train loss: 0.0509687409
+Epoch:  2000  |  train loss: 0.0512688696
+Calculating proto and cov in AE latent
+Processing class: 47
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0562994346
+Epoch:   200  |  train loss: 0.0564397946
+Epoch:   300  |  train loss: 0.0535009287
+Epoch:   400  |  train loss: 0.0513294905
+Epoch:   500  |  train loss: 0.0504950643
+Epoch:   600  |  train loss: 0.0499355949
+Epoch:   700  |  train loss: 0.0491342954
+Epoch:   800  |  train loss: 0.0481614955
+Epoch:   900  |  train loss: 0.0481503382
+Epoch:  1000  |  train loss: 0.0478397191
+Epoch:  1100  |  train loss: 0.0466895953
+Epoch:  1200  |  train loss: 0.0464593850
+Epoch:  1300  |  train loss: 0.0461005762
+Epoch:  1400  |  train loss: 0.0453446522
+Epoch:  1500  |  train loss: 0.0450828649
+Epoch:  1600  |  train loss: 0.0447935738
+Epoch:  1700  |  train loss: 0.0441606462
+Epoch:  1800  |  train loss: 0.0442342319
+Epoch:  1900  |  train loss: 0.0437618524
+Epoch:  2000  |  train loss: 0.0437226534
+Calculating proto and cov in AE latent
+Processing class: 48
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0577258460
+Epoch:   200  |  train loss: 0.0565666929
+Epoch:   300  |  train loss: 0.0544729486
+Epoch:   400  |  train loss: 0.0536350973
+Epoch:   500  |  train loss: 0.0533480488
+Epoch:   600  |  train loss: 0.0525335580
+Epoch:   700  |  train loss: 0.0515492342
+Epoch:   800  |  train loss: 0.0512854464
+Epoch:   900  |  train loss: 0.0513353057
+Epoch:  1000  |  train loss: 0.0505495690
+Epoch:  1100  |  train loss: 0.0505310148
+Epoch:  1200  |  train loss: 0.0499386296
+Epoch:  1300  |  train loss: 0.0496233106
+Epoch:  1400  |  train loss: 0.0495836943
+Epoch:  1500  |  train loss: 0.0492173254
+Epoch:  1600  |  train loss: 0.0493401170
+Epoch:  1700  |  train loss: 0.0490619361
+Epoch:  1800  |  train loss: 0.0485543951
+Epoch:  1900  |  train loss: 0.0486619450
+Epoch:  2000  |  train loss: 0.0484293468
+Calculating proto and cov in AE latent
+Processing class: 49
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0570524119
+Epoch:   200  |  train loss: 0.0552911423
+Epoch:   300  |  train loss: 0.0542785473
+Epoch:   400  |  train loss: 0.0535007849
+Epoch:   500  |  train loss: 0.0523491628
+Epoch:   600  |  train loss: 0.0526268512
+Epoch:   700  |  train loss: 0.0522304885
+Epoch:   800  |  train loss: 0.0519683354
+Epoch:   900  |  train loss: 0.0513787180
+Epoch:  1000  |  train loss: 0.0510530904
+Epoch:  1100  |  train loss: 0.0517612830
+Epoch:  1200  |  train loss: 0.0509052090
+Epoch:  1300  |  train loss: 0.0503736719
+Epoch:  1400  |  train loss: 0.0503507271
+Epoch:  1500  |  train loss: 0.0497143708
+Epoch:  1600  |  train loss: 0.0493294254
+Epoch:  1700  |  train loss: 0.0492752552
+Epoch:  1800  |  train loss: 0.0487251259
+Epoch:  1900  |  train loss: 0.0478472009
+Epoch:  2000  |  train loss: 0.0482517891
+Calculating proto and cov in AE latent
+Clasifying using eucl dist from latent proto
+2024-03-11 20:41:07,850 [trainer.py] => CNN: {'total': 83.44, '00-09': 87.7, '10-19': 79.6, '20-29': 84.9, '30-39': 81.0, '40-49': 84.0, 'old': 0, 'new': 83.44}
+2024-03-11 20:41:07,852 [trainer.py] => No NME accuracy
+2024-03-11 20:41:07,852 [trainer.py] => FeCAM: {'total': 46.0, '00-09': 49.6, '10-19': 37.2, '20-29': 53.0, '30-39': 44.7, '40-49': 45.5, 'old': 0, 'new': 46.0}
+2024-03-11 20:41:07,852 [trainer.py] => CNN top1 curve: [83.44]
+2024-03-11 20:41:07,852 [trainer.py] => CNN top5 curve: [96.5]
+2024-03-11 20:41:07,852 [trainer.py] => FeCAM top1 curve: [46.0]
+2024-03-11 20:41:07,852 [trainer.py] => FeCAM top5 curve: [62.8]
+
+2024-03-11 20:41:07,867 [fecam.py] => Learning on 50-60
+Processing class: 50
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0611187205
+Epoch:   200  |  train loss: 0.0599780738
+Epoch:   300  |  train loss: 0.0575581886
+Epoch:   400  |  train loss: 0.0563545585
+Epoch:   500  |  train loss: 0.0552445106
+Epoch:   600  |  train loss: 0.0538056701
+Epoch:   700  |  train loss: 0.0536646605
+Epoch:   800  |  train loss: 0.0528129041
+Epoch:   900  |  train loss: 0.0518852189
+Epoch:  1000  |  train loss: 0.0516858503
+Epoch:  1100  |  train loss: 0.0509391643
+Epoch:  1200  |  train loss: 0.0508385547
+Epoch:  1300  |  train loss: 0.0502509527
+Epoch:  1400  |  train loss: 0.0498580538
+Epoch:  1500  |  train loss: 0.0491764091
+Epoch:  1600  |  train loss: 0.0486944646
+Epoch:  1700  |  train loss: 0.0482203208
+Epoch:  1800  |  train loss: 0.0482723780
+Epoch:  1900  |  train loss: 0.0480583027
+Epoch:  2000  |  train loss: 0.0478940651
+Calculating proto and cov in AE latent
+Processing class: 51
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0618384250
+Epoch:   200  |  train loss: 0.0619044602
+Epoch:   300  |  train loss: 0.0584604420
+Epoch:   400  |  train loss: 0.0570337281
+Epoch:   500  |  train loss: 0.0550024077
+Epoch:   600  |  train loss: 0.0532636352
+Epoch:   700  |  train loss: 0.0524155632
+Epoch:   800  |  train loss: 0.0515625589
+Epoch:   900  |  train loss: 0.0511877589
+Epoch:  1000  |  train loss: 0.0504962474
+Epoch:  1100  |  train loss: 0.0498044223
+Epoch:  1200  |  train loss: 0.0489520170
+Epoch:  1300  |  train loss: 0.0487494335
+Epoch:  1400  |  train loss: 0.0482904188
+Epoch:  1500  |  train loss: 0.0480001770
+Epoch:  1600  |  train loss: 0.0472840957
+Epoch:  1700  |  train loss: 0.0470686257
+Epoch:  1800  |  train loss: 0.0462903149
+Epoch:  1900  |  train loss: 0.0461545445
+Epoch:  2000  |  train loss: 0.0460085727
+Calculating proto and cov in AE latent
+Processing class: 52
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0640328646
+Epoch:   200  |  train loss: 0.0627821475
+Epoch:   300  |  train loss: 0.0610513054
+Epoch:   400  |  train loss: 0.0589015588
+Epoch:   500  |  train loss: 0.0580967717
+Epoch:   600  |  train loss: 0.0573471069
+Epoch:   700  |  train loss: 0.0566477291
+Epoch:   800  |  train loss: 0.0556126192
+Epoch:   900  |  train loss: 0.0551963568
+Epoch:  1000  |  train loss: 0.0545696594
+Epoch:  1100  |  train loss: 0.0539659925
+Epoch:  1200  |  train loss: 0.0536285080
+Epoch:  1300  |  train loss: 0.0532068707
+Epoch:  1400  |  train loss: 0.0525649130
+Epoch:  1500  |  train loss: 0.0526639469
+Epoch:  1600  |  train loss: 0.0516614504
+Epoch:  1700  |  train loss: 0.0512956128
+Epoch:  1800  |  train loss: 0.0510457799
+Epoch:  1900  |  train loss: 0.0507828653
+Epoch:  2000  |  train loss: 0.0505461156
+Calculating proto and cov in AE latent
+Processing class: 53
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0612448037
+Epoch:   200  |  train loss: 0.0578391261
+Epoch:   300  |  train loss: 0.0578966498
+Epoch:   400  |  train loss: 0.0566636056
+Epoch:   500  |  train loss: 0.0560807198
+Epoch:   600  |  train loss: 0.0557615086
+Epoch:   700  |  train loss: 0.0551797360
+Epoch:   800  |  train loss: 0.0552214198
+Epoch:   900  |  train loss: 0.0545247227
+Epoch:  1000  |  train loss: 0.0542314552
+Epoch:  1100  |  train loss: 0.0538932636
+Epoch:  1200  |  train loss: 0.0544412859
+Epoch:  1300  |  train loss: 0.0534033097
+Epoch:  1400  |  train loss: 0.0533212699
+Epoch:  1500  |  train loss: 0.0530423395
+Epoch:  1600  |  train loss: 0.0525064550
+Epoch:  1700  |  train loss: 0.0525312364
+Epoch:  1800  |  train loss: 0.0520974271
+Epoch:  1900  |  train loss: 0.0521440692
+Epoch:  2000  |  train loss: 0.0515287384
+Calculating proto and cov in AE latent
+Processing class: 54
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0590561897
+Epoch:   200  |  train loss: 0.0548308365
+Epoch:   300  |  train loss: 0.0536375396
+Epoch:   400  |  train loss: 0.0525418922
+Epoch:   500  |  train loss: 0.0515801013
+Epoch:   600  |  train loss: 0.0514577009
+Epoch:   700  |  train loss: 0.0503962852
+Epoch:   800  |  train loss: 0.0499075614
+Epoch:   900  |  train loss: 0.0492831044
+Epoch:  1000  |  train loss: 0.0492654517
+Epoch:  1100  |  train loss: 0.0487559117
+Epoch:  1200  |  train loss: 0.0482259907
+Epoch:  1300  |  train loss: 0.0477667682
+Epoch:  1400  |  train loss: 0.0471901357
+Epoch:  1500  |  train loss: 0.0472115315
+Epoch:  1600  |  train loss: 0.0471082687
+Epoch:  1700  |  train loss: 0.0465950921
+Epoch:  1800  |  train loss: 0.0459971339
+Epoch:  1900  |  train loss: 0.0450928234
+Epoch:  2000  |  train loss: 0.0455624506
+Calculating proto and cov in AE latent
+Processing class: 55
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0664462104
+Epoch:   200  |  train loss: 0.0659253284
+Epoch:   300  |  train loss: 0.0649040282
+Epoch:   400  |  train loss: 0.0648296908
+Epoch:   500  |  train loss: 0.0642661199
+Epoch:   600  |  train loss: 0.0635827832
+Epoch:   700  |  train loss: 0.0629013628
+Epoch:   800  |  train loss: 0.0629710726
+Epoch:   900  |  train loss: 0.0622547634
+Epoch:  1000  |  train loss: 0.0615144983
+Epoch:  1100  |  train loss: 0.0608944312
+Epoch:  1200  |  train loss: 0.0605628356
+Epoch:  1300  |  train loss: 0.0596692912
+Epoch:  1400  |  train loss: 0.0596515432
+Epoch:  1500  |  train loss: 0.0591902047
+Epoch:  1600  |  train loss: 0.0586874291
+Epoch:  1700  |  train loss: 0.0583156399
+Epoch:  1800  |  train loss: 0.0575809881
+Epoch:  1900  |  train loss: 0.0574621685
+Epoch:  2000  |  train loss: 0.0568256870
+Calculating proto and cov in AE latent
+Processing class: 56
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0637006864
+Epoch:   200  |  train loss: 0.0603165485
+Epoch:   300  |  train loss: 0.0576443717
+Epoch:   400  |  train loss: 0.0560948431
+Epoch:   500  |  train loss: 0.0553487226
+Epoch:   600  |  train loss: 0.0539059170
+Epoch:   700  |  train loss: 0.0524804644
+Epoch:   800  |  train loss: 0.0509510584
+Epoch:   900  |  train loss: 0.0506761573
+Epoch:  1000  |  train loss: 0.0502373680
+Epoch:  1100  |  train loss: 0.0486755677
+Epoch:  1200  |  train loss: 0.0491130643
+Epoch:  1300  |  train loss: 0.0480098285
+Epoch:  1400  |  train loss: 0.0474191308
+Epoch:  1500  |  train loss: 0.0475620568
+Epoch:  1600  |  train loss: 0.0471177340
+Epoch:  1700  |  train loss: 0.0468140915
+Epoch:  1800  |  train loss: 0.0466984779
+Epoch:  1900  |  train loss: 0.0461607873
+Epoch:  2000  |  train loss: 0.0458975896
+Calculating proto and cov in AE latent
+Processing class: 57
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0658641070
+Epoch:   200  |  train loss: 0.0654455841
+Epoch:   300  |  train loss: 0.0648574799
+Epoch:   400  |  train loss: 0.0643487364
+Epoch:   500  |  train loss: 0.0629138537
+Epoch:   600  |  train loss: 0.0621209092
+Epoch:   700  |  train loss: 0.0614692479
+Epoch:   800  |  train loss: 0.0608960688
+Epoch:   900  |  train loss: 0.0606098510
+Epoch:  1000  |  train loss: 0.0598382883
+Epoch:  1100  |  train loss: 0.0598320119
+Epoch:  1200  |  train loss: 0.0588207930
+Epoch:  1300  |  train loss: 0.0586930141
+Epoch:  1400  |  train loss: 0.0582057804
+Epoch:  1500  |  train loss: 0.0574287735
+Epoch:  1600  |  train loss: 0.0571513586
+Epoch:  1700  |  train loss: 0.0566110000
+Epoch:  1800  |  train loss: 0.0561431877
+Epoch:  1900  |  train loss: 0.0562227465
+Epoch:  2000  |  train loss: 0.0553738199
+Calculating proto and cov in AE latent
+Processing class: 58
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0620810516
+Epoch:   200  |  train loss: 0.0585795633
+Epoch:   300  |  train loss: 0.0563233562
+Epoch:   400  |  train loss: 0.0550090455
+Epoch:   500  |  train loss: 0.0541689046
+Epoch:   600  |  train loss: 0.0528895177
+Epoch:   700  |  train loss: 0.0518714890
+Epoch:   800  |  train loss: 0.0505866490
+Epoch:   900  |  train loss: 0.0499084830
+Epoch:  1000  |  train loss: 0.0490723401
+Epoch:  1100  |  train loss: 0.0483601764
+Epoch:  1200  |  train loss: 0.0477482729
+Epoch:  1300  |  train loss: 0.0467937261
+Epoch:  1400  |  train loss: 0.0470422566
+Epoch:  1500  |  train loss: 0.0459382303
+Epoch:  1600  |  train loss: 0.0460797392
+Epoch:  1700  |  train loss: 0.0454969190
+Epoch:  1800  |  train loss: 0.0451664649
+Epoch:  1900  |  train loss: 0.0444305345
+Epoch:  2000  |  train loss: 0.0437497810
+Calculating proto and cov in AE latent
+Processing class: 59
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0649971277
+Epoch:   200  |  train loss: 0.0625874348
+Epoch:   300  |  train loss: 0.0612321630
+Epoch:   400  |  train loss: 0.0606403887
+Epoch:   500  |  train loss: 0.0600658230
+Epoch:   600  |  train loss: 0.0591539495
+Epoch:   700  |  train loss: 0.0579097219
+Epoch:   800  |  train loss: 0.0573957615
+Epoch:   900  |  train loss: 0.0566673204
+Epoch:  1000  |  train loss: 0.0570402287
+Epoch:  1100  |  train loss: 0.0563046746
+Epoch:  1200  |  train loss: 0.0551657625
+Epoch:  1300  |  train loss: 0.0547851555
+Epoch:  1400  |  train loss: 0.0550520167
+Epoch:  1500  |  train loss: 0.0547920622
+Epoch:  1600  |  train loss: 0.0541507319
+Epoch:  1700  |  train loss: 0.0537076309
+Epoch:  1800  |  train loss: 0.0535468630
+Epoch:  1900  |  train loss: 0.0534360446
+Epoch:  2000  |  train loss: 0.0526944168
+Calculating proto and cov in AE latent
+Clasifying using eucl dist from latent proto
+2024-03-11 20:51:59,884 [trainer.py] => CNN: {'total': 71.75, '00-09': 82.2, '10-19': 72.8, '20-29': 78.5, '30-39': 74.9, '40-49': 68.4, '50-59': 53.7, 'old': 75.36, 'new': 53.7}
+2024-03-11 20:51:59,885 [trainer.py] => No NME accuracy
+2024-03-11 20:51:59,885 [trainer.py] => FeCAM: {'total': 22.17, '00-09': 24.9, '10-19': 19.5, '20-29': 26.6, '30-39': 20.5, '40-49': 25.9, '50-59': 15.6, 'old': 23.48, 'new': 15.6}
+2024-03-11 20:51:59,885 [trainer.py] => CNN top1 curve: [83.44, 71.75]
+2024-03-11 20:51:59,885 [trainer.py] => CNN top5 curve: [96.5, 89.6]
+2024-03-11 20:51:59,885 [trainer.py] => FeCAM top1 curve: [46.0, 22.17]
+2024-03-11 20:51:59,885 [trainer.py] => FeCAM top5 curve: [62.8, 48.48]
+
+2024-03-11 20:51:59,891 [fecam.py] => Learning on 60-70
+Processing class: 60
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0642719686
+Epoch:   200  |  train loss: 0.0630199559
+Epoch:   300  |  train loss: 0.0614284717
+Epoch:   400  |  train loss: 0.0596840136
+Epoch:   500  |  train loss: 0.0586937927
+Epoch:   600  |  train loss: 0.0576584019
+Epoch:   700  |  train loss: 0.0564273775
+Epoch:   800  |  train loss: 0.0555470169
+Epoch:   900  |  train loss: 0.0546200812
+Epoch:  1000  |  train loss: 0.0537193827
+Epoch:  1100  |  train loss: 0.0528980263
+Epoch:  1200  |  train loss: 0.0528047115
+Epoch:  1300  |  train loss: 0.0519385852
+Epoch:  1400  |  train loss: 0.0514411233
+Epoch:  1500  |  train loss: 0.0515483782
+Epoch:  1600  |  train loss: 0.0505069278
+Epoch:  1700  |  train loss: 0.0501531586
+Epoch:  1800  |  train loss: 0.0497764088
+Epoch:  1900  |  train loss: 0.0495288029
+Epoch:  2000  |  train loss: 0.0489638597
+Calculating proto and cov in AE latent
+Processing class: 61
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0599159554
+Epoch:   200  |  train loss: 0.0570077650
+Epoch:   300  |  train loss: 0.0564602807
+Epoch:   400  |  train loss: 0.0542384274
+Epoch:   500  |  train loss: 0.0524079725
+Epoch:   600  |  train loss: 0.0520372137
+Epoch:   700  |  train loss: 0.0511807859
+Epoch:   800  |  train loss: 0.0504962608
+Epoch:   900  |  train loss: 0.0499729075
+Epoch:  1000  |  train loss: 0.0488242328
+Epoch:  1100  |  train loss: 0.0489969738
+Epoch:  1200  |  train loss: 0.0480826862
+Epoch:  1300  |  train loss: 0.0473970950
+Epoch:  1400  |  train loss: 0.0474028729
+Epoch:  1500  |  train loss: 0.0477095529
+Epoch:  1600  |  train loss: 0.0470052585
+Epoch:  1700  |  train loss: 0.0463388488
+Epoch:  1800  |  train loss: 0.0457213126
+Epoch:  1900  |  train loss: 0.0455937006
+Epoch:  2000  |  train loss: 0.0459888287
+Calculating proto and cov in AE latent
+Processing class: 62
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0659579098
+Epoch:   200  |  train loss: 0.0659550369
+Epoch:   300  |  train loss: 0.0648561299
+Epoch:   400  |  train loss: 0.0642034024
+Epoch:   500  |  train loss: 0.0636032924
+Epoch:   600  |  train loss: 0.0625948876
+Epoch:   700  |  train loss: 0.0620946489
+Epoch:   800  |  train loss: 0.0615468264
+Epoch:   900  |  train loss: 0.0607413247
+Epoch:  1000  |  train loss: 0.0603473656
+Epoch:  1100  |  train loss: 0.0594911851
+Epoch:  1200  |  train loss: 0.0594141997
+Epoch:  1300  |  train loss: 0.0591732241
+Epoch:  1400  |  train loss: 0.0585005909
+Epoch:  1500  |  train loss: 0.0583264992
+Epoch:  1600  |  train loss: 0.0578726530
+Epoch:  1700  |  train loss: 0.0578072175
+Epoch:  1800  |  train loss: 0.0571026430
+Epoch:  1900  |  train loss: 0.0569121718
+Epoch:  2000  |  train loss: 0.0564785331
+Calculating proto and cov in AE latent
+Processing class: 63
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0635303944
+Epoch:   200  |  train loss: 0.0612958327
+Epoch:   300  |  train loss: 0.0586431235
+Epoch:   400  |  train loss: 0.0569280006
+Epoch:   500  |  train loss: 0.0560360655
+Epoch:   600  |  train loss: 0.0548790857
+Epoch:   700  |  train loss: 0.0540526010
+Epoch:   800  |  train loss: 0.0532229528
+Epoch:   900  |  train loss: 0.0525238104
+Epoch:  1000  |  train loss: 0.0525035806
+Epoch:  1100  |  train loss: 0.0510200523
+Epoch:  1200  |  train loss: 0.0506363019
+Epoch:  1300  |  train loss: 0.0500690438
+Epoch:  1400  |  train loss: 0.0494454399
+Epoch:  1500  |  train loss: 0.0489165872
+Epoch:  1600  |  train loss: 0.0483938262
+Epoch:  1700  |  train loss: 0.0486562550
+Epoch:  1800  |  train loss: 0.0480950400
+Epoch:  1900  |  train loss: 0.0471674472
+Epoch:  2000  |  train loss: 0.0477071680
+Calculating proto and cov in AE latent
+Processing class: 64
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0632968009
+Epoch:   200  |  train loss: 0.0605221584
+Epoch:   300  |  train loss: 0.0584025636
+Epoch:   400  |  train loss: 0.0563142888
+Epoch:   500  |  train loss: 0.0555626787
+Epoch:   600  |  train loss: 0.0553019673
+Epoch:   700  |  train loss: 0.0545091599
+Epoch:   800  |  train loss: 0.0530725658
+Epoch:   900  |  train loss: 0.0524574667
+Epoch:  1000  |  train loss: 0.0514813460
+Epoch:  1100  |  train loss: 0.0513047561
+Epoch:  1200  |  train loss: 0.0505918458
+Epoch:  1300  |  train loss: 0.0502852499
+Epoch:  1400  |  train loss: 0.0495520800
+Epoch:  1500  |  train loss: 0.0489998236
+Epoch:  1600  |  train loss: 0.0488416262
+Epoch:  1700  |  train loss: 0.0488395683
+Epoch:  1800  |  train loss: 0.0486407429
+Epoch:  1900  |  train loss: 0.0483540513
+Epoch:  2000  |  train loss: 0.0482932739
+Calculating proto and cov in AE latent
+Processing class: 65
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0619143628
+Epoch:   200  |  train loss: 0.0590152070
+Epoch:   300  |  train loss: 0.0567407317
+Epoch:   400  |  train loss: 0.0547430016
+Epoch:   500  |  train loss: 0.0539837629
+Epoch:   600  |  train loss: 0.0524520740
+Epoch:   700  |  train loss: 0.0512807980
+Epoch:   800  |  train loss: 0.0507581756
+Epoch:   900  |  train loss: 0.0498732932
+Epoch:  1000  |  train loss: 0.0496174805
+Epoch:  1100  |  train loss: 0.0486728176
+Epoch:  1200  |  train loss: 0.0482785434
+Epoch:  1300  |  train loss: 0.0473951519
+Epoch:  1400  |  train loss: 0.0477712750
+Epoch:  1500  |  train loss: 0.0473756425
+Epoch:  1600  |  train loss: 0.0468051903
+Epoch:  1700  |  train loss: 0.0466551058
+Epoch:  1800  |  train loss: 0.0461449340
+Epoch:  1900  |  train loss: 0.0462848529
+Epoch:  2000  |  train loss: 0.0457996242
+Calculating proto and cov in AE latent
+Processing class: 66
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0641062260
+Epoch:   200  |  train loss: 0.0614483953
+Epoch:   300  |  train loss: 0.0598098487
+Epoch:   400  |  train loss: 0.0590094358
+Epoch:   500  |  train loss: 0.0577553682
+Epoch:   600  |  train loss: 0.0558453210
+Epoch:   700  |  train loss: 0.0554622859
+Epoch:   800  |  train loss: 0.0543049060
+Epoch:   900  |  train loss: 0.0538384758
+Epoch:  1000  |  train loss: 0.0528615758
+Epoch:  1100  |  train loss: 0.0525031388
+Epoch:  1200  |  train loss: 0.0519332491
+Epoch:  1300  |  train loss: 0.0517752551
+Epoch:  1400  |  train loss: 0.0509908371
+Epoch:  1500  |  train loss: 0.0508257307
+Epoch:  1600  |  train loss: 0.0498172700
+Epoch:  1700  |  train loss: 0.0498838864
+Epoch:  1800  |  train loss: 0.0492045708
+Epoch:  1900  |  train loss: 0.0493147798
+Epoch:  2000  |  train loss: 0.0491408616
+Calculating proto and cov in AE latent
+Processing class: 67
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0644224420
+Epoch:   200  |  train loss: 0.0624576904
+Epoch:   300  |  train loss: 0.0605146624
+Epoch:   400  |  train loss: 0.0598864250
+Epoch:   500  |  train loss: 0.0584485032
+Epoch:   600  |  train loss: 0.0578092709
+Epoch:   700  |  train loss: 0.0566304862
+Epoch:   800  |  train loss: 0.0563123889
+Epoch:   900  |  train loss: 0.0556036599
+Epoch:  1000  |  train loss: 0.0552977890
+Epoch:  1100  |  train loss: 0.0546263307
+Epoch:  1200  |  train loss: 0.0543328822
+Epoch:  1300  |  train loss: 0.0534055352
+Epoch:  1400  |  train loss: 0.0532695085
+Epoch:  1500  |  train loss: 0.0529739797
+Epoch:  1600  |  train loss: 0.0525372133
+Epoch:  1700  |  train loss: 0.0521820739
+Epoch:  1800  |  train loss: 0.0521910630
+Epoch:  1900  |  train loss: 0.0518063843
+Epoch:  2000  |  train loss: 0.0514556974
+Calculating proto and cov in AE latent
+Processing class: 68
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0611777700
+Epoch:   200  |  train loss: 0.0599993348
+Epoch:   300  |  train loss: 0.0580269195
+Epoch:   400  |  train loss: 0.0565063044
+Epoch:   500  |  train loss: 0.0543647036
+Epoch:   600  |  train loss: 0.0538670883
+Epoch:   700  |  train loss: 0.0530984953
+Epoch:   800  |  train loss: 0.0519306213
+Epoch:   900  |  train loss: 0.0517112590
+Epoch:  1000  |  train loss: 0.0502524853
+Epoch:  1100  |  train loss: 0.0498175442
+Epoch:  1200  |  train loss: 0.0496026367
+Epoch:  1300  |  train loss: 0.0481565468
+Epoch:  1400  |  train loss: 0.0475669563
+Epoch:  1500  |  train loss: 0.0474615827
+Epoch:  1600  |  train loss: 0.0469914511
+Epoch:  1700  |  train loss: 0.0469073325
+Epoch:  1800  |  train loss: 0.0460808761
+Epoch:  1900  |  train loss: 0.0458411820
+Epoch:  2000  |  train loss: 0.0457114480
+Calculating proto and cov in AE latent
+Processing class: 69
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0503780052
+Epoch:   200  |  train loss: 0.0489231743
+Epoch:   300  |  train loss: 0.0472458124
+Epoch:   400  |  train loss: 0.0464024797
+Epoch:   500  |  train loss: 0.0460585400
+Epoch:   600  |  train loss: 0.0456017055
+Epoch:   700  |  train loss: 0.0457124695
+Epoch:   800  |  train loss: 0.0450709224
+Epoch:   900  |  train loss: 0.0447731130
+Epoch:  1000  |  train loss: 0.0447116606
+Epoch:  1100  |  train loss: 0.0444881380
+Epoch:  1200  |  train loss: 0.0439617641
+Epoch:  1300  |  train loss: 0.0434498228
+Epoch:  1400  |  train loss: 0.0433853671
+Epoch:  1500  |  train loss: 0.0423820220
+Epoch:  1600  |  train loss: 0.0426083706
+Epoch:  1700  |  train loss: 0.0422454797
+Epoch:  1800  |  train loss: 0.0415825814
+Epoch:  1900  |  train loss: 0.0415197894
+Epoch:  2000  |  train loss: 0.0413882814
+Calculating proto and cov in AE latent
+Clasifying using eucl dist from latent proto
+2024-03-11 21:03:50,302 [trainer.py] => CNN: {'total': 64.66, '00-09': 75.0, '10-19': 70.1, '20-29': 77.1, '30-39': 70.6, '40-49': 64.0, '50-59': 45.8, '60-69': 50.0, 'old': 67.1, 'new': 50.0}
+2024-03-11 21:03:50,302 [trainer.py] => No NME accuracy
+2024-03-11 21:03:50,302 [trainer.py] => FeCAM: {'total': 17.76, '00-09': 22.4, '10-19': 16.2, '20-29': 21.7, '30-39': 17.4, '40-49': 21.7, '50-59': 12.3, '60-69': 12.6, 'old': 18.62, 'new': 12.6}
+2024-03-11 21:03:50,302 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66]
+2024-03-11 21:03:50,302 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54]
+2024-03-11 21:03:50,302 [trainer.py] => FeCAM top1 curve: [46.0, 22.17, 17.76]
+2024-03-11 21:03:50,302 [trainer.py] => FeCAM top5 curve: [62.8, 48.48, 39.53]
+
+2024-03-11 21:03:50,307 [fecam.py] => Learning on 70-80
+Processing class: 70
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0626252927
+Epoch:   200  |  train loss: 0.0615239687
+Epoch:   300  |  train loss: 0.0586373471
+Epoch:   400  |  train loss: 0.0569246449
+Epoch:   500  |  train loss: 0.0552366517
+Epoch:   600  |  train loss: 0.0532313138
+Epoch:   700  |  train loss: 0.0520272642
+Epoch:   800  |  train loss: 0.0519259244
+Epoch:   900  |  train loss: 0.0509162702
+Epoch:  1000  |  train loss: 0.0502265058
+Epoch:  1100  |  train loss: 0.0500875339
+Epoch:  1200  |  train loss: 0.0491512671
+Epoch:  1300  |  train loss: 0.0482387654
+Epoch:  1400  |  train loss: 0.0482721880
+Epoch:  1500  |  train loss: 0.0478776373
+Epoch:  1600  |  train loss: 0.0473021023
+Epoch:  1700  |  train loss: 0.0464936301
+Epoch:  1800  |  train loss: 0.0463501006
+Epoch:  1900  |  train loss: 0.0454104528
+Epoch:  2000  |  train loss: 0.0451859087
+Calculating proto and cov in AE latent
+Processing class: 71
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0639576033
+Epoch:   200  |  train loss: 0.0629542209
+Epoch:   300  |  train loss: 0.0612935707
+Epoch:   400  |  train loss: 0.0602139451
+Epoch:   500  |  train loss: 0.0595172383
+Epoch:   600  |  train loss: 0.0578579403
+Epoch:   700  |  train loss: 0.0571395569
+Epoch:   800  |  train loss: 0.0557493761
+Epoch:   900  |  train loss: 0.0558495402
+Epoch:  1000  |  train loss: 0.0550821304
+Epoch:  1100  |  train loss: 0.0543397993
+Epoch:  1200  |  train loss: 0.0534952775
+Epoch:  1300  |  train loss: 0.0535223737
+Epoch:  1400  |  train loss: 0.0528873071
+Epoch:  1500  |  train loss: 0.0525950462
+Epoch:  1600  |  train loss: 0.0513776854
+Epoch:  1700  |  train loss: 0.0518600293
+Epoch:  1800  |  train loss: 0.0506181262
+Epoch:  1900  |  train loss: 0.0505362526
+Epoch:  2000  |  train loss: 0.0502110533
+Calculating proto and cov in AE latent
+Processing class: 72
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0638403669
+Epoch:   200  |  train loss: 0.0629998624
+Epoch:   300  |  train loss: 0.0613708101
+Epoch:   400  |  train loss: 0.0592622258
+Epoch:   500  |  train loss: 0.0576672286
+Epoch:   600  |  train loss: 0.0566694230
+Epoch:   700  |  train loss: 0.0557108223
+Epoch:   800  |  train loss: 0.0548267066
+Epoch:   900  |  train loss: 0.0540581889
+Epoch:  1000  |  train loss: 0.0538918257
+Epoch:  1100  |  train loss: 0.0529842198
+Epoch:  1200  |  train loss: 0.0516141184
+Epoch:  1300  |  train loss: 0.0518958360
+Epoch:  1400  |  train loss: 0.0507491566
+Epoch:  1500  |  train loss: 0.0503412299
+Epoch:  1600  |  train loss: 0.0503247403
+Epoch:  1700  |  train loss: 0.0496459045
+Epoch:  1800  |  train loss: 0.0489909016
+Epoch:  1900  |  train loss: 0.0492485687
+Epoch:  2000  |  train loss: 0.0484819055
+Calculating proto and cov in AE latent
+Processing class: 73
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0646163195
+Epoch:   200  |  train loss: 0.0624440856
+Epoch:   300  |  train loss: 0.0605709061
+Epoch:   400  |  train loss: 0.0600209221
+Epoch:   500  |  train loss: 0.0590825766
+Epoch:   600  |  train loss: 0.0580806926
+Epoch:   700  |  train loss: 0.0578791678
+Epoch:   800  |  train loss: 0.0569466904
+Epoch:   900  |  train loss: 0.0565211847
+Epoch:  1000  |  train loss: 0.0564419419
+Epoch:  1100  |  train loss: 0.0556737810
+Epoch:  1200  |  train loss: 0.0560513593
+Epoch:  1300  |  train loss: 0.0550877497
+Epoch:  1400  |  train loss: 0.0548951536
+Epoch:  1500  |  train loss: 0.0542378634
+Epoch:  1600  |  train loss: 0.0535484470
+Epoch:  1700  |  train loss: 0.0538288124
+Epoch:  1800  |  train loss: 0.0533202954
+Epoch:  1900  |  train loss: 0.0526704185
+Epoch:  2000  |  train loss: 0.0531526819
+Calculating proto and cov in AE latent
+Processing class: 74
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0665802255
+Epoch:   200  |  train loss: 0.0655839220
+Epoch:   300  |  train loss: 0.0642979801
+Epoch:   400  |  train loss: 0.0634807788
+Epoch:   500  |  train loss: 0.0627044007
+Epoch:   600  |  train loss: 0.0612587348
+Epoch:   700  |  train loss: 0.0605090328
+Epoch:   800  |  train loss: 0.0593216240
+Epoch:   900  |  train loss: 0.0590924650
+Epoch:  1000  |  train loss: 0.0583631493
+Epoch:  1100  |  train loss: 0.0575300984
+Epoch:  1200  |  train loss: 0.0570180774
+Epoch:  1300  |  train loss: 0.0563147783
+Epoch:  1400  |  train loss: 0.0565938212
+Epoch:  1500  |  train loss: 0.0557070553
+Epoch:  1600  |  train loss: 0.0547691949
+Epoch:  1700  |  train loss: 0.0546652935
+Epoch:  1800  |  train loss: 0.0543570310
+Epoch:  1900  |  train loss: 0.0539503530
+Epoch:  2000  |  train loss: 0.0529437326
+Calculating proto and cov in AE latent
+Processing class: 75
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0643770888
+Epoch:   200  |  train loss: 0.0625276349
+Epoch:   300  |  train loss: 0.0607896678
+Epoch:   400  |  train loss: 0.0598402917
+Epoch:   500  |  train loss: 0.0585432790
+Epoch:   600  |  train loss: 0.0575297028
+Epoch:   700  |  train loss: 0.0562807396
+Epoch:   800  |  train loss: 0.0561171189
+Epoch:   900  |  train loss: 0.0551433094
+Epoch:  1000  |  train loss: 0.0547152586
+Epoch:  1100  |  train loss: 0.0541643649
+Epoch:  1200  |  train loss: 0.0537381820
+Epoch:  1300  |  train loss: 0.0532339752
+Epoch:  1400  |  train loss: 0.0527282991
+Epoch:  1500  |  train loss: 0.0527893469
+Epoch:  1600  |  train loss: 0.0522586681
+Epoch:  1700  |  train loss: 0.0518942297
+Epoch:  1800  |  train loss: 0.0512039579
+Epoch:  1900  |  train loss: 0.0512212597
+Epoch:  2000  |  train loss: 0.0510642685
+Calculating proto and cov in AE latent
+Processing class: 76
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0555287831
+Epoch:   200  |  train loss: 0.0507294357
+Epoch:   300  |  train loss: 0.0495831534
+Epoch:   400  |  train loss: 0.0489522651
+Epoch:   500  |  train loss: 0.0475427352
+Epoch:   600  |  train loss: 0.0475361377
+Epoch:   700  |  train loss: 0.0469868340
+Epoch:   800  |  train loss: 0.0466547117
+Epoch:   900  |  train loss: 0.0464161046
+Epoch:  1000  |  train loss: 0.0467063904
+Epoch:  1100  |  train loss: 0.0460730664
+Epoch:  1200  |  train loss: 0.0457519457
+Epoch:  1300  |  train loss: 0.0452879816
+Epoch:  1400  |  train loss: 0.0453942657
+Epoch:  1500  |  train loss: 0.0449434616
+Epoch:  1600  |  train loss: 0.0447730660
+Epoch:  1700  |  train loss: 0.0443686053
+Epoch:  1800  |  train loss: 0.0439279415
+Epoch:  1900  |  train loss: 0.0439292461
+Epoch:  2000  |  train loss: 0.0439121217
+Calculating proto and cov in AE latent
+Processing class: 77
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0619544849
+Epoch:   200  |  train loss: 0.0592401832
+Epoch:   300  |  train loss: 0.0579884402
+Epoch:   400  |  train loss: 0.0564708367
+Epoch:   500  |  train loss: 0.0547977701
+Epoch:   600  |  train loss: 0.0537076324
+Epoch:   700  |  train loss: 0.0528121248
+Epoch:   800  |  train loss: 0.0518842869
+Epoch:   900  |  train loss: 0.0503295600
+Epoch:  1000  |  train loss: 0.0499663442
+Epoch:  1100  |  train loss: 0.0490791328
+Epoch:  1200  |  train loss: 0.0485436589
+Epoch:  1300  |  train loss: 0.0481551096
+Epoch:  1400  |  train loss: 0.0478464589
+Epoch:  1500  |  train loss: 0.0469807439
+Epoch:  1600  |  train loss: 0.0463189594
+Epoch:  1700  |  train loss: 0.0462772883
+Epoch:  1800  |  train loss: 0.0459715374
+Epoch:  1900  |  train loss: 0.0454316817
+Epoch:  2000  |  train loss: 0.0448895372
+Calculating proto and cov in AE latent
+Processing class: 78
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0629384756
+Epoch:   200  |  train loss: 0.0602588698
+Epoch:   300  |  train loss: 0.0587253921
+Epoch:   400  |  train loss: 0.0567845248
+Epoch:   500  |  train loss: 0.0553637870
+Epoch:   600  |  train loss: 0.0543882795
+Epoch:   700  |  train loss: 0.0533506557
+Epoch:   800  |  train loss: 0.0524801791
+Epoch:   900  |  train loss: 0.0516999736
+Epoch:  1000  |  train loss: 0.0516547590
+Epoch:  1100  |  train loss: 0.0512111373
+Epoch:  1200  |  train loss: 0.0503993407
+Epoch:  1300  |  train loss: 0.0497329466
+Epoch:  1400  |  train loss: 0.0490239754
+Epoch:  1500  |  train loss: 0.0490758814
+Epoch:  1600  |  train loss: 0.0483903535
+Epoch:  1700  |  train loss: 0.0484230481
+Epoch:  1800  |  train loss: 0.0480183363
+Epoch:  1900  |  train loss: 0.0476380825
+Epoch:  2000  |  train loss: 0.0469573274
+Calculating proto and cov in AE latent
+Processing class: 79
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0659511328
+Epoch:   200  |  train loss: 0.0650447637
+Epoch:   300  |  train loss: 0.0642437607
+Epoch:   400  |  train loss: 0.0636506714
+Epoch:   500  |  train loss: 0.0632767215
+Epoch:   600  |  train loss: 0.0631570719
+Epoch:   700  |  train loss: 0.0626803473
+Epoch:   800  |  train loss: 0.0619739689
+Epoch:   900  |  train loss: 0.0609499246
+Epoch:  1000  |  train loss: 0.0608328946
+Epoch:  1100  |  train loss: 0.0602541350
+Epoch:  1200  |  train loss: 0.0595973969
+Epoch:  1300  |  train loss: 0.0588159010
+Epoch:  1400  |  train loss: 0.0584440403
+Epoch:  1500  |  train loss: 0.0581915237
+Epoch:  1600  |  train loss: 0.0581040718
+Epoch:  1700  |  train loss: 0.0570912465
+Epoch:  1800  |  train loss: 0.0568065517
+Epoch:  1900  |  train loss: 0.0566562802
+Epoch:  2000  |  train loss: 0.0563979335
+Calculating proto and cov in AE latent
+Clasifying using eucl dist from latent proto
+2024-03-11 21:17:14,473 [trainer.py] => CNN: {'total': 59.18, '00-09': 73.6, '10-19': 68.4, '20-29': 76.9, '30-39': 69.1, '40-49': 60.6, '50-59': 37.2, '60-69': 45.7, '70-79': 41.9, 'old': 61.64, 'new': 41.9}
+2024-03-11 21:17:14,475 [trainer.py] => No NME accuracy
+2024-03-11 21:17:14,475 [trainer.py] => FeCAM: {'total': 13.99, '00-09': 20.5, '10-19': 14.4, '20-29': 20.4, '30-39': 15.3, '40-49': 19.3, '50-59': 6.8, '60-69': 8.5, '70-79': 6.7, 'old': 15.03, 'new': 6.7}
+2024-03-11 21:17:14,475 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66, 59.18]
+2024-03-11 21:17:14,475 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54, 84.09]
+2024-03-11 21:17:14,475 [trainer.py] => FeCAM top1 curve: [46.0, 22.17, 17.76, 13.99]
+2024-03-11 21:17:14,475 [trainer.py] => FeCAM top5 curve: [62.8, 48.48, 39.53, 33.26]
+
+2024-03-11 21:17:14,481 [fecam.py] => Learning on 80-90
+Processing class: 80
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0579006843
+Epoch:   200  |  train loss: 0.0536312975
+Epoch:   300  |  train loss: 0.0514088824
+Epoch:   400  |  train loss: 0.0502331987
+Epoch:   500  |  train loss: 0.0494071864
+Epoch:   600  |  train loss: 0.0481832109
+Epoch:   700  |  train loss: 0.0475580588
+Epoch:   800  |  train loss: 0.0470526226
+Epoch:   900  |  train loss: 0.0465716243
+Epoch:  1000  |  train loss: 0.0457782723
+Epoch:  1100  |  train loss: 0.0448690020
+Epoch:  1200  |  train loss: 0.0444719821
+Epoch:  1300  |  train loss: 0.0437856354
+Epoch:  1400  |  train loss: 0.0435948178
+Epoch:  1500  |  train loss: 0.0428664409
+Epoch:  1600  |  train loss: 0.0426107578
+Epoch:  1700  |  train loss: 0.0421802282
+Epoch:  1800  |  train loss: 0.0417745918
+Epoch:  1900  |  train loss: 0.0414932549
+Epoch:  2000  |  train loss: 0.0410605304
+Calculating proto and cov in AE latent
+Processing class: 81
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0626339033
+Epoch:   200  |  train loss: 0.0613607086
+Epoch:   300  |  train loss: 0.0595635369
+Epoch:   400  |  train loss: 0.0586111367
+Epoch:   500  |  train loss: 0.0579392843
+Epoch:   600  |  train loss: 0.0566376783
+Epoch:   700  |  train loss: 0.0566488802
+Epoch:   800  |  train loss: 0.0559497565
+Epoch:   900  |  train loss: 0.0555318907
+Epoch:  1000  |  train loss: 0.0554972798
+Epoch:  1100  |  train loss: 0.0547093153
+Epoch:  1200  |  train loss: 0.0540325262
+Epoch:  1300  |  train loss: 0.0537560925
+Epoch:  1400  |  train loss: 0.0534355462
+Epoch:  1500  |  train loss: 0.0534875259
+Epoch:  1600  |  train loss: 0.0528260753
+Epoch:  1700  |  train loss: 0.0525187530
+Epoch:  1800  |  train loss: 0.0525449954
+Epoch:  1900  |  train loss: 0.0520395860
+Epoch:  2000  |  train loss: 0.0519090928
+Calculating proto and cov in AE latent
+Processing class: 82
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0609679192
+Epoch:   200  |  train loss: 0.0583577678
+Epoch:   300  |  train loss: 0.0562775038
+Epoch:   400  |  train loss: 0.0548436187
+Epoch:   500  |  train loss: 0.0534622490
+Epoch:   600  |  train loss: 0.0530817881
+Epoch:   700  |  train loss: 0.0524590053
+Epoch:   800  |  train loss: 0.0523244135
+Epoch:   900  |  train loss: 0.0513076432
+Epoch:  1000  |  train loss: 0.0510657862
+Epoch:  1100  |  train loss: 0.0506589338
+Epoch:  1200  |  train loss: 0.0508346491
+Epoch:  1300  |  train loss: 0.0497671999
+Epoch:  1400  |  train loss: 0.0500348315
+Epoch:  1500  |  train loss: 0.0496921510
+Epoch:  1600  |  train loss: 0.0486451529
+Epoch:  1700  |  train loss: 0.0485633038
+Epoch:  1800  |  train loss: 0.0480996788
+Epoch:  1900  |  train loss: 0.0476995610
+Epoch:  2000  |  train loss: 0.0478544824
+Calculating proto and cov in AE latent
+Processing class: 83
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0586204149
+Epoch:   200  |  train loss: 0.0546183519
+Epoch:   300  |  train loss: 0.0523387298
+Epoch:   400  |  train loss: 0.0510331839
+Epoch:   500  |  train loss: 0.0505682752
+Epoch:   600  |  train loss: 0.0497712411
+Epoch:   700  |  train loss: 0.0493013106
+Epoch:   800  |  train loss: 0.0487779066
+Epoch:   900  |  train loss: 0.0485412069
+Epoch:  1000  |  train loss: 0.0485370420
+Epoch:  1100  |  train loss: 0.0477807686
+Epoch:  1200  |  train loss: 0.0471225671
+Epoch:  1300  |  train loss: 0.0465204269
+Epoch:  1400  |  train loss: 0.0462252066
+Epoch:  1500  |  train loss: 0.0461042926
+Epoch:  1600  |  train loss: 0.0453612782
+Epoch:  1700  |  train loss: 0.0455946125
+Epoch:  1800  |  train loss: 0.0454530992
+Epoch:  1900  |  train loss: 0.0444368497
+Epoch:  2000  |  train loss: 0.0448381312
+Calculating proto and cov in AE latent
+Processing class: 84
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0626581490
+Epoch:   200  |  train loss: 0.0583755396
+Epoch:   300  |  train loss: 0.0561328009
+Epoch:   400  |  train loss: 0.0555821180
+Epoch:   500  |  train loss: 0.0543833628
+Epoch:   600  |  train loss: 0.0530970521
+Epoch:   700  |  train loss: 0.0525344558
+Epoch:   800  |  train loss: 0.0510807402
+Epoch:   900  |  train loss: 0.0505420752
+Epoch:  1000  |  train loss: 0.0500546642
+Epoch:  1100  |  train loss: 0.0490203559
+Epoch:  1200  |  train loss: 0.0485313110
+Epoch:  1300  |  train loss: 0.0476939887
+Epoch:  1400  |  train loss: 0.0470668681
+Epoch:  1500  |  train loss: 0.0472558253
+Epoch:  1600  |  train loss: 0.0466077335
+Epoch:  1700  |  train loss: 0.0461773783
+Epoch:  1800  |  train loss: 0.0457252964
+Epoch:  1900  |  train loss: 0.0449514151
+Epoch:  2000  |  train loss: 0.0448715113
+Calculating proto and cov in AE latent
+Processing class: 85
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0632228255
+Epoch:   200  |  train loss: 0.0614442930
+Epoch:   300  |  train loss: 0.0595961206
+Epoch:   400  |  train loss: 0.0583202600
+Epoch:   500  |  train loss: 0.0568979338
+Epoch:   600  |  train loss: 0.0570039876
+Epoch:   700  |  train loss: 0.0558457144
+Epoch:   800  |  train loss: 0.0550000072
+Epoch:   900  |  train loss: 0.0542287946
+Epoch:  1000  |  train loss: 0.0535322607
+Epoch:  1100  |  train loss: 0.0525166929
+Epoch:  1200  |  train loss: 0.0530515805
+Epoch:  1300  |  train loss: 0.0523698315
+Epoch:  1400  |  train loss: 0.0522596367
+Epoch:  1500  |  train loss: 0.0512488745
+Epoch:  1600  |  train loss: 0.0510038748
+Epoch:  1700  |  train loss: 0.0502451085
+Epoch:  1800  |  train loss: 0.0504968517
+Epoch:  1900  |  train loss: 0.0495664932
+Epoch:  2000  |  train loss: 0.0491884485
+Calculating proto and cov in AE latent
+Processing class: 86
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0652668625
+Epoch:   200  |  train loss: 0.0642123163
+Epoch:   300  |  train loss: 0.0620358922
+Epoch:   400  |  train loss: 0.0609318465
+Epoch:   500  |  train loss: 0.0600569554
+Epoch:   600  |  train loss: 0.0588810034
+Epoch:   700  |  train loss: 0.0580103688
+Epoch:   800  |  train loss: 0.0571114391
+Epoch:   900  |  train loss: 0.0564650193
+Epoch:  1000  |  train loss: 0.0553299546
+Epoch:  1100  |  train loss: 0.0554354087
+Epoch:  1200  |  train loss: 0.0548834793
+Epoch:  1300  |  train loss: 0.0545156509
+Epoch:  1400  |  train loss: 0.0543887526
+Epoch:  1500  |  train loss: 0.0533878729
+Epoch:  1600  |  train loss: 0.0525579147
+Epoch:  1700  |  train loss: 0.0526173294
+Epoch:  1800  |  train loss: 0.0518564075
+Epoch:  1900  |  train loss: 0.0521736644
+Epoch:  2000  |  train loss: 0.0512779824
+Calculating proto and cov in AE latent
+Processing class: 87
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0627907909
+Epoch:   200  |  train loss: 0.0596014768
+Epoch:   300  |  train loss: 0.0568285786
+Epoch:   400  |  train loss: 0.0558554873
+Epoch:   500  |  train loss: 0.0550000958
+Epoch:   600  |  train loss: 0.0539944977
+Epoch:   700  |  train loss: 0.0534921996
+Epoch:   800  |  train loss: 0.0530535102
+Epoch:   900  |  train loss: 0.0527505085
+Epoch:  1000  |  train loss: 0.0521714099
+Epoch:  1100  |  train loss: 0.0513125904
+Epoch:  1200  |  train loss: 0.0511782832
+Epoch:  1300  |  train loss: 0.0507715851
+Epoch:  1400  |  train loss: 0.0502572298
+Epoch:  1500  |  train loss: 0.0494411170
+Epoch:  1600  |  train loss: 0.0490778081
+Epoch:  1700  |  train loss: 0.0486694440
+Epoch:  1800  |  train loss: 0.0479207210
+Epoch:  1900  |  train loss: 0.0477867343
+Epoch:  2000  |  train loss: 0.0468947187
+Calculating proto and cov in AE latent
+Processing class: 88
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0644956380
+Epoch:   200  |  train loss: 0.0641130701
+Epoch:   300  |  train loss: 0.0624486640
+Epoch:   400  |  train loss: 0.0600151055
+Epoch:   500  |  train loss: 0.0579081610
+Epoch:   600  |  train loss: 0.0571252607
+Epoch:   700  |  train loss: 0.0561858095
+Epoch:   800  |  train loss: 0.0547456644
+Epoch:   900  |  train loss: 0.0542377993
+Epoch:  1000  |  train loss: 0.0537531421
+Epoch:  1100  |  train loss: 0.0529026799
+Epoch:  1200  |  train loss: 0.0522137605
+Epoch:  1300  |  train loss: 0.0513549291
+Epoch:  1400  |  train loss: 0.0506351352
+Epoch:  1500  |  train loss: 0.0507414602
+Epoch:  1600  |  train loss: 0.0505434670
+Epoch:  1700  |  train loss: 0.0494344398
+Epoch:  1800  |  train loss: 0.0493535817
+Epoch:  1900  |  train loss: 0.0488295212
+Epoch:  2000  |  train loss: 0.0487003259
+Calculating proto and cov in AE latent
+Processing class: 89
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0610804476
+Epoch:   200  |  train loss: 0.0584591568
+Epoch:   300  |  train loss: 0.0563724726
+Epoch:   400  |  train loss: 0.0546108879
+Epoch:   500  |  train loss: 0.0525004290
+Epoch:   600  |  train loss: 0.0521690078
+Epoch:   700  |  train loss: 0.0511181712
+Epoch:   800  |  train loss: 0.0502711736
+Epoch:   900  |  train loss: 0.0497603059
+Epoch:  1000  |  train loss: 0.0492064439
+Epoch:  1100  |  train loss: 0.0493011363
+Epoch:  1200  |  train loss: 0.0490049444
+Epoch:  1300  |  train loss: 0.0481520519
+Epoch:  1400  |  train loss: 0.0479235381
+Epoch:  1500  |  train loss: 0.0471632026
+Epoch:  1600  |  train loss: 0.0469103314
+Epoch:  1700  |  train loss: 0.0462997057
+Epoch:  1800  |  train loss: 0.0461297341
+Epoch:  1900  |  train loss: 0.0454865523
+Epoch:  2000  |  train loss: 0.0452896088
+Calculating proto and cov in AE latent
+Clasifying using eucl dist from latent proto
+2024-03-11 21:32:02,971 [trainer.py] => CNN: {'total': 54.08, '00-09': 67.9, '10-19': 63.6, '20-29': 73.2, '30-39': 68.8, '40-49': 57.2, '50-59': 32.6, '60-69': 40.9, '70-79': 38.1, '80-89': 44.4, 'old': 55.29, 'new': 44.4}
+2024-03-11 21:32:02,972 [trainer.py] => No NME accuracy
+2024-03-11 21:32:02,972 [trainer.py] => FeCAM: {'total': 12.46, '00-09': 20.0, '10-19': 13.6, '20-29': 18.1, '30-39': 14.6, '40-49': 17.9, '50-59': 5.9, '60-69': 7.7, '70-79': 5.5, '80-89': 8.8, 'old': 12.91, 'new': 8.8}
+2024-03-11 21:32:02,972 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66, 59.18, 54.08]
+2024-03-11 21:32:02,972 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54, 84.09, 81.74]
+2024-03-11 21:32:02,972 [trainer.py] => FeCAM top1 curve: [46.0, 22.17, 17.76, 13.99, 12.46]
+2024-03-11 21:32:02,972 [trainer.py] => FeCAM top5 curve: [62.8, 48.48, 39.53, 33.26, 30.04]
+
+2024-03-11 21:32:02,978 [fecam.py] => Learning on 90-100
+Processing class: 90
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0649462074
+Epoch:   200  |  train loss: 0.0625588715
+Epoch:   300  |  train loss: 0.0597076826
+Epoch:   400  |  train loss: 0.0587450355
+Epoch:   500  |  train loss: 0.0573352545
+Epoch:   600  |  train loss: 0.0558300950
+Epoch:   700  |  train loss: 0.0551438846
+Epoch:   800  |  train loss: 0.0546615757
+Epoch:   900  |  train loss: 0.0535875082
+Epoch:  1000  |  train loss: 0.0523023613
+Epoch:  1100  |  train loss: 0.0520249553
+Epoch:  1200  |  train loss: 0.0511771768
+Epoch:  1300  |  train loss: 0.0509471864
+Epoch:  1400  |  train loss: 0.0505636185
+Epoch:  1500  |  train loss: 0.0497134633
+Epoch:  1600  |  train loss: 0.0493859202
+Epoch:  1700  |  train loss: 0.0492482617
+Epoch:  1800  |  train loss: 0.0484372072
+Epoch:  1900  |  train loss: 0.0476606302
+Epoch:  2000  |  train loss: 0.0476408459
+Calculating proto and cov in AE latent
+Processing class: 91
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0539952211
+Epoch:   200  |  train loss: 0.0511372514
+Epoch:   300  |  train loss: 0.0501163378
+Epoch:   400  |  train loss: 0.0485099487
+Epoch:   500  |  train loss: 0.0474513948
+Epoch:   600  |  train loss: 0.0471496530
+Epoch:   700  |  train loss: 0.0473973960
+Epoch:   800  |  train loss: 0.0462224595
+Epoch:   900  |  train loss: 0.0461989596
+Epoch:  1000  |  train loss: 0.0456152044
+Epoch:  1100  |  train loss: 0.0449969895
+Epoch:  1200  |  train loss: 0.0451586775
+Epoch:  1300  |  train loss: 0.0446163878
+Epoch:  1400  |  train loss: 0.0442177393
+Epoch:  1500  |  train loss: 0.0441429012
+Epoch:  1600  |  train loss: 0.0441418201
+Epoch:  1700  |  train loss: 0.0437053293
+Epoch:  1800  |  train loss: 0.0438179791
+Epoch:  1900  |  train loss: 0.0426432267
+Epoch:  2000  |  train loss: 0.0431618474
+Calculating proto and cov in AE latent
+Processing class: 92
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0625145309
+Epoch:   200  |  train loss: 0.0598054826
+Epoch:   300  |  train loss: 0.0582868971
+Epoch:   400  |  train loss: 0.0562235206
+Epoch:   500  |  train loss: 0.0555732533
+Epoch:   600  |  train loss: 0.0542589210
+Epoch:   700  |  train loss: 0.0538576812
+Epoch:   800  |  train loss: 0.0532674387
+Epoch:   900  |  train loss: 0.0526571281
+Epoch:  1000  |  train loss: 0.0518712357
+Epoch:  1100  |  train loss: 0.0511719316
+Epoch:  1200  |  train loss: 0.0507430553
+Epoch:  1300  |  train loss: 0.0502905391
+Epoch:  1400  |  train loss: 0.0502435818
+Epoch:  1500  |  train loss: 0.0497570582
+Epoch:  1600  |  train loss: 0.0491137981
+Epoch:  1700  |  train loss: 0.0486931518
+Epoch:  1800  |  train loss: 0.0479111694
+Epoch:  1900  |  train loss: 0.0475331455
+Epoch:  2000  |  train loss: 0.0480417639
+Calculating proto and cov in AE latent
+Processing class: 93
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0649982378
+Epoch:   200  |  train loss: 0.0614338800
+Epoch:   300  |  train loss: 0.0601533346
+Epoch:   400  |  train loss: 0.0574768327
+Epoch:   500  |  train loss: 0.0563369602
+Epoch:   600  |  train loss: 0.0545055375
+Epoch:   700  |  train loss: 0.0538135752
+Epoch:   800  |  train loss: 0.0524482191
+Epoch:   900  |  train loss: 0.0514762796
+Epoch:  1000  |  train loss: 0.0510008909
+Epoch:  1100  |  train loss: 0.0500701055
+Epoch:  1200  |  train loss: 0.0499523453
+Epoch:  1300  |  train loss: 0.0492813222
+Epoch:  1400  |  train loss: 0.0489436865
+Epoch:  1500  |  train loss: 0.0481310546
+Epoch:  1600  |  train loss: 0.0471444055
+Epoch:  1700  |  train loss: 0.0470774256
+Epoch:  1800  |  train loss: 0.0467636734
+Epoch:  1900  |  train loss: 0.0464427456
+Epoch:  2000  |  train loss: 0.0460019000
+Calculating proto and cov in AE latent
+Processing class: 94
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0611406632
+Epoch:   200  |  train loss: 0.0573068947
+Epoch:   300  |  train loss: 0.0541307501
+Epoch:   400  |  train loss: 0.0530255094
+Epoch:   500  |  train loss: 0.0510849901
+Epoch:   600  |  train loss: 0.0506441213
+Epoch:   700  |  train loss: 0.0485523745
+Epoch:   800  |  train loss: 0.0482192516
+Epoch:   900  |  train loss: 0.0474674903
+Epoch:  1000  |  train loss: 0.0470099270
+Epoch:  1100  |  train loss: 0.0464844890
+Epoch:  1200  |  train loss: 0.0459303483
+Epoch:  1300  |  train loss: 0.0454736225
+Epoch:  1400  |  train loss: 0.0450119965
+Epoch:  1500  |  train loss: 0.0447629906
+Epoch:  1600  |  train loss: 0.0442490675
+Epoch:  1700  |  train loss: 0.0440154500
+Epoch:  1800  |  train loss: 0.0432731166
+Epoch:  1900  |  train loss: 0.0431950271
+Epoch:  2000  |  train loss: 0.0426250428
+Calculating proto and cov in AE latent
+Processing class: 95
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0646569595
+Epoch:   200  |  train loss: 0.0635606140
+Epoch:   300  |  train loss: 0.0631098278
+Epoch:   400  |  train loss: 0.0612455800
+Epoch:   500  |  train loss: 0.0597717091
+Epoch:   600  |  train loss: 0.0581356533
+Epoch:   700  |  train loss: 0.0575025417
+Epoch:   800  |  train loss: 0.0560023047
+Epoch:   900  |  train loss: 0.0559157208
+Epoch:  1000  |  train loss: 0.0550133713
+Epoch:  1100  |  train loss: 0.0544962846
+Epoch:  1200  |  train loss: 0.0535162158
+Epoch:  1300  |  train loss: 0.0534428567
+Epoch:  1400  |  train loss: 0.0523170002
+Epoch:  1500  |  train loss: 0.0526073441
+Epoch:  1600  |  train loss: 0.0519153528
+Epoch:  1700  |  train loss: 0.0515531652
+Epoch:  1800  |  train loss: 0.0511457287
+Epoch:  1900  |  train loss: 0.0507077292
+Epoch:  2000  |  train loss: 0.0500348702
+Calculating proto and cov in AE latent
+Processing class: 96
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0650375381
+Epoch:   200  |  train loss: 0.0640591159
+Epoch:   300  |  train loss: 0.0628869884
+Epoch:   400  |  train loss: 0.0617998309
+Epoch:   500  |  train loss: 0.0603192933
+Epoch:   600  |  train loss: 0.0588690996
+Epoch:   700  |  train loss: 0.0582678176
+Epoch:   800  |  train loss: 0.0573575906
+Epoch:   900  |  train loss: 0.0568373337
+Epoch:  1000  |  train loss: 0.0564578459
+Epoch:  1100  |  train loss: 0.0557592049
+Epoch:  1200  |  train loss: 0.0550349474
+Epoch:  1300  |  train loss: 0.0547870979
+Epoch:  1400  |  train loss: 0.0544312619
+Epoch:  1500  |  train loss: 0.0536137082
+Epoch:  1600  |  train loss: 0.0535780974
+Epoch:  1700  |  train loss: 0.0529575258
+Epoch:  1800  |  train loss: 0.0526875749
+Epoch:  1900  |  train loss: 0.0526347257
+Epoch:  2000  |  train loss: 0.0517769553
+Calculating proto and cov in AE latent
+Processing class: 97
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0619524345
+Epoch:   200  |  train loss: 0.0592667148
+Epoch:   300  |  train loss: 0.0578847215
+Epoch:   400  |  train loss: 0.0561906114
+Epoch:   500  |  train loss: 0.0554863065
+Epoch:   600  |  train loss: 0.0548095807
+Epoch:   700  |  train loss: 0.0542800412
+Epoch:   800  |  train loss: 0.0537547655
+Epoch:   900  |  train loss: 0.0528279670
+Epoch:  1000  |  train loss: 0.0522454448
+Epoch:  1100  |  train loss: 0.0515809365
+Epoch:  1200  |  train loss: 0.0506584547
+Epoch:  1300  |  train loss: 0.0507805526
+Epoch:  1400  |  train loss: 0.0499686673
+Epoch:  1500  |  train loss: 0.0497092612
+Epoch:  1600  |  train loss: 0.0494988076
+Epoch:  1700  |  train loss: 0.0496142611
+Epoch:  1800  |  train loss: 0.0484511532
+Epoch:  1900  |  train loss: 0.0484907001
+Epoch:  2000  |  train loss: 0.0478830613
+Calculating proto and cov in AE latent
+Processing class: 98
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0598232165
+Epoch:   200  |  train loss: 0.0570984997
+Epoch:   300  |  train loss: 0.0532363996
+Epoch:   400  |  train loss: 0.0515473835
+Epoch:   500  |  train loss: 0.0510169283
+Epoch:   600  |  train loss: 0.0498823322
+Epoch:   700  |  train loss: 0.0490224488
+Epoch:   800  |  train loss: 0.0486664504
+Epoch:   900  |  train loss: 0.0477719419
+Epoch:  1000  |  train loss: 0.0473587669
+Epoch:  1100  |  train loss: 0.0473677404
+Epoch:  1200  |  train loss: 0.0468123019
+Epoch:  1300  |  train loss: 0.0466075800
+Epoch:  1400  |  train loss: 0.0460923620
+Epoch:  1500  |  train loss: 0.0454762384
+Epoch:  1600  |  train loss: 0.0456257999
+Epoch:  1700  |  train loss: 0.0450321510
+Epoch:  1800  |  train loss: 0.0447364599
+Epoch:  1900  |  train loss: 0.0448892325
+Epoch:  2000  |  train loss: 0.0443410829
+Calculating proto and cov in AE latent
+Processing class: 99
+Training Wasserstein Auto Encoder
+Epoch:   100  |  train loss: 0.0637378722
+Epoch:   200  |  train loss: 0.0604409687
+Epoch:   300  |  train loss: 0.0584142670
+Epoch:   400  |  train loss: 0.0569349498
+Epoch:   500  |  train loss: 0.0555416338
+Epoch:   600  |  train loss: 0.0545178041
+Epoch:   700  |  train loss: 0.0529705860
+Epoch:   800  |  train loss: 0.0521533206
+Epoch:   900  |  train loss: 0.0518324003
+Epoch:  1000  |  train loss: 0.0509907097
+Epoch:  1100  |  train loss: 0.0497711100
+Epoch:  1200  |  train loss: 0.0495653272
+Epoch:  1300  |  train loss: 0.0494715638
+Epoch:  1400  |  train loss: 0.0487056591
+Epoch:  1500  |  train loss: 0.0479776219
+Epoch:  1600  |  train loss: 0.0478104733
+Epoch:  1700  |  train loss: 0.0478244916
+Epoch:  1800  |  train loss: 0.0469115965
+Epoch:  1900  |  train loss: 0.0468937479
+Epoch:  2000  |  train loss: 0.0471022286
+Calculating proto and cov in AE latent
+Clasifying using eucl dist from latent proto
+2024-03-11 21:48:51,210 [trainer.py] => CNN: {'total': 50.36, '00-09': 57.7, '10-19': 63.6, '20-29': 71.4, '30-39': 68.5, '40-49': 56.8, '50-59': 29.6, '60-69': 38.9, '70-79': 36.6, '80-89': 42.7, '90-99': 37.8, 'old': 51.76, 'new': 37.8}
+2024-03-11 21:48:51,212 [trainer.py] => No NME accuracy
+2024-03-11 21:48:51,212 [trainer.py] => FeCAM: {'total': 10.87, '00-09': 19.3, '10-19': 13.2, '20-29': 16.7, '30-39': 14.3, '40-49': 16.4, '50-59': 5.6, '60-69': 6.6, '70-79': 5.2, '80-89': 7.3, '90-99': 4.1, 'old': 11.62, 'new': 4.1}
+2024-03-11 21:48:51,212 [trainer.py] => CNN top1 curve: [83.44, 71.75, 64.66, 59.18, 54.08, 50.36]
+2024-03-11 21:48:51,212 [trainer.py] => CNN top5 curve: [96.5, 89.6, 86.54, 84.09, 81.74, 79.63]
+2024-03-11 21:48:51,212 [trainer.py] => FeCAM top1 curve: [46.0, 22.17, 17.76, 13.99, 12.46, 10.87]
+2024-03-11 21:48:51,212 [trainer.py] => FeCAM top5 curve: [62.8, 48.48, 39.53, 33.26, 30.04, 26.43]
+

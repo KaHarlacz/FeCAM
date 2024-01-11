@@ -1,0 +1,5 @@
+data
+*.pyc
+tf_logs/
+logs/
+results/
